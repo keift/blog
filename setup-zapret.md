@@ -1,5 +1,7 @@
 # Setup Zapret to bypass DPI
 
+Setup Zapret to bypass DPI
+
 ## 1 - Keep Hosts content up to date
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
