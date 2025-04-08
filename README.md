@@ -2,18 +2,18 @@
 
 Keift's official blog
 
-### Burası da neresi?
+### Where is this place?
 
-Burada çeşitli şeyler hakkında bilgiler ve tutorial'lar paylaşıyoruz.
+Here we share information and tutorials about various things.
 
-### Bize ulaşın
+### Contact us
 
 [Discord](https://discord.gg/keift) | [Telegram](https://t.me/keiftt)
 
-### Bizi takip edin
+### Follow us
 
 [X](https://x.com/keiftttt)
 
-### İşte burada
+### Here it is
 
 - [Install Zapret](https://keift.gitbook.io/blog/setup-zapret)
