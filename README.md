@@ -1,5 +1,3 @@
-# Welcome
-
 ## Where is this place?
 
 Here we share information and tutorials about various things.
