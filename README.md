@@ -4,4 +4,4 @@
 
 ## Follow us
 
-[GitHub](https://github.com/keift) | [X](https://x.com/keiftttt)
+[GitHub](https://github.com/keift) | [Twitter](https://x.com/keiftttt)
