@@ -1,6 +1,6 @@
 # Welcome
 
-Keift's official blog
+Yayıncılık ve ürün hizmetleri sunan Keift'in blog sayfası.
 
 ## Where is this place?
 
