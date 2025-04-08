@@ -1,6 +1,6 @@
 # Welcome
 
-Yayıncılık ve ürün hizmetleri sunan Keift'in blog sayfası.
+Yayıncılık ve ürün hizmetleri sunan Keift'in paylaşım sayfası.
 
 ## Where is this place?
 
