@@ -13,7 +13,3 @@ Here we share information and tutorials about various things.
 ## Follow us
 
 [GitHub](https://github.com/keift) | [X](https://x.com/keiftttt)
-
-## Here it is
-
-- [Install Zapret](https://keift.gitbook.io/blog/setup-zapret)
