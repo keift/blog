@@ -1,6 +1,6 @@
-# Setup Zapret
+# Install Zapret
 
-Setup Zapret to bypass DPI
+Install Zapret to bypass DPI barriers
 
 ## 1 - Keep Hosts content up to date
 
