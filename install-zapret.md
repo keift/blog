@@ -101,7 +101,7 @@ unzip ./zapret-v70.5.zip
 rm -rf ./zapret-v70.5.zip
 ```
 
-## 7 - Prepare for setup
+## 7 - Prepare for installation
 
 Install the pre-installation requirements and prepare to perform a clean install.
 
