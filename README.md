@@ -1,7 +1,5 @@
 # Welcome
 
-Yayıncılık ve ürün hizmetleri sunan Keift'in blog sayfası.
-
 ## Where is this place?
 
 Here we share information and tutorials about various things.
