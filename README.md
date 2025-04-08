@@ -12,7 +12,7 @@ Here we share information and tutorials about various things.
 
 ## Follow us
 
-[X](https://x.com/keiftttt)
+[GitHub](https://github.com/keift) | [X](https://x.com/keiftttt)
 
 ## Here it is
 
