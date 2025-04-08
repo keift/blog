@@ -1,4 +1,4 @@
-# Setup Zapret to bypass DPI
+# Setup Zapret
 
 Setup Zapret to bypass DPI
 
