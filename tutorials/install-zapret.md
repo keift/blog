@@ -11,55 +11,23 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-## 2. Install Curl tool
+## 2. Install required tools
 
-Essential tool for HTTP requests.
-
-```shell
-# Debian, Ubuntu, Kali, Linux Mint (APT)
-sudo apt install -y curl
-
-# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
-sudo dnf install -y curl
-sudo yum install -y curl
-
-# Arch, Manjaro (Pacman)
-sudo pacman -S --noconfirm curl
-```
-
-## 3. Install Nslookup tool
-
-Essential tool for check DNS queries.
+Required tools for installation.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
-sudo apt install -y dnsutils
+sudo apt install -y curl dnsutils unzip
 
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
-sudo dnf install -y bind-utils
-sudo yum install -y bind-utils
+sudo dnf install -y curl bind-utils unzip
+sudo yum install -y curl bind-utils unzip
 
 # Arch, Manjaro (Pacman)
-sudo pacman -S --noconfirm bind
+sudo pacman -S --noconfirm curl bind-tools unzip
 ```
 
-## 4. Install Unzip tool
-
-Essential tool for extracting zip files.
-
-```shell
-# Debian, Ubuntu, Kali, Linux Mint (APT)
-sudo apt install -y unzip
-
-# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
-sudo dnf install -y unzip
-sudo yum install -y unzip
-
-# Arch, Manjaro (Pacman)
-sudo pacman -S --noconfirm unzip
-```
-
-## 5. Change DNS rules
+## 3. Change DNS rules
 
 Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves. We are using Yandex DNS here.
 
@@ -80,20 +48,7 @@ sudo chattr +i /etc/resolv.conf
 sudo systemctl restart NetworkManager
 ```
 
-If you want to undo this action you can do the following:
-
-```shell
-# Unlock /etc/resolv.conf file if it is already locked
-sudo chattr -i /etc/resolv.conf
-
-# Delete /etc/resolv.conf file to reset it to default
-sudo rm -rf /etc/resolv.conf
-
-# Restart the system for everything to work properly
-sudo reboot
-```
-
-## 6. Download Zapret
+## 4. Download Zapret
 
 Download the compiled zip file as release on GitHub.
 
@@ -105,7 +60,7 @@ cd ~/
 wget https://github.com/bol-van/zapret/releases/download/v70.5/zapret-v70.5.zip
 ```
 
-## 7. Unzip the zip file
+## 5. Unzip the zip file
 
 Extract the zip file and then delete it.
 
@@ -117,7 +72,7 @@ unzip ./zapret-v70.5.zip
 rm -rf ./zapret-v70.5.zip
 ```
 
-## 8. Prepare for installation
+## 6. Prepare for installation
 
 Install the pre-installation requirements and prepare to perform a clean install.
 
@@ -145,7 +100,7 @@ select firewall type :
 your choice (default : nftables) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-## 9. Do Blockcheck
+## 7. Do Blockcheck
 
 Find the DPI methods implemented by the ISP.
 
@@ -217,7 +172,7 @@ This is an example settings for **NFQWS**. It may be different for each person. 
 ```
 
 
-## 10. Install Zapret
+## 8. Install Zapret
 
 Once everything is complete, we can start installing Zapret.
 
@@ -330,7 +285,7 @@ select filtering :
 your choice (default : none) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-## 11. Finish the installation
+## 9. Finish the installation
 
 All done! We are done with this folder of Zapret anymore. We can delete it.
 
@@ -343,3 +298,28 @@ rm -rf ./zapret-v70.5
 ```
 
 🎉 That's it! You have now overcome all access barriers. Long live freedom!
+
+## TIP: Uninstall Zapret
+
+If you ever regain your freedom, you can undo all of these actions in the following way.
+
+```shell
+# Uninstall Zapret and delete unnecessary files
+/opt/zapret/uninstall_easy.sh
+sudo rm -rf /opt/zapret
+```
+
+## TIP: Remove DNS settings.
+
+To remove DNS settings, you can do the following.
+
+```shell
+# Unlock /etc/resolv.conf file if it is already locked
+sudo chattr -i /etc/resolv.conf
+
+# Delete /etc/resolv.conf file to reset it to default
+sudo rm -rf /etc/resolv.conf
+
+# Restart the system for everything to work properly
+sudo reboot
+```
