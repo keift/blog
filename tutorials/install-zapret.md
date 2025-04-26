@@ -17,14 +17,14 @@ Essential tool for HTTP requests.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
-sudo apt install -y dnsutils
+sudo apt install -y curl
 
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
-sudo dnf install -y bind-utils
-sudo yum install -y bind-utils
+sudo dnf install -y curl
+sudo yum install -y curl
 
 # Arch, Manjaro (Pacman)
-sudo pacman -S --noconfirm bind
+sudo pacman -S --noconfirm curl
 ```
 
 ## 3. Install Nslookup tool
