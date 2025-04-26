@@ -74,7 +74,7 @@ rm -rf ./zapret-v70.5.zip
 
 ## 6. Prepare for installation
 
-Install the installation requirements and prepare to perform a clean install.
+Install the requirements and prepare to perform a clean install.
 
 ```shell
 # Enter the folder
