@@ -309,7 +309,7 @@ If you ever regain your freedom, you can undo all of these actions in the follow
 sudo rm -rf /opt/zapret
 ```
 
-## TIP: Remove DNS settings.
+## TIP: Remove DNS settings
 
 To remove DNS settings, you can do the following.
 
