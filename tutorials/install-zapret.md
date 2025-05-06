@@ -59,7 +59,7 @@ sudo chattr -i /etc/resolv.conf
 # Delete the /etc/resolv.conf file as it may be set as a symlink
 sudo rm -rf /etc/resolv.conf
 
-# Rewrite the /etc/resolv.conf file and specify that we will use Yandex DNS in it
+# Rewrite the /etc/resolv.conf file and specify that we will use DNSCrypt Proxy in it
 echo -e "nameserver 127.0.0.1\nnameserver 77.88.8.8\nnameserver 77.88.8.1" | sudo tee /etc/resolv.conf
 
 # Make the file read-only so that the system cannot change it
