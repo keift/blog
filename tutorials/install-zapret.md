@@ -43,8 +43,8 @@ sudo yum install -y dnscrypt-proxy
 sudo pacman -S --noconfirm dnscrypt-proxy
 
 # Configure DNSCrypt Proxy
-sudo sed -i "s/^listen_addresses = .*/listen_addresses = \['127.0.0.1:53'\]/" "/etc/dnscrypt-proxy/dnscrypt-proxy.toml"
-sudo sed -i "s/^server_names = .*/server_names = \[\'scaleway-fr\'\]/" "/etc/dnscrypt-proxy/dnscrypt-proxy.toml"
+sudo sed -i "s/^listen_addresses = .*/listen_addresses = \['127.0.0.1:53'\]/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+sudo sed -i "s/^server_names = .*/server_names = \[\'scaleway-fr\'\]/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
 
 # Grant necessary permissions to DNSCrypt Proxy
 sudo setcap "cap_net_bind_service=+ep" /usr/bin/dnscrypt-proxy
