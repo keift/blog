@@ -345,6 +345,10 @@ sudo dnf remove -y dnscrypt-proxy
 sudo yum remove -y dnscrypt-proxy
 sudo pacman -Rns --noconfirm dnscrypt-proxy
 
+# Remove permissions previously granted to DNSCrypt Proxy
+sudo setcap "cap_net_bind_service=-ep" /usr/bin/dnscrypt-proxy
+sudo setcap "cap_net_bind_service=-ep" /usr/sbin/dnscrypt-proxy
+
 # Unlock /etc/resolv.conf file if it is already locked
 sudo chattr -i /etc/resolv.conf
 
