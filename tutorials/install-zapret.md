@@ -74,6 +74,10 @@ sudo systemctl restart NetworkManager
 Download the compiled zip file as release on GitHub.
 
 ```shell
+# Delete if present
+rm -rf ./zapret-v70.5.zip
+rm -rf ./zapret-v70.5
+
 # Go to the home directory
 cd ~/
 
