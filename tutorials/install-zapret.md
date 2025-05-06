@@ -43,12 +43,8 @@ sudo yum install -y dnscrypt-proxy
 sudo pacman -S --noconfirm dnscrypt-proxy
 
 # Configure DNSCrypt Proxy
-sudo sed -i "s/^listen_addresses = .*/listen_addresses = \['127.0.0.1:53'\]/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
-sudo sed -i "s/^server_names = .*/server_names = \[\'scaleway-fr\'\]/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
-
-# Grant necessary permissions to DNSCrypt Proxy
-sudo setcap "cap_net_bind_service=+ep" /usr/bin/dnscrypt-proxy
-sudo setcap "cap_net_bind_service=+ep" /usr/sbin/dnscrypt-proxy
+sudo sed -i "s/^listen_addresses = .*/listen_addresses = \[\]/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+sudo sed -i "s/^server_names = .*/server_names = \[\'scaleway-fr\', 'scaleway-fr-ipv6', 'yandex', 'yandex-ipv6'\]/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
 
 # Restart DNSCrypt Proxy
 sudo systemctl restart dnscrypt-proxy
@@ -60,7 +56,7 @@ sudo chattr -i /etc/resolv.conf
 sudo rm -rf /etc/resolv.conf
 
 # Rewrite the /etc/resolv.conf file and specify that we will use DNSCrypt Proxy in it
-echo -e "nameserver 127.0.0.1\nnameserver 77.88.8.8\nnameserver 77.88.8.1" | sudo tee /etc/resolv.conf
+echo -e "nameserver 127.0.2.1\nnameserver 77.88.8.8\nnameserver 77.88.8.1" | sudo tee /etc/resolv.conf
 
 # Make the file read-only so that the system cannot change it
 sudo chattr +i /etc/resolv.conf
@@ -344,10 +340,6 @@ sudo apt purge -y dnscrypt-proxy
 sudo dnf remove -y dnscrypt-proxy
 sudo yum remove -y dnscrypt-proxy
 sudo pacman -Rns --noconfirm dnscrypt-proxy
-
-# Remove permissions previously granted to DNSCrypt Proxy
-sudo setcap "cap_net_bind_service=-ep" /usr/bin/dnscrypt-proxy
-sudo setcap "cap_net_bind_service=-ep" /usr/sbin/dnscrypt-proxy
 
 # Unlock /etc/resolv.conf file if it is already locked
 sudo chattr -i /etc/resolv.conf
