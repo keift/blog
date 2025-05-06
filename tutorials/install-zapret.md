@@ -29,9 +29,30 @@ sudo pacman -S --noconfirm curl bind-tools unzip
 
 ## 3. Change DNS rules
 
-Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves. We are using Yandex DNS here.
+Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves. We are using DNS Crypt here.
 
 ```shell
+# Install DNSCrypt Proxy
+sudo apt purge -y dnscrypt-proxy
+sudo dnf remove -y dnscrypt-proxy
+sudo yum remove -y dnscrypt-proxy
+sudo pacman -Rns --noconfirm dnscrypt-proxy
+sudo apt install -y dnscrypt-proxy
+sudo dnf install -y dnscrypt-proxy
+sudo yum install -y dnscrypt-proxy
+sudo pacman -S --noconfirm dnscrypt-proxy
+
+# Configure DNSCrypt Proxy
+sudo sed -i "s/^listen_addresses = .*/listen_addresses = \['127.0.0.1:53'\]/" "/etc/dnscrypt-proxy/dnscrypt-proxy.toml"
+sudo sed -i "s/^server_names = .*/server_names = \[\'scaleway-fr\'\]/" "/etc/dnscrypt-proxy/dnscrypt-proxy.toml"
+
+# Grant necessary permissions to DNSCrypt Proxy
+sudo setcap "cap_net_bind_service=+ep" /usr/bin/dnscrypt-proxy
+sudo setcap "cap_net_bind_service=+ep" /usr/sbin/dnscrypt-proxy
+
+# Restart DNSCrypt Proxy
+sudo systemctl restart dnscrypt-proxy
+
 # Unlock /etc/resolv.conf file if it is already locked
 sudo chattr -i /etc/resolv.conf
 
@@ -39,7 +60,7 @@ sudo chattr -i /etc/resolv.conf
 sudo rm -rf /etc/resolv.conf
 
 # Rewrite the /etc/resolv.conf file and specify that we will use Yandex DNS in it
-echo -e "nameserver 77.88.8.8\nnameserver 77.88.8.1" | sudo tee /etc/resolv.conf
+echo -e "nameserver 127.0.0.1\nnameserver 77.88.8.8\nnameserver 77.88.8.1" | sudo tee /etc/resolv.conf
 
 # Make the file read-only so that the system cannot change it
 sudo chattr +i /etc/resolv.conf
@@ -314,6 +335,12 @@ sudo rm -rf /opt/zapret
 To remove DNS settings, you can do the following.
 
 ```shell
+# Uninstall DNSCrypt Proxy
+sudo apt purge -y dnscrypt-proxy
+sudo dnf remove -y dnscrypt-proxy
+sudo yum remove -y dnscrypt-proxy
+sudo pacman -Rns --noconfirm dnscrypt-proxy
+
 # Unlock /etc/resolv.conf file if it is already locked
 sudo chattr -i /etc/resolv.conf
 
