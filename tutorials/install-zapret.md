@@ -29,7 +29,7 @@ sudo pacman -S --noconfirm curl bind-tools unzip
 
 ## 3. Change DNS rules
 
-Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves. We are using DNS Crypt here.
+Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves. We are using DNSCrypt Proxy here.
 
 ```shell
 # Install DNSCrypt Proxy
