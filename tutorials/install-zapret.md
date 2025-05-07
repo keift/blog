@@ -52,7 +52,6 @@ idle_timeout: 10000
 
 listen_addresses:
   - 127.0.0.1@53
-  - "::1@53"
 
 upstream_recursive_servers:
   - address_data: 77.88.8.8
@@ -79,7 +78,13 @@ sudo chattr -i /etc/resolv.conf
 sudo rm -rf /etc/resolv.conf
 
 # Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
-echo -e "nameserver 127.0.0.1\nnameserver 77.88.8.8\nnameserver 77.88.8.1" | sudo tee /etc/resolv.conf
+sudo tee /etc/resolv.conf > /dev/null << EOF
+nameserver 127.0.0.1
+nameserver 77.88.8.8
+nameserver 77.88.8.1
+nameserver 2a02:6b8::feed:0ff
+nameserver 2a02:6b8:0:1::feed:0ff
+EOF
 
 # Make the file read-only so that the system cannot change it
 sudo chattr +i /etc/resolv.conf
