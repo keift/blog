@@ -62,8 +62,7 @@ upstream_recursive_servers:
     tls_auth_name: "cloudflare-dns.com"
 EOF
 
-# Enable and restart Stubby
-sudo systemctl enable stubby
+# Restart Stubby
 sudo systemctl restart stubby
 
 # Unlock /etc/resolv.conf file if it is already locked
@@ -352,11 +351,11 @@ sudo rm -rf /opt/zapret
 To remove DNS settings, you can do the following.
 
 ```shell
-# Uninstall DNSCrypt Proxy
-sudo apt purge -y dnscrypt-proxy
-sudo dnf remove -y dnscrypt-proxy
-sudo yum remove -y dnscrypt-proxy
-sudo pacman -Rns --noconfirm dnscrypt-proxy
+# Uninstall Stubby
+sudo apt purge -y stubby
+sudo dnf remove -y stubby
+sudo yum remove -y stubby
+sudo pacman -Rns --noconfirm stubby
 
 # Unlock /etc/resolv.conf file if it is already locked
 sudo chattr -i /etc/resolv.conf
