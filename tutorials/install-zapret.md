@@ -32,22 +32,39 @@ sudo pacman -S --noconfirm curl bind-tools unzip
 Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves. We are using DNSCrypt Proxy here.
 
 ```shell
-# Install DNSCrypt Proxy
-sudo apt purge -y dnscrypt-proxy
-sudo dnf remove -y dnscrypt-proxy
-sudo yum remove -y dnscrypt-proxy
-sudo pacman -Rns --noconfirm dnscrypt-proxy
-sudo apt install -y dnscrypt-proxy
-sudo dnf install -y dnscrypt-proxy
-sudo yum install -y dnscrypt-proxy
-sudo pacman -S --noconfirm dnscrypt-proxy
+# Install Stubby
+sudo apt install -y stubby
+sudo dnf install -y stubby
+sudo yum install -y stubby
+sudo pacman -S --noconfirm stubby
 
-# Configure DNSCrypt Proxy
-sudo sed -i "s/^listen_addresses = .*/listen_addresses = \['127.0.2.1:53'\]/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
-sudo sed -i "s/^[#[:space:]]*server_names = .*/server_names = ['scaleway-fr', 'scaleway-fr-ipv6', 'yandex', 'yandex-ipv6']/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+# Configure Stubby
+sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
+resolution_type: GETDNS_RESOLUTION_STUB
+dns_transport_list:
+  - GETDNS_TRANSPORT_TLS
 
-# Restart DNSCrypt Proxy
-sudo systemctl restart dnscrypt-proxy
+tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
+
+round_robin_upstreams: 1
+
+idle_timeout: 10000
+
+listen_addresses:
+  - 127.0.0.1@53
+
+upstream_recursive_servers:
+  - address_data: 1.1.1.1
+    tls_port: 853
+    tls_auth_name: "cloudflare-dns.com"
+  - address_data: 1.0.0.1
+    tls_port: 853
+    tls_auth_name: "cloudflare-dns.com"
+EOF
+
+# Enable and restart Stubby
+sudo systemctl enable stubby
+sudo systemctl restart stubby
 
 # Unlock /etc/resolv.conf file if it is already locked
 sudo chattr -i /etc/resolv.conf
@@ -55,8 +72,8 @@ sudo chattr -i /etc/resolv.conf
 # Delete the /etc/resolv.conf file as it may be set as a symlink
 sudo rm -rf /etc/resolv.conf
 
-# Rewrite the /etc/resolv.conf file and specify that we will use DNSCrypt Proxy in it
-echo -e "nameserver 127.0.2.1\nnameserver 77.88.8.8\nnameserver 77.88.8.1" | sudo tee /etc/resolv.conf
+# Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
+echo -e "nameserver 127.0.0.1\nnameserver 77.88.8.8\nnameserver 77.88.8.1" | sudo tee /etc/resolv.conf
 
 # Make the file read-only so that the system cannot change it
 sudo chattr +i /etc/resolv.conf
