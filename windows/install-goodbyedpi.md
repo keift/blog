@@ -8,7 +8,7 @@ Press **Win + R** and type `cmd`.
 
 ```shell
 # Go to the documents directory
-cd %userprofile%\Documents
+cd %userprofile%/Documents
 
 # Download the compiled zip file from GitHub
 curl -Lo goodbyedpi-v1.1.0.zip https://github.com/fir4tozden/goodbyedpi/archive/refs/tags/v1.1.0.zip
@@ -32,7 +32,7 @@ Once everything is complete, we can start installing GoodbyeDPI.
 
 ```shell
 # Enter the folder
-cd ./goodbyedpi-v1.1.0/goodbyedpi-v1.1.0
+cd ./goodbyedpi-v1.1.0/goodbyedpi-1.1.0
 
 # Run install.bat
 install.bat
