@@ -34,7 +34,7 @@ sudo dnf install -y stubby
 sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 
-# Configure Stubby configration
+# Configure Stubby
 sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
   resolution_type: GETDNS_RESOLUTION_STUB
   dns_transport_list:
