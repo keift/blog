@@ -57,16 +57,16 @@ listen_addresses:
 upstream_recursive_servers:
   - address_data: 77.88.8.8
     tls_port: 853
-    tls_auth_name: common.dot.dns.yandex.net
+    tls_auth_name: "common.dot.dns.yandex.net"
   - address_data: 77.88.8.1
     tls_port: 853
-    tls_auth_name: common.dot.dns.yandex.net
+    tls_auth_name: "common.dot.dns.yandex.net"
   - address_data: 2a02:6b8::feed:0ff
     tls_port: 853
-    tls_auth_name: common.dot.dns.yandex.net
+    tls_auth_name: "common.dot.dns.yandex.net"
   - address_data: 2a02:6b8:0:1::feed:0ff
     tls_port: 853
-    tls_auth_name: common.dot.dns.yandex.net
+    tls_auth_name: "common.dot.dns.yandex.net"
 EOF
 
 # Restart Stubby
