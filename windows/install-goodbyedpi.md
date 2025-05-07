@@ -11,7 +11,7 @@ Press **Win + R** and type `cmd`.
 cd %userprofile%/Documents
 
 # Download the compiled zip file from GitHub
-curl -Lo goodbyedpi-v1.1.0.zip https://github.com/fir4tozden/goodbyedpi/archive/refs/tags/v1.1.0.zip
+curl -Lo goodbyedpi-v1.1.zip https://github.com/fir4tozden/goodbyedpi/archive/refs/tags/v1.1.zip
 ```
 
 ## 3. Unzip the zip file
@@ -20,10 +20,10 @@ Extract the zip file and then delete it.
 
 ```shell
 # Unzip the zip file
-powershell -Command "Expand-Archive -Path './goodbyedpi-v1.1.0.zip' -DestinationPath './goodbyedpi-v1.1.0'"
+powershell -Command "Expand-Archive -Path './goodbyedpi-v1.1.zip' -DestinationPath './goodbyedpi-v1.1'"
 
 # Delete the zip file that we no longer need
-del goodbyedpi-v1.1.0.zip
+del goodbyedpi-v1.1.zip
 ```
 
 ## 4. Install GoodbyeDPI
@@ -32,7 +32,7 @@ Once everything is complete, we can start installing GoodbyeDPI.
 
 ```shell
 # Enter the folder
-cd ./goodbyedpi-v1.1.0/goodbyedpi-1.1.0
+cd ./goodbyedpi-v1.1/goodbyedpi-1.1
 
 # Run install.bat
 install.bat
@@ -46,7 +46,7 @@ If you ever regain your freedom, you can undo all of these actions in the follow
 
 ```shell
 # Go to the GoodbyeDPI directory
-cd %userprofile%/Documents/goodbyedpi-v1.1.0/goodbyedip-1.1.0
+cd %userprofile%/Documents/goodbyedpi-v1.1/goodbyedip-1.1
 
 # Run uninstall.bat
 uninstall.bat
