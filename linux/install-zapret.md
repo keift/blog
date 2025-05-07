@@ -1,7 +1,3 @@
-# Install Zapret
-
-Install Zapret to bypass DPI barriers
-
 ## 1. Keep Hosts content up to date
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
@@ -38,7 +34,7 @@ sudo dnf install -y stubby
 sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 
-# Configure Stubby
+# Configure Stubby configration
 sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
   resolution_type: GETDNS_RESOLUTION_STUB
   dns_transport_list:
@@ -68,7 +64,7 @@ sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
       tls_auth_name: "common.dot.dns.yandex.net"
 EOF
 
-# Restart Stubby
+# Restart the Stubby for everything to work properly
 sudo systemctl restart stubby
 
 # Unlock /etc/resolv.conf file if it is already locked
