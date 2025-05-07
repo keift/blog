@@ -40,32 +40,32 @@ sudo pacman -S --noconfirm stubby
 
 # Configure Stubby
 sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
-resolution_type: GETDNS_RESOLUTION_STUB
-dns_transport_list:
-  - GETDNS_TRANSPORT_TLS
+  resolution_type: GETDNS_RESOLUTION_STUB
+  dns_transport_list:
+    - GETDNS_TRANSPORT_TLS
 
-tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
+  tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
 
-round_robin_upstreams: 1
+  round_robin_upstreams: 1
 
-idle_timeout: 10000
+  idle_timeout: 10000
 
-listen_addresses:
-  - 127.0.0.1@53
+  listen_addresses:
+    - 127.0.0.1@53
 
-upstream_recursive_servers:
-  - address_data: 77.88.8.8
-    tls_port: 853
-    tls_auth_name: "common.dot.dns.yandex.net"
-  - address_data: 77.88.8.1
-    tls_port: 853
-    tls_auth_name: "common.dot.dns.yandex.net"
-  - address_data: 2a02:6b8::feed:0ff
-    tls_port: 853
-    tls_auth_name: "common.dot.dns.yandex.net"
-  - address_data: 2a02:6b8:0:1::feed:0ff
-    tls_port: 853
-    tls_auth_name: "common.dot.dns.yandex.net"
+  upstream_recursive_servers:
+    - address_data: 77.88.8.8
+      tls_port: 853
+      tls_auth_name: "common.dot.dns.yandex.net"
+    - address_data: 77.88.8.1
+      tls_port: 853
+      tls_auth_name: "common.dot.dns.yandex.net"
+    - address_data: 2a02:6b8::feed:0ff
+      tls_port: 853
+      tls_auth_name: "common.dot.dns.yandex.net"
+    - address_data: 2a02:6b8:0:1::feed:0ff
+      tls_port: 853
+      tls_auth_name: "common.dot.dns.yandex.net"
 EOF
 
 # Restart Stubby
@@ -79,11 +79,11 @@ sudo rm -rf /etc/resolv.conf
 
 # Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
 sudo tee /etc/resolv.conf > /dev/null << EOF
-nameserver 127.0.0.1
-nameserver 77.88.8.8
-nameserver 77.88.8.1
-nameserver 2a02:6b8::feed:0ff
-nameserver 2a02:6b8:0:1::feed:0ff
+  nameserver 127.0.0.1
+  nameserver 77.88.8.8
+  nameserver 77.88.8.1
+  nameserver 2a02:6b8::feed:0ff
+  nameserver 2a02:6b8:0:1::feed:0ff
 EOF
 
 # Make the file read-only so that the system cannot change it
