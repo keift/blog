@@ -4,7 +4,7 @@ Antivirus programs can corrupt GoodbyeDPI and make it unusable. If you have prev
 
 ## 2. Download GoodbyeDPI
 
-Press *Win + R* and type `cmd`.
+Press **Win + R** and type `cmd`.
 
 ```shell
 # Go to the documents directory
