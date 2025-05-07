@@ -43,7 +43,7 @@ sudo yum install -y dnscrypt-proxy
 sudo pacman -S --noconfirm dnscrypt-proxy
 
 # Configure DNSCrypt Proxy
-sudo sed -i "s/^listen_addresses = .*/listen_addresses = \[\]/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
+sudo sed -i "s/^listen_addresses = .*/listen_addresses = \['127.0.2.1:53'\]/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
 sudo sed -i "s/^[#[:space:]]*server_names = .*/server_names = ['scaleway-fr', 'scaleway-fr-ipv6', 'yandex', 'yandex-ipv6']/" /etc/dnscrypt-proxy/dnscrypt-proxy.toml
 
 # Restart DNSCrypt Proxy
