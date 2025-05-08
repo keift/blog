@@ -132,7 +132,7 @@ sudo rm -rf /opt/zapret
 ~/zapret-v70.5/install_bin.sh
 ```
 
-Questions that may arise at this time:
+In the meantime, here are the answers you should give to the questions you may encounter.
 
 ```shell
 # 1 - FIRST QUESTION
@@ -151,7 +151,7 @@ Find the DPI methods implemented by the ISP.
 ~/zapret-v70.5/blockcheck.sh
 ```
 
-Questions that may arise at this time:
+In the meantime, here are the answers you should give to the questions you may encounter.
 
 ```shell
 # 1 - FIRST QUESTION
@@ -223,7 +223,7 @@ Once everything is complete, we can start installing Zapret.
 ~/zapret-v70.5/install_easy.sh
 ```
 
-Questions that may arise at this time:
+In the meantime, here are the answers you should give to the questions you may encounter.
 
 ```shell
 # 1 - FIRST QUESTION
