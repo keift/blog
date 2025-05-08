@@ -46,7 +46,7 @@ If you ever regain your freedom, you can undo all of these actions in the follow
 
 ```shell
 # Go to the GoodbyeDPI directory
-cd %userprofile%/Documents/goodbyedpi-v1.1/goodbyedip-1.1
+cd %userprofile%/Documents/goodbyedpi-v1.1/goodbyedpi-1.1
 
 # Run uninstall.bat
 uninstall.bat
