@@ -353,7 +353,7 @@ sudo rm -rf /opt/zapret
 
 ## TIP: Remove DNS settings
 
-To remove DNS settings, you can do the following.
+If you want to remove the DNS settings, you can do the following.
 
 ```shell
 # Uninstall Stubby
