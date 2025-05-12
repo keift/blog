@@ -28,7 +28,7 @@ del goodbyedpi-v1.1.zip
 
 ## 4. Install GoodbyeDPI
 
-Once everything is complete, we can start installing GoodbyeDPI.
+We can start installing GoodbyeDPI.
 
 ```shell
 # Enter the folder

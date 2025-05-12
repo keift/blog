@@ -132,7 +132,7 @@ sudo rm -rf /opt/zapret
 ~/zapret-v70.6/install_bin.sh
 ```
 
-In the meantime, here are the answers you should give to the questions you may encounter.
+Here are the answers you need to give to the questions you may encounter during this time.
 
 ```shell
 # 1 - FIRST QUESTION
@@ -151,7 +151,7 @@ Find the DPI methods implemented by the ISP.
 ~/zapret-v70.6/blockcheck.sh
 ```
 
-In the meantime, here are the answers you should give to the questions you may encounter.
+Here are the answers you need to give to the questions you may encounter during this time.
 
 ```shell
 # 1 - FIRST QUESTION
@@ -216,14 +216,14 @@ This is an example settings for **NFQWS**. It may be different for each person. 
 
 ## 8. Install Zapret
 
-Once everything is complete, we can start installing Zapret.
+We can start installing Zapret.
 
 ```shell
 # Start the installation
 ~/zapret-v70.6/install_easy.sh
 ```
 
-In the meantime, here are the answers you should give to the questions you may encounter.
+Here are the answers you need to give to the questions you may encounter during this time.
 
 ```shell
 # 1 - FIRST QUESTION
@@ -290,7 +290,7 @@ NFQWS_OPT="--dpi-desync=fakeddisorder --dpi-desync-ttl=1 --dpi-desync-autottl=5 
 
 Then save with **CTRL + S** and close with **CTRL + X**.
 
-Let's continue with the questions:
+Let's continue with the questions.
 
 ```shell
 # 8 - EIGHTH QUESTION
@@ -343,8 +343,10 @@ rm -rf ~/zapret-v70.6
 If you ever regain your freedom, you can undo all of these actions in the following way.
 
 ```shell
-# Uninstall Zapret and delete unnecessary files
+# Uninstall Zapret
 /opt/zapret/uninstall_easy.sh
+
+# Delete unnecessary files
 sudo rm -rf ~/zapret-v70.6
 sudo rm -rf /opt/zapret
 ```
