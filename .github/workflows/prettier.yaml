@@ -20,7 +20,7 @@ jobs:
           registry-url: https://registry.npmjs.org
 
       - name: Install Prettier
-        run: bun add prettier -g
+        run: bun add -g prettier
 
       - name: Run Prettier
         run: prettier --write ./
