@@ -37,4 +37,3 @@ sudo tailscale up --advertise-exit-node=true
 ```
 
 Meanwhile, open the authorization link that appears and continue by selecting your own account or the network to which you were invited.
-
