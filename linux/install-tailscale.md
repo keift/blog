@@ -38,7 +38,7 @@ sudo tailscale up --exit-node= --advertise-exit-node=true
 
 Meanwhile, open the authorization link that appears and continue by selecting your own account or the network to which you were invited.
 
-Finally, open the menu of the machine labeled **"Exit Node"** from [Tailscale dashboard](https://login.tailscale.com/admin/machines) and select the **"Use as exit"** node option in **"Edit route settings..."**.
+Finally, open the menu of the machine labeled **"Exit Node"** from [Tailscale dashboard](https://login.tailscale.com/admin/machines) and select the **"Use as exit node"** option in **"Edit route settings..."**.
 
 ## 4. Connect to the exit node (Client)
 
