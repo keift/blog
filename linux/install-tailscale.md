@@ -16,6 +16,15 @@ Install Tailscale via shell script.
 curl -fsSL https://tailscale.com/install.sh | sh
 ```
 
+## 3. Login to the Tailscale
+
+You must be connected to the Tailscale network on both your server and your clients.
+
+```shell
+# Login to the Tailscale
+sudo tailscale login
+```
+
 ## 3. Advertise exit node
 
 Select a host machine as the exit node. This represents the device you will use as the VPN.
