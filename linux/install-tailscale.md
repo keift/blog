@@ -41,4 +41,3 @@ Meanwhile, open the authorization link that appears and continue by selecting yo
 Finally, open the menu of the machine labeled **"Exit Node"** from [Tailscale dashboard](https://login.tailscale.com/admin/machines) and select the **"Use as exit"** node option in **"Edit route settings..."**.
 
 ## 4. Connect to the exit node (Client)
-
