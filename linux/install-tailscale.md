@@ -51,6 +51,8 @@ sudo tailscale set --exit-node=100.100.10.10
 sudo tailscale up
 ```
 
+Meanwhile, open the authorization link that appears and continue by selecting your own account or the network to which you were invited.
+
 You can find out the exit node address via the [Tailscale dashboard](https://login.tailscale.com/admin/machines) or on the server with the following command.
 
 ```shell
