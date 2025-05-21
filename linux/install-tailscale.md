@@ -16,7 +16,7 @@ Install Tailscale via shell script.
 curl -fsSL https://tailscale.com/install.sh | sh
 ```
 
-## 3. Advertise exit node (Server)
+## 3. Advertise exit node
 
 Select a host machine as the exit node. This represents the device you will use as the VPN.
 
@@ -41,7 +41,7 @@ Meanwhile, open the authorization link that appears and continue by selecting yo
 
 Finally, open the menu of the machine labeled **"Exit Node"** from [Tailscale dashboard](https://login.tailscale.com/admin/machines) and select the **"Use as exit node"** option in **"Edit route settings..."**.
 
-## 4. Connect to the exit node (Client)
+## 4. Connect to the exit node
 
 You can successfully use your VPN service by connecting to the exit node from different devices.
 
@@ -79,7 +79,7 @@ sudo ethtool -K $NETDEV rx-udp-gro-forwarding off rx-gro-list on
 sudo rm -rf /etc/networkd-dispatcher/routable.d/50-tailscale
 ```
 
-## TIP: Stop being an exit node (Server)
+## TIP: Stop being an exit node
 
 You can stop being an exit node as follows.
 
@@ -89,7 +89,7 @@ sudo tailscale set --advertise-exit-node=false
 sudo tailscale up
 ```
 
-## TIP: Stop using exit node (Client)
+## TIP: Stop using exit node
 
 You can stop using the exit node as follows.
 
