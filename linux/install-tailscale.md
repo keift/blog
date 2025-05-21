@@ -29,4 +29,3 @@ sudo sysctl -p /etc/sysctl.d/99-tailscale.conf
 # Advertise as an exit node
 sudo tailscale up --advertise-exit-node=true
 ```
-

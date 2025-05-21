@@ -213,7 +213,6 @@ This is an example settings for **NFQWS**. It may be different for each person. 
 --dpi-desync=fakeddisorder --dpi-desync-ttl=1 --dpi-desync-autottl=5 --dpi-desync-split-pos=1
 ```
 
-
 ## 8. Install Zapret
 
 We can start installing Zapret.
