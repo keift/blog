@@ -138,8 +138,7 @@ sudo rm -rf /opt/zapret
 
 Here are the answers you need to give to the questions you may encounter during this time.
 
-```shell
-# 1 - FIRST QUESTION
+```
 select firewall type :
 1 : iptables
 2 : nftables
@@ -157,39 +156,32 @@ Find the DPI methods implemented by the ISP.
 
 Here are the answers you need to give to the questions you may encounter during this time.
 
-```shell
-# 1 - FIRST QUESTION
+```
 specify domain(s) to test. multiple domains are space separated.
 domain(s) (default: rutracker.org) : 🟥 [ENTER A WEBSITE DOMAIN NAME BLOCKED IN YOUR COUNTRY HERE - EXAMPLE: discord.com] 🟥
 ```
 
-```shell
-# 2 - SECOND QUESTION
+```
 ip protocol version(s) - 4, 6 or 46 for both (default: 4) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 3 - THIRD QUESTION
+```
 check http (default : Y) (Y/N) ? 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 4 - FOURTH QUESTION
+```
 check https tls 1.2 (default : Y) (Y/N) ? 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 5 - FIFTH QUESTION
+```
 check https tls 1.3 (default : N) (Y/N) ? 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 6 - SIXTH QUESTION
+```
 how many times to repeat each test (default: 1) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 7 - SEVENTH QUESTION
+```
 quick - scan as fast as possible to reveal any working strategy
 standard - do investigation what works on your DPI
 force - scan maximum despite of result
@@ -205,7 +197,7 @@ After the process is finished, the test results will appear.
 
 Copy the latest setting from these results. Example:
 
-```shell
+```
 ipv4 discord.com curl_test_https_tls12 : nfqws --dpi-desync=fakeddisorder --dpi-desync-ttl=1 --dpi-desync-autottl=5 --dpi-desync-split-pos=1
                                                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
                                                                                      MAKE A NOTE FOR IT
@@ -228,26 +220,22 @@ We can start installing Zapret.
 
 Here are the answers you need to give to the questions you may encounter during this time.
 
-```shell
-# 1 - FIRST QUESTION
+```
 do you want the installer to copy it for you (default : N) (Y/N) ? 🟥 [TYPE "Y"] 🟥
 ```
 
-```shell
-# 2 - SECOND QUESTION
+```
 select firewall type :
 1 : iptables
 2 : nftables
 your choice (default : nftables) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 3 - THIRD QUESTION
+```
 enable ipv6 support (default : N) (Y/N) ? 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 4 - FOURTH QUESTION
+```
 select flow offloading :
 1 : none
 2 : software
@@ -255,23 +243,19 @@ select flow offloading :
 your choice (default : none) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 5 - FIFTH QUESTION
+```
 enable tpws socks mode on port 987 ? (default : N) (Y/N) ? 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 6 - SIXTH QUESTION
+```
 enable tpws transparent mode ? (default : N) (Y/N) ? 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 7 - SEVENTH QUESTION
+```
 enable nfqws ? (default : N) (Y/N) ? 🟥 [TYPE "Y"] 🟥
 ```
 
-```shell
-# 8 - EIGHTH QUESTION
+```
 do you want to edit the options (default : N) (Y/N) ? 🟥 [TYPE "Y"] 🟥
 ```
 
@@ -295,13 +279,11 @@ Then save with **CTRL + S** and close with **CTRL + X**.
 
 Let's continue with the questions.
 
-```shell
-# 8 - EIGHTH QUESTION
+```
 do you want to edit the options (default : N) (Y/N) ? 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 9 - NINTH QUESTION
+```
 LAN interface :
 1 : NONE
 2 : docker0
@@ -310,8 +292,7 @@ LAN interface :
 your choice (default : NONE) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 10 - TENTH QUESTION
+```
 WAN interface :
 1 : ANY
 2 : docker0
@@ -320,8 +301,7 @@ WAN interface :
 your choice (default : ANY) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-```shell
-# 11 - ELEVENTH QUESTION
+```
 select filtering :
 1 : none
 2 : ipset
