@@ -86,3 +86,24 @@ sudo chattr +i /etc/resolv.conf
 # Restart NetworkManager for the changes to take effect
 sudo systemctl restart NetworkManager
 ```
+
+## TIP: Uninstall Stubby
+
+This is how you can uninstall Stubby.
+
+```shell
+# Uninstall Stubby
+sudo apt purge -y stubby
+sudo dnf remove -y stubby
+sudo yum remove -y stubby
+sudo pacman -Rns --noconfirm stubby
+
+# Unlock /etc/resolv.conf file if it is already locked
+sudo chattr -i /etc/resolv.conf
+
+# Delete /etc/resolv.conf file to reset it to default
+sudo rm -rf /etc/resolv.conf
+
+# Restart the system for everything to work properly
+sudo reboot
+```
