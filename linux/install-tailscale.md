@@ -74,7 +74,7 @@ sudo tailscale set --exit-node=100.100.10.10
 sudo tailscale up
 ```
 
-You can find out the exit node address via the [Tailscale dashboard](https://login.tailscale.com/admin/machines) or on the server with the following command.
+You can find the exit node address from the [Tailscale dashboard](https://login.tailscale.com/admin/machines) or on the server with the following command.
 
 ```shell
 # See Tailscale address
