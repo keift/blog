@@ -46,8 +46,6 @@ sudo tailscale set --advertise-exit-node=true
 sudo tailscale up
 ```
 
-Meanwhile, open the authorization link that appears and continue by selecting your own account or the network to which you were invited.
-
 Finally, open the menu of the machine labeled **"Exit Node"** from [Tailscale dashboard](https://login.tailscale.com/admin/machines) and select the **"Use as exit node"** option in **"Edit route settings..."**.
 
 ## 5. Connect to the exit node
@@ -59,8 +57,6 @@ You can successfully use your VPN service by connecting to the exit node from di
 sudo tailscale set --exit-node=100.100.10.10
 sudo tailscale up
 ```
-
-Meanwhile, open the authorization link that appears and continue by selecting your own account or the network to which you were invited.
 
 You can find out the exit node address via the [Tailscale dashboard](https://login.tailscale.com/admin/machines) or on the server with the following command.
 
