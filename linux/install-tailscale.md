@@ -25,10 +25,10 @@ sudo pacman -S --noconfirm curl
 
 ## 3. Install Tailscale
 
-Install Tailscale with script.
+Install Tailscale with shell script.
 
 ```shell
-# Pull and run the specified script
+# Pull and run the specified shell script
 curl -fsSL https://tailscale.com/install.sh | sh
 ```
 
