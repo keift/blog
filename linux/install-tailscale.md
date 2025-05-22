@@ -9,7 +9,7 @@ sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 
 ## 2. Install Tailscale
 
-Install Tailscale via shell script.
+Install Tailscale with script.
 
 ```shell
 # Pull and run the specified script
