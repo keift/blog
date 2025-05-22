@@ -34,6 +34,10 @@ sudo dnf install -y stubby
 sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 
+# Enable and start Stubby
+sudo systemctl enable stubby
+sudo systemctl start stubby
+
 # Configure Stubby
 sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
   resolution_type: GETDNS_RESOLUTION_STUB
