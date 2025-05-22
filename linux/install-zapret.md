@@ -261,7 +261,7 @@ do you want to edit the options (default : N) (Y/N) ? 🟥 [TYPE "Y"] 🟥
 
 Then we write the **NFQWS** settings that we just copied to `NFQWS_OPT`. Example:
 
-```shell
+```ini
 NFQWS_PORTS_TCP=80,443
 NFQWS_PORTS_UDP=443
 NFQWS_TCP_PKT_OUT=9
