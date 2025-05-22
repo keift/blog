@@ -23,7 +23,7 @@ sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 ```
 
-# 3. Continue with the installation
+## 3. Continue with the installation
 
 Set up and use Stubby.
 
