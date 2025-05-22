@@ -25,7 +25,7 @@ You must be connected to the Tailscale network on both your server and your clie
 sudo tailscale login
 ```
 
-## 3. Advertise exit node
+## 4. Advertise exit node
 
 Select a host machine as the exit node. This represents the device you will use as the VPN.
 
@@ -50,7 +50,7 @@ Meanwhile, open the authorization link that appears and continue by selecting yo
 
 Finally, open the menu of the machine labeled **"Exit Node"** from [Tailscale dashboard](https://login.tailscale.com/admin/machines) and select the **"Use as exit node"** option in **"Edit route settings..."**.
 
-## 4. Connect to the exit node
+## 5. Connect to the exit node
 
 You can successfully use your VPN service by connecting to the exit node from different devices.
 
