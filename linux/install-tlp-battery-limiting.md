@@ -25,7 +25,7 @@ sudo pacman -S --noconfirm tlp tlp-rdw
 
 ## 3. Continue with the installation
 
-Set up and use Stubby.
+Set up and use TLP.
 
 ```shell
 # Start TLP
