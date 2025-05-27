@@ -32,7 +32,7 @@ Allow Nginx to be accessed from outside in the firewall.
 sudo ufw allow "Nginx Full"
 ```
 
-# 4. Create a service
+## 4. Create a service
 
 Here we perform routing by creating a reverse proxy service.
 
