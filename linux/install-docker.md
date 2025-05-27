@@ -18,6 +18,8 @@ curl -fsSL https://get.docker.com | sh
 
 ## TIP: Uninstall Docker
 
+This is how you can uninstall Docker.
+
 ```shell
 # Uninstall Docker
 sudo apt purge -y docker docker-engine docker.io docker-ce docker-ce-cli
