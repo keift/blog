@@ -38,8 +38,6 @@ cd ./goodbyedpi-v1.1/goodbyedpi-1.1
 install.bat
 ```
 
-🎉 That's it! You have now overcome all access barriers. Long live freedom!
-
 ## TIP: Uninstall GoodbyeDPI
 
 If you ever regain your freedom, you can undo all of these actions in the following way.

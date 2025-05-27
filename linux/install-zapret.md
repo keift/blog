@@ -319,8 +319,6 @@ All done! We are done with this folder of Zapret anymore. We can delete it.
 rm -rf ~/zapret-v70.6
 ```
 
-🎉 That's it! You have now overcome all access barriers. Long live freedom!
-
 ## TIP: Uninstall Zapret
 
 If you ever regain your freedom, you can undo all of these actions in the following way.

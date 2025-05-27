@@ -81,8 +81,6 @@ You can find the exit node address from the [Tailscale dashboard](https://login.
 sudo tailscale ip
 ```
 
-🎉 That's it! You now have your very own VPN!
-
 ## TIP: Uninstall Tailscale
 
 This is how you can uninstall Tailscale.
