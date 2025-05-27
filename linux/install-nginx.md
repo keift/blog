@@ -41,7 +41,7 @@ Here we perform routing by creating a reverse proxy service.
 sudo tee /etc/nginx/sites-available/service-b.conf > /dev/null << EOF
   server {
     listen 80;
-    server_name api.keift.me;
+    server_name api.example.com;
 
     location / {
       proxy_pass http://127.0.0.1:3000;
