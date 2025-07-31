@@ -99,14 +99,14 @@ Download the compiled zip file as release on GitHub.
 
 ```shell
 # Delete if present
-rm -rf ~/zapret-v70.6.zip
-rm -rf ~/zapret-v70.6
+rm -rf ~/zapret-v71.2.zip
+rm -rf ~/zapret-v71.2
 
 # Go to the home directory
 cd ~/
 
 # Download the compiled zip file from GitHub
-wget https://github.com/bol-van/zapret/releases/download/v70.6/zapret-v70.6.zip
+wget https://github.com/bol-van/zapret/releases/download/v71.2/zapret-v71.2.zip
 ```
 
 ## 5. Unzip the zip file
@@ -115,10 +115,10 @@ Extract the zip file and then delete it.
 
 ```shell
 # Unzip the zip file
-unzip ~/zapret-v70.6.zip
+unzip ~/zapret-v71.2.zip
 
 # Delete the zip file that we no longer need
-rm -rf ~/zapret-v70.6.zip
+rm -rf ~/zapret-v71.2.zip
 ```
 
 ## 6. Prepare for installation
@@ -127,13 +127,13 @@ Install the requirements and prepare to perform a clean install.
 
 ```shell
 # For a clean installation, remove any installation files that may be present in case an installation has been made before
-~/zapret-v70.6/uninstall_easy.sh
+~/zapret-v71.2/uninstall_easy.sh
 /opt/zapret/uninstall_easy.sh
 sudo rm -rf /opt/zapret
 
 # Install requirements
-~/zapret-v70.6/install_prereq.sh
-~/zapret-v70.6/install_bin.sh
+~/zapret-v71.2/install_prereq.sh
+~/zapret-v71.2/install_bin.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -151,7 +151,7 @@ Find the DPI methods implemented by the ISP.
 
 ```shell
 # Run the test
-~/zapret-v70.6/blockcheck.sh
+~/zapret-v71.2/blockcheck.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -215,7 +215,7 @@ We can start installing Zapret.
 
 ```shell
 # Start the installation
-~/zapret-v70.6/install_easy.sh
+~/zapret-v71.2/install_easy.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -316,7 +316,7 @@ All done! We are done with this folder of Zapret anymore. We can delete it.
 
 ```shell
 # Delete the folder
-rm -rf ~/zapret-v70.6
+rm -rf ~/zapret-v71.2
 ```
 
 ## TIP: Uninstall Zapret
@@ -328,7 +328,7 @@ If you ever regain your freedom, you can undo all of these actions in the follow
 /opt/zapret/uninstall_easy.sh
 
 # Delete unnecessary files
-sudo rm -rf ~/zapret-v70.6
+sudo rm -rf ~/zapret-v71.2
 sudo rm -rf /opt/zapret
 ```
 
