@@ -23,7 +23,7 @@ sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 ```
 
-## 3. Complete the DNS setup
+## 3. Get started with DNS
 
 Set up and use Stubby. We are using Yandex DNS here.
 
@@ -87,38 +87,6 @@ sudo chattr +i /etc/resolv.conf
 sudo systemctl restart NetworkManager
 ```
 
-# Restart the Stubby for everything to work properly
-
-sudo systemctl restart stubby
-
-# Unlock /etc/resolv.conf file if it is already locked
-
-sudo chattr -i /etc/resolv.conf
-
-# Delete the /etc/resolv.conf file as it may be set as a symlink
-
-sudo rm -rf /etc/resolv.conf
-
-# Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
-
-sudo tee /etc/resolv.conf > /dev/null << EOF
-nameserver 127.0.0.1
-nameserver 1.1.1.1
-nameserver 1.0.0.1
-nameserver 2606:4700:4700::1111
-nameserver 2606:4700:4700::1001
-EOF
-
-# Make the file read-only so that the system cannot change it
-
-sudo chattr +i /etc/resolv.conf
-
-# Restart NetworkManager for the changes to take effect
-
-sudo systemctl restart NetworkManager
-
-````
-
 ## TIP: Uninstall Stubby
 
 This is how you can uninstall Stubby.
@@ -138,4 +106,4 @@ sudo rm -rf /etc/resolv.conf
 
 # Restart the system for everything to work properly
 sudo reboot
-````
+```
