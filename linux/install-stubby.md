@@ -23,7 +23,7 @@ sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 ```
 
-## 3. Get started with DNS
+## 3. Complete the DNS setup
 
 Set up and use Stubby. We are using Yandex DNS here.
 
@@ -86,45 +86,6 @@ sudo chattr +i /etc/resolv.conf
 # Restart NetworkManager for the changes to take effect
 sudo systemctl restart NetworkManager
 ```
-
-## ALTERNATIVE: Cloudflare DNS (1.1.1.1)
-
-Set up and use Stubby. We are using Cloudflare DNS here.
-
-```shell
-# Enable and start Stubby
-sudo systemctl enable stubby
-sudo systemctl start stubby
-
-# Configure Stubby
-sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
-  resolution_type: GETDNS_RESOLUTION_STUB
-  dns_transport_list:
-    - GETDNS_TRANSPORT_TLS
-
-  tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
-
-  round_robin_upstreams: 1
-
-  idle_timeout: 10000
-
-  listen_addresses:
-    - 127.0.0.1@53
-
-  upstream_recursive_servers:
-    - address_data: 1.1.1.1
-      tls_port: 853
-      tls_auth_name: "cloudflare-dns.com"
-    - address_data: 1.0.0.1
-      tls_port: 853
-      tls_auth_name: "cloudflare-dns.com"
-    - address_data: 2606:4700:4700::1111
-      tls_port: 853
-      tls_auth_name: "cloudflare-dns.com"
-    - address_data: 2606:4700:4700::1001
-      tls_port: 853
-      tls_auth_name: "cloudflare-dns.com"
-EOF
 
 # Restart the Stubby for everything to work properly
 sudo systemctl restart stubby
