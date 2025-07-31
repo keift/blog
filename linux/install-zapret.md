@@ -244,6 +244,15 @@ your choice (default : none) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
 ```
+select filtering :
+1 : none
+2 : ipset
+3 : hostlist
+4 : autohostlist
+your choice (default : none) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
+```
+
+```
 enable tpws socks mode on port 987 ? (default : N) (Y/N) ? 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
@@ -299,15 +308,6 @@ WAN interface :
 3 : lo
 4 : wlp0s20f3
 your choice (default : ANY) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
-```
-
-```
-select filtering :
-1 : none
-2 : ipset
-3 : hostlist
-4 : autohostlist
-your choice (default : none) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
 ## 9. Finish the installation
