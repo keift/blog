@@ -25,7 +25,7 @@ sudo pacman -S --noconfirm stubby
 
 ## 3. Continue with the installation
 
-Set up and use Stubby.
+Set up and use Stubby. We are using Yandex DNS here.
 
 ```shell
 # Enable and start Stubby
@@ -89,7 +89,7 @@ sudo systemctl restart NetworkManager
 
 ## ALTERNATIVE: Cloudflare DNS (1.1.1.1)
 
-Set up and use Stubby with Cloudflare DNS.
+Set up and use Stubby. We are using Cloudflare DNS here.
 
 ```shell
 # Enable and start Stubby
