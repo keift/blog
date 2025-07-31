@@ -13,14 +13,14 @@ Required tools for installation.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
-sudo apt install -y curl dnsutils unzip
+sudo apt install -y curl dnsutils unzip nftables
 
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
-sudo dnf install -y curl bind-utils unzip
-sudo yum install -y curl bind-utils unzip
+sudo dnf install -y curl bind-utils unzip nftables
+sudo yum install -y curl bind-utils unzip nftables
 
 # Arch, Manjaro (Pacman)
-sudo pacman -S --noconfirm curl bind-tools unzip
+sudo pacman -S --noconfirm curl bind-tools unzip nftables
 ```
 
 ## 3. Change DNS rules
