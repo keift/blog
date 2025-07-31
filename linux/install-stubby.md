@@ -23,7 +23,7 @@ sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 ```
 
-## 3. Get started with DNS
+## 3. Complete the DNS setup
 
 Set up and use Stubby. We are using Yandex DNS here.
 
