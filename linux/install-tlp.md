@@ -23,7 +23,7 @@ sudo yum install -y tlp tlp-rdw
 sudo pacman -S --noconfirm tlp tlp-rdw
 ```
 
-## 3. Continue with the installation
+## 3. Complete the TLP setup
 
 Set up and use TLP.
 
