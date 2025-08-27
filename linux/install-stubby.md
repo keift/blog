@@ -28,6 +28,10 @@ sudo pacman -S --noconfirm stubby
 Set up and use Stubby. We are using Yandex DNS here.
 
 ```shell
+# Enable and start Systemd-Resolved
+sudo systemctl enable systemd-resolved
+sudo systemctl start systemd-resolved
+
 # Enable and start Stubby
 sudo systemctl enable stubby
 sudo systemctl start stubby
@@ -65,11 +69,12 @@ EOF
 # Restart the Stubby for everything to work properly
 sudo systemctl restart stubby
 
-# Unlock /etc/resolv.conf file if it is already locked
-sudo chattr -i /etc/resolv.conf
-
-# Delete the /etc/resolv.conf file as it may be set as a symlink
-sudo rm -rf /etc/resolv.conf
+# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Stubby in it
+sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+  [Resolve]
+  DNS=127.0.0.1
+  DNSStubListener=no
+EOF
 
 # Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
 sudo tee /etc/resolv.conf > /dev/null << EOF
@@ -80,11 +85,8 @@ sudo tee /etc/resolv.conf > /dev/null << EOF
   nameserver 2a02:6b8:0:1::feed:0ff
 EOF
 
-# Make the file read-only so that the system cannot change it
-sudo chattr +i /etc/resolv.conf
-
-# Restart NetworkManager for the changes to take effect
-sudo systemctl restart NetworkManager
+# Restart Systemd-Resolved for the changes to take effect
+sudo systemctl restart systemd-resolved
 ```
 
 ## TIP: Uninstall Stubby
@@ -98,12 +100,10 @@ sudo dnf remove -y stubby
 sudo yum remove -y stubby
 sudo pacman -Rns --noconfirm stubby
 
-# Unlock /etc/resolv.conf file if it is already locked
-sudo chattr -i /etc/resolv.conf
+# Enable and start Systemd-Resolved
+sudo systemctl enable systemd-resolved
+sudo systemctl start systemd-resolved
 
-# Delete /etc/resolv.conf file to reset it to default
-sudo rm -rf /etc/resolv.conf
-
-# Restart the system for everything to work properly
-sudo reboot
+# Restart Systemd-Resolved for the changes to take effect
+sudo systemctl restart systemd-resolved
 ```
