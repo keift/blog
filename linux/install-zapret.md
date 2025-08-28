@@ -45,14 +45,12 @@ sudo systemctl start stubby
 # Configure Stubby
 sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
   resolution_type: GETDNS_RESOLUTION_STUB
+  tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
+  round_robin_upstreams: 1
+  idle_timeout: 10000
+
   dns_transport_list:
     - GETDNS_TRANSPORT_TLS
-
-  tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
-
-  round_robin_upstreams: 1
-
-  idle_timeout: 10000
 
   listen_addresses:
     - 127.0.0.1@53
@@ -348,6 +346,9 @@ sudo pacman -Rns --noconfirm stubby
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
+
+# Leave the Systemd-Resolved configuration blank
+sudo tee /etc/systemd/resolved.conf > /dev/null <<< ""
 
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
