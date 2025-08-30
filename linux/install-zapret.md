@@ -27,7 +27,7 @@ sudo pacman -S --noconfirm curl bind-tools unzip nftables
 
 Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves. We are using Stubby here.
 
-We've used Yandex DNS here with Russian users in mind. However, other provider alternatives are also available if you prefer:
+We've used Yandex DNS here with Russian users in mind. However, other provider alternatives are also available if you prefer.
 
 - [Cloudflare DNS](https://keift.gitbook.io/blog/linux/install-stubby#alternative-cloudflare-dns-recommended)
 - [Google DNS](https://keift.gitbook.io/blog/linux/install-stubby#alternative-google-dns)
