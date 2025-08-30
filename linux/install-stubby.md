@@ -233,7 +233,6 @@ EOF
 sudo systemctl restart systemd-resolved
 ```
 
-
 ## ALTERNATIVE: Quad9
 
 Set up and use Stubby. We are using Quad9 here.
@@ -303,7 +302,6 @@ EOF
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
 ```
-
 
 ## TIP: Uninstall Stubby
 
