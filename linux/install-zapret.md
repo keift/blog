@@ -29,10 +29,10 @@ Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We n
 
 We've used Yandex DNS here with Russian users in mind. However, other provider alternatives are also available if you prefer:
 
-- [Cloudflare DNS]
-- [Google DNS]
-- [Yandex DNS]
-- [Quad9]
+- [Cloudflare DNS](https://keift.gitbook.io/blog/linux/install-stubby#alternative-cloudflare-dns-recommended)
+- [Google DNS](https://keift.gitbook.io/blog/linux/install-stubby#alternative-google-dns)
+- [Yandex DNS](https://keift.gitbook.io/blog/linux/install-stubby#alternative-yandex-dns)
+- [Quad9](https://keift.gitbook.io/blog/linux/install-stubby#alternative-quad9)
 
 ```shell
 # Install Stubby
