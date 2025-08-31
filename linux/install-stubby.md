@@ -89,6 +89,9 @@ sudo tee /etc/resolv.conf > /dev/null << EOF
   nameserver 2606:4700:4700::1001
 EOF
 
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
 ```
@@ -158,6 +161,9 @@ sudo tee /etc/resolv.conf > /dev/null << EOF
   nameserver 2001:4860:4860::8888
   nameserver 2001:4860:4860::8844
 EOF
+
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
@@ -229,6 +235,9 @@ sudo tee /etc/resolv.conf > /dev/null << EOF
   nameserver 2a02:6b8:0:1::feed:0ff
 EOF
 
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
 ```
@@ -298,6 +307,9 @@ sudo tee /etc/resolv.conf > /dev/null << EOF
   nameserver 2620:fe::fe
   nameserver 2620:fe::9
 EOF
+
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
