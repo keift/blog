@@ -46,6 +46,9 @@ sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
   DNSOverTLS=yes
 EOF
 
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
 ```
@@ -66,6 +69,9 @@ sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
   DNSOverTLS=yes
 EOF
 
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
 ```
@@ -85,6 +91,9 @@ sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
   DNS=9.9.9.9 149.112.112.112 2620:fe::fe 2620:fe::9
   DNSOverTLS=yes
 EOF
+
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
