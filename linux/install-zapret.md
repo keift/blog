@@ -25,7 +25,7 @@ sudo pacman -S --noconfirm curl bind-tools unzip nftables
 
 ## 3. Change DNS rules
 
-Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves. We are using Stubby here.
+Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves.
 
 We've used Yandex DNS here with Russian users in mind. However, other provider alternatives are also available if you prefer.
 
