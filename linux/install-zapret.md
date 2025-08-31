@@ -296,12 +296,6 @@ sudo rm -rf /opt/zapret
 If you want to remove the DNS settings, you can do the following.
 
 ```shell
-# Uninstall Stubby
-sudo apt purge -y stubby
-sudo dnf remove -y stubby
-sudo yum remove -y stubby
-sudo pacman -Rns --noconfirm stubby
-
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
