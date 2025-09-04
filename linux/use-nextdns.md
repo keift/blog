@@ -12,7 +12,7 @@ sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 Using NextDNS in systemd distributions.
 
 ```shell
-# Environment variables
+# 🟥 Environment variables
 NEXTDNS_ID=aaaaaa
 DEVICE_NAME="HUAWEI MateBook D16"
 
@@ -39,7 +39,7 @@ sudo systemctl restart systemd-resolved
 Using NextDNS in non-systemd distributions.
 
 ```shell
-# Environment variables
+# 🟥 Environment variables
 NEXTDNS_ID=aaaaaa
 DEVICE_NAME="HUAWEI MateBook D16"
 
