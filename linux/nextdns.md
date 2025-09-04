@@ -110,6 +110,7 @@ sudo systemctl restart systemd-resolved
 ## TIP: Remove DNS settings
 
 If you want to remove the DNS settings, you can do the following.
+
 ```shell
 # Uninstall Stubby
 sudo apt purge -y stubby
