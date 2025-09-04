@@ -13,7 +13,7 @@ Using NextDNS in systemd distributions.
 
 ```shell
 # 🟥 Environment variables
-NEXTDNS_ID=aaaaaa
+NEXTDNS_ID="aaaaaa"
 DEVICE_NAME="HUAWEI MateBook D16"
 
 # Enable and start Systemd-Resolved
@@ -40,7 +40,7 @@ Using NextDNS in non-systemd distributions.
 
 ```shell
 # 🟥 Environment variables
-NEXTDNS_ID=aaaaaa
+NEXTDNS_ID="aaaaaa"
 DEVICE_NAME="HUAWEI MateBook D16"
 
 # Install Stubby
