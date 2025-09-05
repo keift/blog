@@ -9,7 +9,7 @@ sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 
 ## ALTERNATIVE: NextDNS with Systemd-Resolved (Recommended)
 
-Using NextDNS in systemd distributions.
+Using NextDNS in Systemd distributions.
 
 ```shell
 # 🟥 Environment variables
@@ -36,7 +36,7 @@ sudo systemctl restart systemd-resolved
 
 ## ALTERNATIVE: NextDNS with Stubby
 
-Using NextDNS in non-systemd distributions.
+Using NextDNS in non-Systemd distributions.
 
 ```shell
 # 🟥 Environment variables
