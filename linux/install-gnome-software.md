@@ -7,9 +7,9 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-## 2. Install required tools
+## 2. Install Gnome Software
 
-Required tools for installation.
+Gnome Software and Flatpak integration.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
