@@ -1,4 +1,6 @@
 ---
+title: "Install TLP"
+description: "Extend the life of your battery by limiting it."
 icon: battery-three-quarters
 ---
 

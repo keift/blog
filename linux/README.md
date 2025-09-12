@@ -2,5 +2,5 @@
 icon: linux
 ---
 
-# linux
+# Linux
 

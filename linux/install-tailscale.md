@@ -1,4 +1,6 @@
 ---
+title: "Install Tailscale"
+description: "Set up and use your own VPN server."
 icon: braille
 ---
 

@@ -1,4 +1,6 @@
 ---
+title: "Install Gnome Software"
+description: "Use your Flatpak with interface."
 icon: basket-shopping
 ---
 

@@ -2,7 +2,6 @@
 
 * [Welcome](README.md)
 * [linux](linux/README.md)
-  * [dot-with-systemd-resolved](linux/dot-with-systemd-resolved.md)
   * [install-dockerr](linux/install-docker.md)
   * [install-gnome-software](linux/install-gnome-software.md)
   * [install-nginx](linux/install-nginx.md)
@@ -10,6 +9,7 @@
   * [install-tailscale](linux/install-tailscale.md)
   * [install-tlp](linux/install-tlp.md)
   * [install-zapret](linux/install-zapret.md)
+  * [dot-with-systemd-resolved](linux/dot-with-systemd-resolved.md)
   * [use-nextdns](linux/use-nextdns.md)
 * [windows](windows/README.md)
   * [install-goodbyedpi](windows/install-goodbyedpi.md)

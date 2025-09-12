@@ -1,4 +1,6 @@
 ---
+title: "Install Docker"
+description: "Containerize your services."
 icon: docker
 ---
 

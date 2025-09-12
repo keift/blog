@@ -1,4 +1,6 @@
 ---
+title: "DoT with Systemd-Resolved"
+description: "Encrypt your DNS queries with Systemd-Resolved."
 icon: notebook
 ---
 

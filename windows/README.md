@@ -2,5 +2,5 @@
 icon: windows
 ---
 
-# windows
+# Windows
 

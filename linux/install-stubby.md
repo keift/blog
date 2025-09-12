@@ -1,4 +1,6 @@
 ---
+title: "Install Stubby"
+description: "Encrypt your DNS queries with Stubby."
 icon: notebook
 ---
 

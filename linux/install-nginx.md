@@ -1,4 +1,6 @@
 ---
+title: "Install Nginx"
+description: "Create reverse proxy services."
 icon: 'n'
 ---
 

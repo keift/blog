@@ -1,4 +1,6 @@
 ---
+title: "Install Zapret"
+description: "Install Zapret to bypass DPI barriers."
 icon: lock-keyhole-open
 ---
 
