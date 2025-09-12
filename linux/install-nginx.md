@@ -4,7 +4,7 @@ description: Create reverse proxy services.
 icon: n
 ---
 
-### 1. Update Hosts content
+## 1. Update Hosts content
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
 
@@ -13,7 +13,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-### 2. Install Nginx
+## 2. Install Nginx
 
 Nginx is a web server and reverse proxy service.
 
@@ -29,7 +29,7 @@ sudo yum install -y nginx
 sudo pacman -S --noconfirm nginx
 ```
 
-### 3. Specify permissions on the UFW side
+## 3. Specify permissions on the UFW side
 
 Allow Nginx to be accessed from outside in the firewall.
 
@@ -38,7 +38,7 @@ Allow Nginx to be accessed from outside in the firewall.
 sudo ufw allow "Nginx Full"
 ```
 
-### 4. Create a service
+## 4. Create a service
 
 Here we perform routing by creating a reverse proxy service.
 
@@ -72,7 +72,7 @@ sudo ln -s /etc/nginx/sites-available/*.conf /etc/nginx/sites-enabled
 sudo systemctl restart nginx
 ```
 
-### TIP: Uninstall Nginx
+## TIP: Uninstall Nginx
 
 This is how you can uninstall Nginx.
 

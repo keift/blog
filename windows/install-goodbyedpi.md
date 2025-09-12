@@ -4,11 +4,11 @@ description: Install GoodbyeDPI to bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 
-### 1. Uninstall all antivirus programs
+## 1. Uninstall all antivirus programs
 
 Antivirus programs can corrupt GoodbyeDPI and make it unusable. If you have previously downloaded GoodbyeDPI while your antivirus program was running, you will need to delete it and download it again.
 
-### 2. Download GoodbyeDPI
+## 2. Download GoodbyeDPI
 
 Press **Win + R** and type `cmd`.
 
@@ -20,7 +20,7 @@ cd %userprofile%/Documents
 curl -Lo goodbyedpi-v1.1.zip https://github.com/fir4tozden/goodbyedpi/archive/refs/tags/v1.1.zip
 ```
 
-### 3. Unzip the zip file
+## 3. Unzip the zip file
 
 Extract the zip file and then delete it.
 
@@ -32,7 +32,7 @@ powershell -Command "Expand-Archive -Path './goodbyedpi-v1.1.zip' -DestinationPa
 del goodbyedpi-v1.1.zip
 ```
 
-### 4. Install GoodbyeDPI
+## 4. Install GoodbyeDPI
 
 We can start installing GoodbyeDPI.
 
@@ -44,7 +44,7 @@ cd ./goodbyedpi-v1.1/goodbyedpi-1.1
 install.bat
 ```
 
-### TIP: Uninstall GoodbyeDPI
+## TIP: Uninstall GoodbyeDPI
 
 If you ever regain your freedom, you can undo all of these actions in the following way.
 

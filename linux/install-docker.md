@@ -4,7 +4,7 @@ description: Containerize your services.
 icon: docker
 ---
 
-### 1. Update Hosts content
+## 1. Update Hosts content
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
 
@@ -13,7 +13,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-### 2. Install Docker
+## 2. Install Docker
 
 Docker is a containerization service.
 
@@ -22,7 +22,7 @@ Docker is a containerization service.
 curl -fsSL https://get.docker.com | sh
 ```
 
-### TIP: Uninstall Docker
+## TIP: Uninstall Docker
 
 This is how you can uninstall Docker.
 

@@ -4,7 +4,7 @@ description: Use your Flatpak with interface.
 icon: basket-shopping
 ---
 
-### 1. Update Hosts content
+## 1. Update Hosts content
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
 
@@ -13,7 +13,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-### 2. Install Gnome Software
+## 2. Install Gnome Software
 
 Gnome Software and Flatpak integration.
 
@@ -29,7 +29,7 @@ sudo yum install -y flatpak gnome-software gnome-software-plugin-flatpak
 sudo pacman -S --noconfirm flatpak gnome-software gnome-software-packagekit-plugin
 ```
 
-### TIP: Uninstall Gnome Software
+## TIP: Uninstall Gnome Software
 
 This is how you can uninstall Gnome Software.
 

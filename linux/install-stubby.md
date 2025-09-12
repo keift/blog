@@ -4,7 +4,7 @@ description: Encrypt your DNS queries with Stubby.
 icon: notebook
 ---
 
-### 1. Update Hosts content
+## 1. Update Hosts content
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
 
@@ -13,7 +13,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-### 2. Install Stubby
+## 2. Install Stubby
 
 Stubby is a DNS-over-TLS service.
 
@@ -29,7 +29,7 @@ sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 ```
 
-### ALTERNATIVE: Cloudflare DNS (Recommended)
+## ALTERNATIVE: Cloudflare DNS (Recommended)
 
 Set up and use Stubby. We are using Cloudflare DNS here.
 
@@ -98,7 +98,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-### ALTERNATIVE: Google DNS
+## ALTERNATIVE: Google DNS
 
 Set up and use Stubby. We are using Google DNS here.
 
@@ -167,7 +167,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-### ALTERNATIVE: Yandex DNS
+## ALTERNATIVE: Yandex DNS
 
 Set up and use Stubby. We are using Yandex DNS here.
 
@@ -236,7 +236,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-### ALTERNATIVE: Quad9
+## ALTERNATIVE: Quad9
 
 Set up and use Stubby. We are using Quad9 here.
 
@@ -305,7 +305,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-### TIP: Uninstall Stubby
+## TIP: Uninstall Stubby
 
 This is how you can uninstall Stubby.
 
