@@ -1,4 +1,10 @@
-## 1. Update Hosts content
+---
+icon: battery-three-quarters
+---
+
+# install-tlp
+
+### 1. Update Hosts content
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
 
@@ -7,7 +13,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-## 2. Install TLP
+### 2. Install TLP
 
 TLP is a power management service.
 
@@ -23,7 +29,7 @@ sudo yum install -y tlp tlp-rdw
 sudo pacman -S --noconfirm tlp tlp-rdw
 ```
 
-## 3. Complete the TLP setup
+### 3. Complete the TLP setup
 
 Set up and use TLP.
 
@@ -39,7 +45,7 @@ sudo sed -i "/STOP_CHARGE_THRESH_BAT0/s/^#//" /etc/tlp.conf
 sudo systemctl restart tlp
 ```
 
-## TIP: Uninstall TLP
+### TIP: Uninstall TLP
 
 This is how you can uninstall TLP.
 

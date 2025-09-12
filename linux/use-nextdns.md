@@ -1,4 +1,10 @@
-## 1. Update Hosts content
+---
+icon: shield
+---
+
+# use-nextdns
+
+### 1. Update Hosts content
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
 
@@ -7,7 +13,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-## ALTERNATIVE: NextDNS with Systemd-Resolved (Recommended)
+### ALTERNATIVE: NextDNS with Systemd-Resolved (Recommended)
 
 Using NextDNS in Systemd distributions.
 
@@ -34,7 +40,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-## ALTERNATIVE: NextDNS with Stubby
+### ALTERNATIVE: NextDNS with Stubby
 
 Using NextDNS in non-Systemd distributions.
 
@@ -107,7 +113,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-## TIP: Remove DNS settings
+### TIP: Remove DNS settings
 
 If you want to remove the DNS settings, you can do the following.
 
