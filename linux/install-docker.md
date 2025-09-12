@@ -4,8 +4,6 @@ description: "Containerize your services."
 icon: docker
 ---
 
-# install-dockerr
-
 ### 1. Update Hosts content
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.

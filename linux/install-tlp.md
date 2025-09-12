@@ -4,8 +4,6 @@ description: "Extend the life of your battery by limiting it."
 icon: battery-three-quarters
 ---
 
-# install-tlp
-
 ### 1. Update Hosts content
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.

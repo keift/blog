@@ -1,6 +1,4 @@
 ---
+title: "Linux"
 icon: linux
 ---
-
-# Linux
-

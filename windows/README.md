@@ -1,6 +1,4 @@
 ---
+title: "Windows"
 icon: windows
 ---
-
-# Windows
-
