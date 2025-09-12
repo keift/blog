@@ -1,5 +1,5 @@
 - [Welcome](./README.md)
-- [Welcome 2](./welcome 2.md)
+- [Welcome 2](./welcome2.md)
 
 - [Linux](./linux/README.md)
   - [Install Zapret](./linux/install-zapret.md)
