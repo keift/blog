@@ -1,5 +1,5 @@
 ---
 title: "Windows"
-description: "pencereler"
+description: ""
 icon: windows
 ---

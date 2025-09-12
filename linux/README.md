@@ -1,5 +1,5 @@
 ---
 title: "Linux"
-description: "penguen"
+description: ""
 icon: linux
 ---
