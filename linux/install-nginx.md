@@ -73,10 +73,13 @@ This is how you can uninstall Nginx.
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
 sudo apt purge -y nginx
+sudo apt autoremove -y
 
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
 sudo dnf remove -y nginx
+sudo dnf autoremove -y
 sudo yum remove -y nginx
+sudo yum autoremove -y
 
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm nginx

@@ -21,12 +21,16 @@ curl -fsSL https://get.docker.com | sh
 This is how you can uninstall Docker.
 
 ```shell
-# Uninstall Docker
-sudo apt purge -y docker docker-engine docker.io docker-ce docker-ce-cli
-sudo dnf remove -y docker docker-ce docker-ce-cli containerd.io
-sudo yum remove -y docker docker-ce docker-ce-cli containerd.io
-sudo pacman -Rns --noconfirm docker
+# Debian, Ubuntu, Kali, Linux Mint (APT)
+sudo apt purge -y docker* containerd.io
+sudo apt autoremove -y
 
-# Remove leftovers
-sudo rm -rf /var/lib/docker /etc/docker /var/run/docker.sock
+# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
+sudo dnf remove -y docker* containerd.io
+sudo dnf autoremove -y
+sudo yum remove -y docker* containerd.io
+sudo yum autoremove -y
+
+# Arch, Manjaro (Pacman)
+sudo pacman -Rns --noconfirm docker* containerd.io
 ```

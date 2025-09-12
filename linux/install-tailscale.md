@@ -81,25 +81,6 @@ You can find the exit node address from the [Tailscale dashboard](https://login.
 sudo tailscale ip
 ```
 
-## TIP: Uninstall Tailscale
-
-This is how you can uninstall Tailscale.
-
-```shell
-# Uninstall Tailscale
-sudo apt purge -y tailscale
-sudo dnf remove -y tailscale
-sudo yum remove -y tailscale
-sudo pacman -Rns --noconfirm tailscale
-
-# Remove configs
-sudo rm -rf /etc/sysctl.d/99-tailscale.conf
-sudo sysctl --system
-NETDEV=$(ip -o route get 8.8.8.8 | cut -f 5 -d " ")
-sudo ethtool -K $NETDEV rx-udp-gro-forwarding off rx-gro-list on
-sudo rm -rf /etc/networkd-dispatcher/routable.d/50-tailscale
-```
-
 ## TIP: Stop being an exit node
 
 You can stop being an exit node as follows.
@@ -118,4 +99,26 @@ You can stop using the exit node as follows.
 # Stop using the exit node
 sudo tailscale set --exit-node=
 sudo tailscale up
+```
+
+## TIP: Uninstall Tailscale
+
+This is how you can uninstall Tailscale.
+
+```shell
+# Uninstall Tailscale
+sudo apt purge -y tailscale
+sudo apt autoremove -y
+sudo dnf remove -y tailscale
+sudo dnf autoremove -y
+sudo yum remove -y tailscale
+sudo yum autoremove -y
+sudo pacman -Rns --noconfirm tailscale
+
+# Remove configs
+sudo rm -rf /etc/sysctl.d/99-tailscale.conf
+sudo sysctl --system
+NETDEV=$(ip -o route get 8.8.8.8 | cut -f 5 -d " ")
+sudo ethtool -K $NETDEV rx-udp-gro-forwarding off rx-gro-list on
+sudo rm -rf /etc/networkd-dispatcher/routable.d/50-tailscale
 ```

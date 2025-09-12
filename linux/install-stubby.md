@@ -306,8 +306,11 @@ This is how you can uninstall Stubby.
 ```shell
 # Uninstall Stubby
 sudo apt purge -y stubby
+sudo apt autoremove -y
 sudo dnf remove -y stubby
+sudo dnf autoremove -y
 sudo yum remove -y stubby
+sudo yum autoremove -y
 sudo pacman -Rns --noconfirm stubby
 
 # Enable and start Systemd-Resolved

@@ -46,10 +46,13 @@ This is how you can uninstall TLP.
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
 sudo apt purge -y tlp tlp-rdw
+sudo apt autoremove -y
 
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
 sudo dnf remove -y tlp tlp-rdw
+sudo dnf autoremove -y
 sudo yum remove -y tlp tlp-rdw
+sudo yum autoremove -y
 
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm tlp tlp-rdw

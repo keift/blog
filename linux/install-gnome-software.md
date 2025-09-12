@@ -30,10 +30,13 @@ This is how you can uninstall Gnome Software.
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
 sudo apt purge -y flatpak gnome-software gnome-software-plugin-flatpak
+sudo apt autoremove -y
 
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
 sudo dnf remove -y flatpak gnome-software gnome-software-plugin-flatpak
+sudo dnf autoremove -y
 sudo yum remove -y flatpak gnome-software gnome-software-plugin-flatpak
+sudo yum autoremove -y
 
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm flatpak gnome-software gnome-software-packagekit-plugin
