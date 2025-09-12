@@ -1,7 +1,7 @@
 ---
 title: "Install Nginx"
 description: "Create reverse proxy services."
-icon: 'n'
+icon: "n"
 ---
 
 ### 1. Update Hosts content
