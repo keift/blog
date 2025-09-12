@@ -1,7 +1,8 @@
 ---
-title: "Welcome"
+title: "Welcomee"
 description: ""
 icon: ""
+slug: "merhaba"
 ---
 
 ## Contact us
