@@ -1,5 +1,3 @@
-# Table of contents
-
 - [Welcome](README.md)
 
 - [Linux](linux/README.md)
