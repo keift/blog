@@ -1,5 +1,5 @@
 ---
-icon: 'n'
+icon: "n"
 ---
 
 # install-nginx
