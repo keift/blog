@@ -1,8 +1,3 @@
----
-title: "Install Zapret"
-description: "Install Zapret to bypass DPI barriers."
-icon: "💡"
----
 
 ## 1. Update Hosts content
 

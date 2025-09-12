@@ -1,8 +1,3 @@
----
-title: "Install Docker"
-description: "Containerize your services."
-icon: "💡"
----
 
 ## 1. Update Hosts content
 

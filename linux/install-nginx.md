@@ -1,8 +1,3 @@
----
-title: "Install Nginx"
-description: "Create reverse proxy services."
-icon: "💡"
----
 
 ## 1. Update Hosts content
 

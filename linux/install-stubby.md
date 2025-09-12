@@ -1,8 +1,3 @@
----
-title: "Install Stubby"
-description: "Encrypt your DNS queries with Stubby."
-icon: "💡"
----
 
 ## 1. Update Hosts content
 

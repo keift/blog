@@ -1,8 +1,3 @@
----
-title: "Install GoodbyeDPI"
-description: "Install GoodbyeDPI to bypass DPI barriers."
-icon: ""
----
 
 ## 1. Uninstall all antivirus programs
 

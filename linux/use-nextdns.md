@@ -1,8 +1,3 @@
----
-title: "Use NextDNS"
-description: "Use your own DNS settings with NextDNS."
-icon: "💡"
----
 
 ## 1. Update Hosts content
 

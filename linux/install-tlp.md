@@ -1,8 +1,4 @@
----
-title: "Install TLP"
-description: "Extend the life of your battery by limiting it."
-icon: "💡"
----
+
 
 ## 1. Update Hosts content
 
