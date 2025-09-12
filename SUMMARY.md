@@ -2,7 +2,7 @@
 
 - [Linux](./linux/README.md)
   - [Install Zapret](./linux/install-zapret.md)
-  - [Install Stubby](./linux/install-stubby.md)
+  - [Install Stubbyy](./linux/install-stubby.md)
   - [Install Docker](./linux/install-docker.md)
   - [Install Nginx](./linux/install-nginx.md)
   - [Install Tailscale](./linux/install-tailscale.md)
