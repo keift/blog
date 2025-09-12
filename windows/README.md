@@ -1,4 +1,3 @@
 ---
-title: Windows
 icon: windows
 ---

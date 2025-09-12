@@ -1,5 +1,4 @@
 ---
-title: Welcome
 icon: hand-wave
 ---
 
