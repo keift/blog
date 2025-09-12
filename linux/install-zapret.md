@@ -4,7 +4,7 @@ description: Install Zapret to bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 
-### 1. Update Hosts content
+## 1. Update Hosts content
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
 
@@ -13,7 +13,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-### 2. Install required tools
+## 2. Install required tools
 
 Required tools for installation.
 
@@ -29,7 +29,7 @@ sudo yum install -y curl bind-utils unzip nftables
 sudo pacman -S --noconfirm curl bind-tools unzip nftables
 ```
 
-### 3. Change DNS rules
+## 3. Change DNS rules
 
 Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves.
 
@@ -61,7 +61,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-### 4. Download Zapret
+## 4. Download Zapret
 
 Download the compiled zip file as release on GitHub.
 
@@ -77,7 +77,7 @@ cd ~/
 wget https://github.com/bol-van/zapret/releases/download/v71.2/zapret-v71.2.zip
 ```
 
-### 5. Unzip the zip file
+## 5. Unzip the zip file
 
 Extract the zip file and then delete it.
 
@@ -89,7 +89,7 @@ unzip ~/zapret-v71.2.zip
 rm -rf ~/zapret-v71.2.zip
 ```
 
-### 6. Prepare for installation
+## 6. Prepare for installation
 
 Install the requirements and prepare to perform a clean install.
 
@@ -113,7 +113,7 @@ select firewall type :
 your choice (default : nftables) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-### 7. Do Blockcheck
+## 7. Do Blockcheck
 
 Find the DPI methods implemented by the ISP.
 
@@ -177,7 +177,7 @@ This is an example settings for **NFQWS**. It may be different for each person. 
 --dpi-desync=fakeddisorder --dpi-desync-ttl=1 --dpi-desync-autottl=-5 --dpi-desync-split-pos=1
 ```
 
-### 8. Install Zapret
+## 8. Install Zapret
 
 We can start installing Zapret.
 
@@ -278,7 +278,7 @@ WAN interface :
 your choice (default : ANY) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-### 9. Finish the installation
+## 9. Finish the installation
 
 All done! We are done with this folder of Zapret anymore. We can delete it.
 
@@ -287,7 +287,7 @@ All done! We are done with this folder of Zapret anymore. We can delete it.
 rm -rf ~/zapret-v71.2
 ```
 
-### TIP: Uninstall Zapret
+## TIP: Uninstall Zapret
 
 If you ever regain your freedom, you can undo all of these actions in the following way.
 
@@ -300,7 +300,7 @@ rm -rf ~/zapret-v71.2
 sudo rm -rf /opt/zapret
 ```
 
-### TIP: Remove DNS settings
+## TIP: Remove DNS settings
 
 If you want to remove the DNS settings, you can do the following.
 
