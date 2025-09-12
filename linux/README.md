@@ -1,5 +1,5 @@
 ---
 title: "Linux"
 description: ""
-icon: linux
+icon: "linux"
 ---
