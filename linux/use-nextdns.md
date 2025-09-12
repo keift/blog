@@ -1,6 +1,6 @@
 ---
-title: "Use NextDNS"
-description: "Use your own DNS settings with NextDNS."
+title: Use NextDNS
+description: Use your own DNS settings with NextDNS.
 icon: shield
 ---
 

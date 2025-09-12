@@ -1,6 +1,5 @@
-# Table of contents
+- [Welcome](README.md)
 
-- [Welcomee](README.md)
 - [Linux](linux/README.md)
   - [Install Zapret](linux/install-zapret.md)
   - [Install Stubby](linux/install-stubby.md)
@@ -11,5 +10,6 @@
   - [Install TLP](linux/install-tlp.md)
   - [DoT with Systemd-Resolved](linux/dot-with-systemd-resolved.md)
   - [Use NextDNS](linux/use-nextdns.md)
+
 - [Windows](windows/README.md)
   - [Install GoodbyeDPI](windows/install-goodbyedpi.md)

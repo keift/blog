@@ -1,6 +1,6 @@
 ---
-title: "Install GoodbyeDPI"
-description: "Install GoodbyeDPI to bypass DPI barriers."
+title: Install GoodbyeDPI
+description: Install GoodbyeDPI to bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 

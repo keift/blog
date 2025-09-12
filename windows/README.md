@@ -1,5 +1,4 @@
 ---
-title: "Windows"
-description: ""
+title: Windows
 icon: windows
 ---

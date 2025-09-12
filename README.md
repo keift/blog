@@ -1,9 +1,7 @@
 ---
 title: Welcome
-icon: hand-horns
+icon: hand-wave
 ---
-
-# Welcome
 
 ### Contact us
 
