@@ -1,4 +1,10 @@
-## 1. Update Hosts content
+---
+icon: notebook
+---
+
+# dot-with-systemd-resolved
+
+### 1. Update Hosts content
 
 If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
 
@@ -7,7 +13,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-## ALTERNATIVE: Cloudflare DNS (Recommended)
+### ALTERNATIVE: Cloudflare DNS (Recommended)
 
 We are using Cloudflare DNS here.
 
@@ -30,7 +36,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-## ALTERNATIVE: Google DNS
+### ALTERNATIVE: Google DNS
 
 We are using Google DNS here.
 
@@ -53,7 +59,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-## ALTERNATIVE: Yandex DNS
+### ALTERNATIVE: Yandex DNS
 
 We are using Yandex DNS here.
 
@@ -76,7 +82,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-## ALTERNATIVE: Quad9
+### ALTERNATIVE: Quad9
 
 We are using Quad9 here.
 
@@ -99,7 +105,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-## TIP: Remove DNS settings
+### TIP: Remove DNS settings
 
 If you want to remove the DNS settings, you can do the following.
 
