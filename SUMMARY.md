@@ -1,4 +1,4 @@
-- [Welcome](./welcome.md)
+- [Welcome](./README.md)
 
 - [Linux](./linux/README.md)
   - [Install Zapret](./linux/install-zapret.md)
