@@ -1,13 +1,14 @@
 ---
-title: "Welcome"
-description: ""
-icon: "hand-wave"
+title: Welcome
+icon: hand-horns
 ---
 
-## Contact us
+# Welcome
+
+### Contact us
 
 [Discord](https://discord.gg/keift) | [Telegram](https://t.me/keiftt)
 
-## Follow us
+### Follow us
 
 [GitHub](https://github.com/keift) | [Twitter](https://x.com/keiftttt)
