@@ -1,4 +1,3 @@
-
 ## 1. Uninstall all antivirus programs
 
 Antivirus programs can corrupt GoodbyeDPI and make it unusable. If you have previously downloaded GoodbyeDPI while your antivirus program was running, you will need to delete it and download it again.
