@@ -262,24 +262,22 @@ do you want to edit the options (default : N) (Y/N) ? 🟩 [LEAVE THIS QUESTION 
 ```
 LAN interface :
 1 : NONE
-2 : docker0
-3 : lo
-4 : wlp0s20f3
+2 : lo
+3 : wlp0s20f3
 your choice (default : NONE) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
 ```
 WAN interface :
 1 : ANY
-2 : docker0
-3 : lo
-4 : wlp0s20f3
+2 : lo
+3 : wlp0s20f3
 your choice (default : ANY) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
 ## 9. Finish the installation
 
-All done! We are done with this folder of Zapret anymore. We can delete it.
+All done! 🎉 We are done with this folder of Zapret anymore. We can delete it.
 
 ```shell
 # Delete the folder
