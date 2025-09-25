@@ -10,6 +10,7 @@
   - [Install TLP](./linux/install-tlp.md)
   - [DoT with Systemd-Resolved](./linux/dot-with-systemd-resolved.md)
   - [Use NextDNS](./linux/use-nextdns.md)
+  - [Systemd Service with Timer](./linux/systemd-service-with-timer.md)
 
 - [Windows](./windows/README.md)
   - [Install GoodbyeDPI](./windows/install-goodbyedpi.md)
