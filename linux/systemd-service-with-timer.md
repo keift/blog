@@ -80,8 +80,11 @@ This is how you can uninstall service.
 SERVICE_NAME="package-updater"
 
 # Delete script
-rm -rf /usr/local/bin/$SERVICE_NAME.sh
+sudo rm -rf /usr/local/bin/$SERVICE_NAME.sh
 
 # Delete service
-rm -rf /etc/systemd/system/$SERVICE_NAME.*
+sudo rm -rf /etc/systemd/system/$SERVICE_NAME.*
+
+# Restart Systemd daemon
+sudo systemctl daemon-reload
 ```
