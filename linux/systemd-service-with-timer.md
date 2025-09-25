@@ -26,9 +26,20 @@ sudo tee /usr/local/bin/$SERVICE_NAME.sh > /dev/null << EOF
 
   set -e
 
-  apt update -y
-  apt upgrade -y
-  apt autoremove -y
+  apt update -y || true
+  apt upgrade -y || true
+  apt autoremove -y || true
+
+  dnf check-update -y || true
+  dnf upgrade -y || true
+  dnf autoremove -y || true
+
+  yum check-update -y || true
+  yum update -y || true
+  yum autoremove -y || true
+
+  pacman -Syu --noconfirm || true
+  pacman -Rns --noconfirm $(pacman -Qdtq) || true
 EOF
 
 # Make the script executable
