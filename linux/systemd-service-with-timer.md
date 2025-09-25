@@ -26,6 +26,17 @@ sudo tee /usr/local/bin/$SERVICE_NAME.sh > /dev/null << EOF
 
   set -e
 
+  apt install -y coreutils util-linux
+  apt install -y --reinstall coreutils util-linux
+
+  dnf install -y coreutils util-linux
+  dnf reinstall -y coreutils util-linux
+
+  yum install -y coreutils util-linux
+  yum reinstall -y coreutils util-linux
+
+  pacman -S --noconfirm coreutils util-linux
+
   apt update -y || true
   apt upgrade -y || true
   apt autoremove -y || true
