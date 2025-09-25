@@ -26,6 +26,10 @@ sudo yum install -y nginx
 
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm nginx
+
+# Enable and start Nginx
+sudo systemctl enable nginx
+sudo systemctl start nginx
 ```
 
 ## 3. Specify permissions on the UFW side

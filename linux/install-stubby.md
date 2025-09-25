@@ -26,6 +26,10 @@ sudo yum install -y stubby
 
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm stubby
+
+# Enable and start Stubby
+sudo systemctl enable stubby
+sudo systemctl start stubby
 ```
 
 ## ALTERNATIVE: Cloudflare DNS (Recommended)

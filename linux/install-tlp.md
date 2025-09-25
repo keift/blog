@@ -26,6 +26,9 @@ sudo yum install -y tlp tlp-rdw
 
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm tlp tlp-rdw
+
+# Start TLP
+sudo tlp start
 ```
 
 ## 3. Complete the TLP setup
@@ -33,9 +36,6 @@ sudo pacman -S --noconfirm tlp tlp-rdw
 Set up and use TLP.
 
 ```shell
-# Start TLP
-sudo tlp start
-
 # Enable battery limiting in TLP config
 sudo sed -i "/START_CHARGE_THRESH_BAT0/s/^#//" /etc/tlp.conf
 sudo sed -i "/STOP_CHARGE_THRESH_BAT0/s/^#//" /etc/tlp.conf

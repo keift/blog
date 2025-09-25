@@ -19,6 +19,10 @@ Docker is a containerization service.
 ```shell
 # Pull and run the specified shell script
 curl -fsSL https://get.docker.com | sh
+
+# Enable and start Docker
+sudo systemctl enable docker
+sudo systemctl start docker
 ```
 
 ## TIP: Uninstall Docker

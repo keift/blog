@@ -35,6 +35,10 @@ Install Tailscale with shell script.
 ```shell
 # Pull and run the specified shell script
 curl -fsSL https://tailscale.com/install.sh | sh
+
+# Enable and start Tailscale
+sudo systemctl enable tailscale
+sudo systemctl start tailscale
 ```
 
 ## 4. Login to the Tailscale
