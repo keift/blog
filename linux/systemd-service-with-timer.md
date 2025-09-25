@@ -18,7 +18,7 @@ Let's start creating the Systemd service.
 
 ```shell
 # 🟥 Environment variables
-SERVICE_NAME="package-updater"
+SERVICE_NAME="neat-deps"
 
 # Create the script in the local binaries folder
 sudo tee /usr/local/bin/$SERVICE_NAME.sh > /dev/null << EOF
@@ -77,7 +77,7 @@ This is how you can uninstall service.
 
 ```shell
 # 🟥 Environment variables
-SERVICE_NAME="package-updater"
+SERVICE_NAME="neat-deps"
 
 # Delete script
 sudo rm -rf /usr/local/bin/$SERVICE_NAME.sh
