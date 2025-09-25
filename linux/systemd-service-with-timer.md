@@ -71,7 +71,7 @@ sudo systemctl enable $SERVICE_NAME.timer
 sudo systemctl start $SERVICE_NAME.timer
 ```
 
-## TIP: Uninstall Service
+## TIP: Uninstall service
 
 This is how you can uninstall service.
 
