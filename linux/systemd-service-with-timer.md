@@ -52,7 +52,6 @@ sudo tee /etc/systemd/system/$SERVICE_NAME.service > /dev/null << EOF
   ExecStart=/usr/local/bin/$SERVICE_NAME.sh
 EOF
 
-
 # Create the timer in the Systemd folder
 sudo tee /etc/systemd/system/$SERVICE_NAME.timer > /dev/null << EOF
   [Timer]
