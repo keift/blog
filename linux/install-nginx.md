@@ -49,8 +49,11 @@ sudo ufw allow "Nginx Full"
 Here we perform routing by creating a reverse proxy service.
 
 ```shell
+# 🟥 Environment variables
 # The name of the service will be service-b. '-b' represents 'backend'. You can use '-f' for your frontend server. It doesn't really matter, we just use it to separate the two servers
-sudo tee /etc/nginx/sites-available/service-b.conf > /dev/null << EOF
+SERVICE_NAME="service-b"
+
+sudo tee /etc/nginx/sites-available/$SERVICE_NAME.conf > /dev/null << EOF
 server {
   listen 80;
   server_name api.example.com;
