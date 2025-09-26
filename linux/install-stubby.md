@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
+sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
 ```
 
 ## 2. Install Stubby
@@ -23,6 +23,9 @@ sudo apt install -y stubby
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
 sudo dnf install -y stubby
 sudo yum install -y stubby
+
+# OpenSUSE (Zypper)
+sudo zypper -n install stubby
 
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm stubby
@@ -41,6 +44,7 @@ Set up and use Stubby. We are using Cloudflare DNS here.
 sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
+sudo zypper -n install stubby
 sudo pacman -S --noconfirm stubby
 
 # Enable and start Systemd-Resolved
@@ -110,6 +114,7 @@ Set up and use Stubby. We are using Google DNS here.
 sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
+sudo zypper -n install stubby
 sudo pacman -S --noconfirm stubby
 
 # Enable and start Systemd-Resolved
@@ -179,6 +184,7 @@ Set up and use Stubby. We are using Yandex DNS here.
 sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
+sudo zypper -n install stubby
 sudo pacman -S --noconfirm stubby
 
 # Enable and start Systemd-Resolved
@@ -248,6 +254,7 @@ Set up and use Stubby. We are using Quad9 here.
 sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
+sudo zypper -n install stubby
 sudo pacman -S --noconfirm stubby
 
 # Enable and start Systemd-Resolved
@@ -315,11 +322,9 @@ This is how you can uninstall Stubby.
 ```shell
 # Uninstall Stubby
 sudo apt purge -y stubby
-sudo apt autoremove -y
 sudo dnf remove -y stubby
-sudo dnf autoremove -y
 sudo yum remove -y stubby
-sudo yum autoremove -y
+sudo zypper -n remove -u stubby
 sudo pacman -Rns --noconfirm stubby
 
 # Enable and start Systemd-Resolved

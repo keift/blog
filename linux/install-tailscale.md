@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
+sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
 ```
 
 ## 2. Install required tools
@@ -23,6 +23,9 @@ sudo apt install -y curl
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
 sudo dnf install -y curl
 sudo yum install -y curl
+
+# OpenSUSE (Zypper)
+sudo zypper -n install curl
 
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm curl
@@ -117,11 +120,9 @@ This is how you can uninstall Tailscale.
 ```shell
 # Uninstall Tailscale
 sudo apt purge -y tailscale
-sudo apt autoremove -y
 sudo dnf remove -y tailscale
-sudo dnf autoremove -y
 sudo yum remove -y tailscale
-sudo yum autoremove -y
+sudo zypper -n remove -u tailscale
 sudo pacman -Rns --noconfirm tailscale
 
 # Remove configs

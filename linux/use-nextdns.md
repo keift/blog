@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
+sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
 ```
 
 ## ALTERNATIVE: NextDNS with Systemd-Resolved (Recommended)
@@ -52,6 +52,7 @@ DEVICE_NAME="HUAWEI MateBook D16"
 sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
+sudo zypper -n install stubby
 sudo pacman -S --noconfirm stubby
 
 # Enable and start Systemd-Resolved
@@ -119,11 +120,9 @@ If you want to remove the DNS settings, you can do the following.
 ```shell
 # Uninstall Stubby
 sudo apt purge -y stubby
-sudo apt autoremove -y
 sudo dnf remove -y stubby
-sudo dnf autoremove -y
 sudo yum remove -y stubby
-sudo yum autoremove -y
+sudo zypper -n remove -u stubby
 sudo pacman -Rns --noconfirm stubby
 
 # Enable and start Systemd-Resolved

@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
+sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
 ```
 
 ## 2. Install required tools
@@ -23,6 +23,9 @@ sudo apt install -y curl dnsutils unzip nftables
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
 sudo dnf install -y curl bind-utils unzip nftables
 sudo yum install -y curl bind-utils unzip nftables
+
+# OpenSUSE (Zypper)
+sudo zypper -n install curl bind-utils unzip nftables
 
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm curl bind-tools unzip nftables

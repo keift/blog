@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
+sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
 ```
 
 ## 2. Install Nginx
@@ -23,6 +23,9 @@ sudo apt install -y nginx
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
 sudo dnf install -y nginx
 sudo yum install -y nginx
+
+# OpenSUSE (Zypper)
+sudo zypper -n install nginx
 
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm nginx
@@ -82,13 +85,13 @@ This is how you can uninstall Nginx.
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
 sudo apt purge -y nginx
-sudo apt autoremove -y
 
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
 sudo dnf remove -y nginx
-sudo dnf autoremove -y
 sudo yum remove -y nginx
-sudo yum autoremove -y
+
+# OpenSUSE (Zypper)
+sudo zypper -n remove -u nginx
 
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm nginx

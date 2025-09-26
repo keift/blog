@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
+sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
 ```
 
 ## 2. Install TLP
@@ -23,6 +23,9 @@ sudo apt install -y tlp tlp-rdw
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
 sudo dnf install -y tlp tlp-rdw
 sudo yum install -y tlp tlp-rdw
+
+# OpenSUSE (Zypper)
+sudo zypper -n install tlp tlp-rdw
 
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm tlp tlp-rdw
@@ -51,13 +54,13 @@ This is how you can uninstall TLP.
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
 sudo apt purge -y tlp tlp-rdw
-sudo apt autoremove -y
 
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
 sudo dnf remove -y tlp tlp-rdw
-sudo dnf autoremove -y
 sudo yum remove -y tlp tlp-rdw
-sudo yum autoremove -y
+
+# OpenSUSE (Zypper)
+sudo zypper -n remove -u tlp tlp-rdw
 
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm tlp tlp-rdw
