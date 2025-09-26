@@ -12,87 +12,18 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "s/^\(127\.0\.1\.1\s\+\)\S\+/\1$(hostname)/" /etc/hosts
 ```
 
-## 2. Create a service
+## 2. Install Neatd
 
 Let's start creating the Systemd service.
 
 ```shell
-# 🟥 Environment variables
-SERVICE_NAME="neat-deps"
-
-# Create the script in the local binaries folder
-sudo tee /usr/local/bin/$SERVICE_NAME.sh > /dev/null << EOF
-  #!/bin/bash
-
-  apt install -y coreutils util-linux
-  apt install -y --reinstall coreutils util-linux
-
-  dnf install -y coreutils util-linux
-  dnf reinstall -y coreutils util-linux
-
-  yum install -y coreutils util-linux
-  yum reinstall -y coreutils util-linux
-
-  pacman -S --noconfirm coreutils util-linux
-
-  apt update -y
-  apt upgrade -y
-  apt autoremove -y
-
-  dnf check-update -y
-  dnf upgrade -y
-  dnf autoremove -y
-
-  yum check-update -y
-  yum update -y
-  yum autoremove -y
-
-  pacman -Syu --noconfirm
-  pacman -Rns --noconfirm $(pacman -Qdtq)
-EOF
-
-# Make the script executable
-sudo chmod +x /usr/local/bin/$SERVICE_NAME.sh
-
-# Create the service in the Systemd folder
-sudo tee /etc/systemd/system/$SERVICE_NAME.service > /dev/null << EOF
-  [Service]
-  Type=oneshot
-  ExecStart=/usr/local/bin/$SERVICE_NAME.sh
-EOF
-
-# Create the timer in the Systemd folder
-sudo tee /etc/systemd/system/$SERVICE_NAME.timer > /dev/null << EOF
-  [Timer]
-  OnCalendar=daily
-  Persistent=true
-
-  [Install]
-  WantedBy=timers.target
-EOF
-
-# Restart Systemd daemon
-sudo systemctl daemon-reload
-
-# Enable and start Timer
-sudo systemctl enable $SERVICE_NAME.timer
-sudo systemctl start $SERVICE_NAME.timer
+curl -fsSL https://raw.githubusercontent.com/keift/neatd/refs/heads/main/install.sh | sh
 ```
 
-## TIP: Uninstall service
+## TIP: Uninstall Neatd
 
 This is how you can uninstall service.
 
 ```shell
-# 🟥 Environment variables
-SERVICE_NAME="neat-deps"
-
-# Delete script
-sudo rm -rf /usr/local/bin/$SERVICE_NAME.sh
-
-# Delete service
-sudo rm -rf /etc/systemd/system/$SERVICE_NAME.*
-
-# Restart Systemd daemon
-sudo systemctl daemon-reload
+curl -fsSL https://raw.githubusercontent.com/keift/neatd/refs/heads/main/uninstall.sh | sh
 ```
