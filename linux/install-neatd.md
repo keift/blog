@@ -15,7 +15,7 @@ Neatd executes appropriate commands for your system at regular intervals.
 
 ## Install Neatd
 
-Let's start creating the Systemd service.
+Let's get started setting up Neatd.
 
 ```shell
 curl -fsSL https://raw.githubusercontent.com/keift/neatd/refs/heads/main/install.sh | sh
@@ -23,7 +23,7 @@ curl -fsSL https://raw.githubusercontent.com/keift/neatd/refs/heads/main/install
 
 ## Uninstall Neatd
 
-This is how you can uninstall service.
+This is how you can uninstall Neatd.
 
 ```shell
 curl -fsSL https://raw.githubusercontent.com/keift/neatd/refs/heads/main/uninstall.sh | sh
