@@ -24,8 +24,6 @@ SERVICE_NAME="neat-deps"
 sudo tee /usr/local/bin/$SERVICE_NAME.sh > /dev/null << EOF
   #!/bin/bash
 
-  set -e
-
   apt install -y coreutils util-linux
   apt install -y --reinstall coreutils util-linux
 
@@ -37,20 +35,20 @@ sudo tee /usr/local/bin/$SERVICE_NAME.sh > /dev/null << EOF
 
   pacman -S --noconfirm coreutils util-linux
 
-  apt update -y || true
-  apt upgrade -y || true
-  apt autoremove -y || true
+  apt update -y
+  apt upgrade -y
+  apt autoremove -y
 
-  dnf check-update -y || true
-  dnf upgrade -y || true
-  dnf autoremove -y || true
+  dnf check-update -y
+  dnf upgrade -y
+  dnf autoremove -y
 
-  yum check-update -y || true
-  yum update -y || true
-  yum autoremove -y || true
+  yum check-update -y
+  yum update -y
+  yum autoremove -y
 
-  pacman -Syu --noconfirm || true
-  pacman -Rns --noconfirm $(pacman -Qdtq) || true
+  pacman -Syu --noconfirm
+  pacman -Rns --noconfirm $(pacman -Qdtq)
 EOF
 
 # Make the script executable
