@@ -1,5 +1,5 @@
 ---
-description: Run the steps that best suit your Linux at regular intervals. intervals.
+description: Run the steps that best suit your Linux at regular intervals.
 icon: timer
 ---
 
