@@ -13,6 +13,7 @@ Neatd executes appropriate commands for your system at regular intervals.
 - Cleans up unused dependencies
 - Checks the FSTrim service, which performs regular maintenance of your SSD/HDD
 - Checks the Logrotate service, which manages log cleaning
+- Checks the TMPFiles-Clean service, which manages temp files cleaning
 
 ## Installation
 
