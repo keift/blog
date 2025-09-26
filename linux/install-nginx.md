@@ -52,14 +52,17 @@ Here we perform routing by creating a reverse proxy service.
 # 🟥 Environment variables
 # The name of the service will be service-b. '-b' represents 'backend'. You can use '-f' for your frontend server. It doesn't really matter, we just use it to separate the two servers
 SERVICE_NAME="service-b"
+SERVER_NAME="api.example.com"
+LISTEN_PORT="80"
+UPSTREAM_PORT="3000"
 
 sudo tee /etc/nginx/sites-available/$SERVICE_NAME.conf > /dev/null << EOF
 server {
-  listen 80;
-  server_name api.example.com;
+  server_name $SERVER_NAME;
+  listen $LISTEN_PORT;
 
   location / {
-    proxy_pass http://127.0.0.1:3000;
+    proxy_pass http://127.0.0.1:$UPSTREAM_PORT;
     proxy_http_version 1.1;
 
     proxy_set_header Upgrade \$http_upgrade;
