@@ -23,9 +23,9 @@ sudo systemctl start systemd-resolved
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Cloudflare DNS in it
 sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
-  [Resolve]
-  DNS=1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
-  DNSOverTLS=yes
+[Resolve]
+DNS=1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
+DNSOverTLS=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
@@ -46,9 +46,9 @@ sudo systemctl start systemd-resolved
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Google DNS in it
 sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
-  [Resolve]
-  DNS=8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
-  DNSOverTLS=yes
+[Resolve]
+DNS=8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
+DNSOverTLS=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
@@ -69,9 +69,9 @@ sudo systemctl start systemd-resolved
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Yandex DNS in it
 sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
-  [Resolve]
-  DNS=77.88.8.8 77.88.8.1 2a02:6b8::feed:0ff 2a02:6b8:0:1::feed:0ff
-  DNSOverTLS=yes
+[Resolve]
+DNS=77.88.8.8 77.88.8.1 2a02:6b8::feed:0ff 2a02:6b8:0:1::feed:0ff
+DNSOverTLS=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
@@ -92,9 +92,9 @@ sudo systemctl start systemd-resolved
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Quad9 in it
 sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
-  [Resolve]
-  DNS=9.9.9.9 149.112.112.112 2620:fe::fe 2620:fe::9
-  DNSOverTLS=yes
+[Resolve]
+DNS=9.9.9.9 149.112.112.112 2620:fe::fe 2620:fe::9
+DNSOverTLS=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file

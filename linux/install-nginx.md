@@ -51,23 +51,23 @@ Here we perform routing by creating a reverse proxy service.
 ```shell
 # The name of the service will be service-b. '-b' represents 'backend'. You can use '-f' for your frontend server. It doesn't really matter, we just use it to separate the two servers
 sudo tee /etc/nginx/sites-available/service-b.conf > /dev/null << EOF
-  server {
-    listen 80;
-    server_name api.example.com;
+server {
+  listen 80;
+  server_name api.example.com;
 
-    location / {
-      proxy_pass http://127.0.0.1:3000;
-      proxy_http_version 1.1;
+  location / {
+    proxy_pass http://127.0.0.1:3000;
+    proxy_http_version 1.1;
 
-      proxy_set_header Upgrade \$http_upgrade;
-      proxy_set_header Connection "upgrade";
+    proxy_set_header Upgrade \$http_upgrade;
+    proxy_set_header Connection "upgrade";
 
-      proxy_set_header Host \$host;
-      proxy_set_header X-Real-IP \$remote_addr;
-      proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
-      proxy_set_header X-Forwarded-Proto \$scheme;
-    }
+    proxy_set_header Host \$host;
+    proxy_set_header X-Real-IP \$remote_addr;
+    proxy_set_header X-Forwarded-For \$proxy_add_x_forwarded_for;
+    proxy_set_header X-Forwarded-Proto \$scheme;
   }
+}
 EOF
 
 # Move to enable all services
