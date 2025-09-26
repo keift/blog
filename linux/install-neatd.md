@@ -13,7 +13,7 @@ Neatd executes appropriate commands for your system at regular intervals.
 - Cleans up unused dependencies
 - Checks the FSTrim service, which performs regular maintenance of your SSD/HDD
 
-## Install Neatd
+## Installation
 
 Let's get started setting up Neatd.
 
@@ -21,7 +21,7 @@ Let's get started setting up Neatd.
 curl -fsSL https://raw.githubusercontent.com/keift/neatd/refs/heads/main/install.sh | sh
 ```
 
-## Uninstall Neatd
+## Uninstall
 
 This is how you can uninstall Neatd.
 
