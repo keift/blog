@@ -8,8 +8,8 @@
   - [Install Tailscale](./linux/install-tailscale.md)
   - [Install Gnome Software](./linux/install-gnome-software.md)
   - [Install TLP](./linux/install-tlp.md)
+  - [Install Neatd](./linux/install-neatd.md)
   - [DoT with Systemd-Resolved](./linux/dot-with-systemd-resolved.md)
-  - [Systemd Service with Timer](./linux/systemd-service-with-timer.md)
   - [Use NextDNS](./linux/use-nextdns.md)
 
 - [Windows](./windows/README.md)
