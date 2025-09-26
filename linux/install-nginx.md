@@ -75,7 +75,7 @@ EOF
 
 # Move to enable all services
 sudo rm -rf /etc/nginx/sites-enabled/*.conf
-sudo ln -s /etc/nginx/sites-available/*.conf /etc/nginx/sites-enabled
+sudo ln -sf /etc/nginx/sites-available/*.conf /etc/nginx/sites-enabled
 
 # Restart the Nginx for everything to work properly
 sudo systemctl restart nginx
