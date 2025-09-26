@@ -18,7 +18,7 @@ Neatd executes appropriate commands for your system at regular intervals.
 Let's get started setting up Neatd.
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/keift/neatd/refs/heads/main/install.sh | sh
+curl -fsSL https://is.gd/9UUvx8 | sh
 ```
 
 ## Uninstall
@@ -26,5 +26,5 @@ curl -fsSL https://raw.githubusercontent.com/keift/neatd/refs/heads/main/install
 This is how you can uninstall Neatd.
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/keift/neatd/refs/heads/main/uninstall.sh | sh
+curl -fsSL https://is.gd/IirmOO | sh
 ```
