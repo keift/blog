@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
+sudo sed -i '/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/' /etc/hosts
 ```
 
 ## 2. Install TLP
@@ -40,8 +40,8 @@ Set up and use TLP.
 
 ```shell
 # Enable battery limiting in TLP config
-sudo sed -i "/START_CHARGE_THRESH_BAT0/s/^#//" /etc/tlp.conf
-sudo sed -i "/STOP_CHARGE_THRESH_BAT0/s/^#//" /etc/tlp.conf
+sudo sed -i '/START_CHARGE_THRESH_BAT0/s/^#//' /etc/tlp.conf
+sudo sed -i '/STOP_CHARGE_THRESH_BAT0/s/^#//' /etc/tlp.conf
 
 # Restart TLP for the changes to take effect
 sudo systemctl restart tlp

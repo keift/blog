@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
+sudo sed -i '/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/' /etc/hosts
 ```
 
 ## 2. Install required tools
@@ -59,14 +59,14 @@ Select a host machine as the exit node. This represents the device you will use 
 
 ```shell
 # Enable IP forwarding
-echo "net.ipv4.ip_forward = 1" | sudo tee -a /etc/sysctl.d/99-tailscale.conf
-echo "net.ipv6.conf.all.forwarding = 1" | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+echo 'net.ipv4.ip_forward = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
+echo 'net.ipv6.conf.all.forwarding = 1' | sudo tee -a /etc/sysctl.d/99-tailscale.conf
 sudo sysctl -p /etc/sysctl.d/99-tailscale.conf
 
 # Increase UDP compatibility
-NETDEV=$(ip -o route get 8.8.8.8 | cut -f 5 -d " ")
+NETDEV=$(ip -o route get 8.8.8.8 | cut -f 5 -d ' ')
 sudo ethtool -K $NETDEV rx-udp-gro-forwarding on rx-gro-list off
-printf "#!/bin/sh\n\nethtool -K %s rx-udp-gro-forwarding on rx-gro-list off \n" "$(ip -o route get 8.8.8.8 | cut -f 5 -d " ")" | sudo tee /etc/networkd-dispatcher/routable.d/50-tailscale
+printf '#!/bin/sh\n\nethtool -K %s rx-udp-gro-forwarding on rx-gro-list off \n' '$(ip -o route get 8.8.8.8 | cut -f 5 -d ' ')' | sudo tee /etc/networkd-dispatcher/routable.d/50-tailscale
 sudo chmod 755 /etc/networkd-dispatcher/routable.d/50-tailscale
 
 # Advertise as an exit node
@@ -74,7 +74,7 @@ sudo tailscale set --advertise-exit-node=true
 sudo tailscale up
 ```
 
-Finally, open the menu of the machine labeled **"Exit Node"** from [Tailscale dashboard](https://login.tailscale.com/admin/machines) and select the **"Use as exit node"** option in **"Edit route settings..."**.
+Finally, open the menu of the machine labeled **'Exit Node'** from [Tailscale dashboard](https://login.tailscale.com/admin/machines) and select the **'Use as exit node'** option in **'Edit route settings...'**.
 
 ## 6. Connect to the exit node
 
@@ -128,7 +128,7 @@ sudo pacman -Rns --noconfirm tailscale
 # Remove configs
 sudo rm -rf /etc/sysctl.d/99-tailscale.conf
 sudo sysctl --system
-NETDEV=$(ip -o route get 8.8.8.8 | cut -f 5 -d " ")
+NETDEV=$(ip -o route get 8.8.8.8 | cut -f 5 -d ' ')
 sudo ethtool -K $NETDEV rx-udp-gro-forwarding off rx-gro-list on
 sudo rm -rf /etc/networkd-dispatcher/routable.d/50-tailscale
 ```

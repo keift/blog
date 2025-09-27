@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
+sudo sed -i '/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/' /etc/hosts
 ```
 
 ## 2. Install Gnome Software

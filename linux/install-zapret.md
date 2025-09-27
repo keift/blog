@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
+sudo sed -i '/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/' /etc/hosts
 ```
 
 ## 2. Install required tools
@@ -191,7 +191,7 @@ We can start installing Zapret.
 Here are the answers you need to give to the questions you may encounter during this time.
 
 ```
-do you want the installer to copy it for you (default : N) (Y/N) ? 🟥 [TYPE "Y"] 🟥
+do you want the installer to copy it for you (default : N) (Y/N) ? 🟥 [TYPE 'Y'] 🟥
 ```
 
 ```
@@ -231,11 +231,11 @@ enable tpws transparent mode ? (default : N) (Y/N) ? 🟩 [LEAVE THIS QUESTION B
 ```
 
 ```
-enable nfqws ? (default : N) (Y/N) ? 🟥 [TYPE "Y"] 🟥
+enable nfqws ? (default : N) (Y/N) ? 🟥 [TYPE 'Y'] 🟥
 ```
 
 ```
-do you want to edit the options (default : N) (Y/N) ? 🟥 [TYPE "Y"] 🟥
+do you want to edit the options (default : N) (Y/N) ? 🟥 [TYPE 'Y'] 🟥
 ```
 
 Then we write the **NFQWS** settings that we just copied to `NFQWS_OPT`. Example:
@@ -310,7 +310,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Leave the Systemd-Resolved configuration blank
-sudo tee /etc/systemd/resolved.conf > /dev/null <<< ""
+sudo tee /etc/systemd/resolved.conf > /dev/null <<< ''
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
