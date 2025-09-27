@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i '/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/' /etc/hosts
+sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
 ```
 
 ## ALTERNATIVE: NextDNS with Systemd-Resolved (Recommended)
@@ -18,8 +18,8 @@ Using NextDNS in Systemd distributions.
 
 ```shell
 # 🟥 Environment variables
-NEXTDNS_ID='aaaaaa'
-DEVICE_NAME='HUAWEI MateBook D16'
+NEXTDNS_ID="aaaaaa"
+DEVICE_NAME="HUAWEI MateBook D16"
 
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
@@ -45,8 +45,8 @@ Using NextDNS in non-Systemd distributions.
 
 ```shell
 # 🟥 Environment variables
-NEXTDNS_ID='aaaaaa'
-DEVICE_NAME='HUAWEI MateBook D16'
+NEXTDNS_ID="aaaaaa"
+DEVICE_NAME="HUAWEI MateBook D16"
 
 # Install Stubby
 sudo apt install -y stubby
@@ -78,13 +78,13 @@ listen_addresses:
 
 upstream_recursive_servers:
   - address_data: 45.90.28.0
-    tls_auth_name: '${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io'
+    tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
   - address_data: 45.90.30.0
-    tls_auth_name: '${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io'
+    tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
   - address_data: 2a07:a8c0::0
-    tls_auth_name: '${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io'
+    tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
   - address_data: 2a07:a8c1::0
-    tls_auth_name: '${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io'
+    tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
 EOF
 
 # Restart the Stubby for everything to work properly
@@ -130,7 +130,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Leave the Systemd-Resolved configuration blank
-sudo tee /etc/systemd/resolved.conf > /dev/null <<< ''
+sudo tee /etc/systemd/resolved.conf > /dev/null <<< ""
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf

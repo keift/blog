@@ -9,7 +9,7 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 
 ```shell
 # Specify the current hostname in /etc/hosts
-sudo sed -i '/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/' /etc/hosts
+sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
 ```
 
 ## 2. Install Stubby
@@ -70,13 +70,13 @@ listen_addresses:
 
 upstream_recursive_servers:
   - address_data: 1.1.1.1
-    tls_auth_name: '1dot1dot1dot1.cloudflare-dns.com'
+    tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
   - address_data: 1.0.0.1
-    tls_auth_name: '1dot1dot1dot1.cloudflare-dns.com'
+    tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
   - address_data: 2606:4700:4700::1111
-    tls_auth_name: '1dot1dot1dot1.cloudflare-dns.com'
+    tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
   - address_data: 2606:4700:4700::1001
-    tls_auth_name: '1dot1dot1dot1.cloudflare-dns.com'
+    tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
 EOF
 
 # Restart the Stubby for everything to work properly
@@ -140,13 +140,13 @@ listen_addresses:
 
 upstream_recursive_servers:
   - address_data: 8.8.8.8
-    tls_auth_name: 'dns.google'
+    tls_auth_name: "dns.google"
   - address_data: 8.8.4.4
-    tls_auth_name: 'dns.google'
+    tls_auth_name: "dns.google"
   - address_data: 2001:4860:4860::8888
-    tls_auth_name: 'dns.google'
+    tls_auth_name: "dns.google"
   - address_data: 2001:4860:4860::8844
-    tls_auth_name: 'dns.google'
+    tls_auth_name: "dns.google"
 EOF
 
 # Restart the Stubby for everything to work properly
@@ -210,13 +210,13 @@ listen_addresses:
 
 upstream_recursive_servers:
   - address_data: 77.88.8.8
-    tls_auth_name: 'common.dot.dns.yandex.net'
+    tls_auth_name: "common.dot.dns.yandex.net"
   - address_data: 77.88.8.1
-    tls_auth_name: 'common.dot.dns.yandex.net'
+    tls_auth_name: "common.dot.dns.yandex.net"
   - address_data: 2a02:6b8::feed:0ff
-    tls_auth_name: 'common.dot.dns.yandex.net'
+    tls_auth_name: "common.dot.dns.yandex.net"
   - address_data: 2a02:6b8:0:1::feed:0ff
-    tls_auth_name: 'common.dot.dns.yandex.net'
+    tls_auth_name: "common.dot.dns.yandex.net"
 EOF
 
 # Restart the Stubby for everything to work properly
@@ -280,13 +280,13 @@ listen_addresses:
 
 upstream_recursive_servers:
   - address_data: 9.9.9.9
-    tls_auth_name: 'dns.quad9.net'
+    tls_auth_name: "dns.quad9.net"
   - address_data: 149.112.112.112
-    tls_auth_name: 'dns.quad9.net'
+    tls_auth_name: "dns.quad9.net"
   - address_data: 2620:fe::fe
-    tls_auth_name: 'dns.quad9.net'
+    tls_auth_name: "dns.quad9.net"
   - address_data: 2620:fe::9
-    tls_auth_name: 'dns.quad9.net'
+    tls_auth_name: "dns.quad9.net"
 EOF
 
 # Restart the Stubby for everything to work properly
@@ -332,7 +332,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Leave the Systemd-Resolved configuration blank
-sudo tee /etc/systemd/resolved.conf > /dev/null <<< ''
+sudo tee /etc/systemd/resolved.conf > /dev/null <<< ""
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
