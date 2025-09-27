@@ -14,5 +14,3 @@
 
 - [Windows](./windows/README.md)
   - [Install GoodbyeDPI](./windows/install-goodbyedpi.md)
-
-
