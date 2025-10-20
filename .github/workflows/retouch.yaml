@@ -19,9 +19,6 @@ jobs:
           bun-version: latest
           registry-url: https://registry.npmjs.org
 
-      - name: Delete lockfile
-        run: rm -rf ./bun.lock
-
       - name: Install Prettier
         run: bun add -g prettier
 
