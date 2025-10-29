@@ -29,6 +29,9 @@ sudo zypper -n install flatpak gnome-software gnome-software-plugin-flatpak
 
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm flatpak gnome-software gnome-software-packagekit-plugin
+
+# Define Flathub remote reference
+sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
 ## TIP: Uninstall Gnome Software
