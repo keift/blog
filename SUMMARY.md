@@ -3,12 +3,12 @@
 - [Linux](./linux/README.md)
   - [Install Zapret](./linux/install-zapret.md)
   - [Install Neatd](./linux/install-neatd.md)
+  - [Install Flatpak](./linux/install-flatpak.md)
   - [Install TLP](./linux/install-tlp.md)
   - [Install Stubby](./linux/install-stubby.md)
   - [Install Docker](./linux/install-docker.md)
   - [Install Nginx](./linux/install-nginx.md)
   - [Install Tailscale](./linux/install-tailscale.md)
-  - [Install Gnome Software](./linux/install-gnome-software.md)
   - [DoT with Systemd-Resolved](./linux/dot-with-systemd-resolved.md)
   - [Use NextDNS](./linux/use-nextdns.md)
 

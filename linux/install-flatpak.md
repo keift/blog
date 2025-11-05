@@ -1,5 +1,5 @@
 ---
-description: Use your Flatpak with interface.
+description: Use your Flatpak with Gnome Software.
 icon: basket-shopping
 ---
 
@@ -12,9 +12,9 @@ If you have changed the hostname before, it may not have been updated in `/etc/h
 sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
 ```
 
-## 2. Install Gnome Software
+## 2. Install Flatpak and Gnome Software
 
-Gnome Software and Flatpak integration.
+Flatpak and Gnome Software integration.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
@@ -34,9 +34,9 @@ sudo pacman -S --noconfirm flatpak gnome-software gnome-software-packagekit-plug
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 ```
 
-## TIP: Uninstall Gnome Software
+## TIP: Uninstall Flatpak and Gnome Software
 
-This is how you can uninstall Gnome Software.
+This is how you can uninstall Flatpak and Gnome Software.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
