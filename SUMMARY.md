@@ -6,6 +6,7 @@
   - [Install Flatpak](./linux/install-flatpak.md)
   - [Install TLP](./linux/install-tlp.md)
   - [Install Stubby](./linux/install-stubby.md)
+  - [Install Dokploy](./linux/install-dokploy.md)
   - [Install Docker](./linux/install-docker.md)
   - [Install Nginx](./linux/install-nginx.md)
   - [Install Tailscale](./linux/install-tailscale.md)
