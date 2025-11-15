@@ -102,4 +102,18 @@ sudo zypper -n remove -u nginx
 
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm nginx
+
+# Remove unused files
+sudo rm -rf /etc/nginx
+sudo rm -rf /var/log/nginx
+sudo rm -rf /var/www/html
+sudo rm -rf /var/www/*
+sudo rm -rf /usr/lib/nginx
+sudo rm -rf /usr/share/nginx
+sudo rm -rf /var/cache/nginx
+sudo rm -rf /run/nginx
+sudo rm -rf /usr/sbin/nginx
+sudo rm -rf /usr/local/nginx
+sudo rm -rf /usr/local/etc/nginx
+sudo rm -rf /usr/local/var/log/nginx
 ```

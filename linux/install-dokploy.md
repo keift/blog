@@ -38,6 +38,9 @@ sudo docker volume rm -f dokploy-postgres-database redis-data-volume
 
 # Remove the Docker network
 docker network rm -f dokploy-network
+
+# Remove unused files
+sudo rm -rf /etc/dokploy
 ```
 
 If you want to remove Docker as well, [continue here](https://keift.gitbook.io/blog/linux/install-docker#tip-uninstall-docker).

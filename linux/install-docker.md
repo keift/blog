@@ -42,4 +42,10 @@ sudo zypper -n remove -u docker* containerd.io
 
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm docker* containerd.io
+
+# Remove unused files
+sudo rm -rf /var/lib/docker
+sudo rm -rf /var/lib/containerd
+sudo rm -rf /etc/apt/sources.list.d/docker.sources
+sudo rm -rf /etc/apt/keyrings/docker.asc
 ```
