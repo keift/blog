@@ -37,7 +37,7 @@ sudo docker service rm dokploy dokploy-traefik dokploy-postgres dokploy-redis
 sudo docker volume rm -f dokploy-postgres-database redis-data-volume
 
 # Remove the Docker network
-docker network rm -f dokploy-network
+sudo docker network rm -f dokploy-network
 
 # Remove unused files
 sudo rm -rf /etc/dokploy
