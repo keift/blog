@@ -69,8 +69,8 @@ Download the compiled zip file as release on GitHub.
 
 ```shell
 # Delete if present
-rm -rf ~/zapret-v71.4.zip
-rm -rf ~/zapret-v71.4
+sudo rm -rf ~/zapret-v71.4.zip
+sudo rm -rf ~/zapret-v71.4
 
 # Go to the home directory
 cd ~/
@@ -88,7 +88,7 @@ Extract the zip file and then delete it.
 unzip ~/zapret-v71.4.zip
 
 # Delete the zip file that we no longer need
-rm -rf ~/zapret-v71.4.zip
+sudo rm -rf ~/zapret-v71.4.zip
 ```
 
 ## 6. Prepare for installation
@@ -284,7 +284,7 @@ All done! 🎉 We are done with this folder of Zapret anymore. We can delete it.
 
 ```shell
 # Delete the folder
-rm -rf ~/zapret-v71.4
+sudo rm -rf ~/zapret-v71.4
 ```
 
 ## TIP: Uninstall Zapret
@@ -296,7 +296,7 @@ If you ever regain your freedom, you can undo all of these actions in the follow
 /opt/zapret/uninstall_easy.sh
 
 # Remove unused files
-rm -rf ~/zapret-v71.4
+sudo rm -rf ~/zapret-v71.4
 sudo rm -rf /opt/zapret
 ```
 
