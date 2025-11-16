@@ -85,7 +85,7 @@ Extract the zip file and then delete it.
 
 ```shell
 # Unzip the zip file
-unzip ~/zapret-v71.4.zip
+sudo unzip ~/zapret-v71.4.zip
 
 # Delete the zip file that we no longer need
 sudo rm -rf ~/zapret-v71.4.zip
