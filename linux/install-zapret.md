@@ -295,7 +295,7 @@ If you ever regain your freedom, you can undo all of these actions in the follow
 # Uninstall Zapret
 /opt/zapret/uninstall_easy.sh
 
-# Delete unnecessary files
+# Remove unused files
 rm -rf ~/zapret-v71.4
 sudo rm -rf /opt/zapret
 ```
