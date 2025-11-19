@@ -79,7 +79,9 @@ cd /usr/local
 # Download the compiled zip file from GitHub
 git clone https://github.com/bol-van/zapret.git
 ```
+
 ## 5. Prepare for installation
+
 build and prepare to perform installation.
 
 ```shell
@@ -171,7 +173,9 @@ sudo ps -p 1 -o comm=
 # if runit continue from here
 # else jump to 8.2
 ```
+
 ## 8.1 Zapret service on Runit BSD Systems
+
 ```shell
 mkdir -p /usr/local/etc/sv/nfqws
 mkdir /usr/local/etc/sv/nfqws/log
@@ -195,6 +199,7 @@ chmod +x /usr/local/etc/sv/nfqws/log/run
 
 ln -s /usr/local/etc/sv/nfqws /usr/local/etc/runit/runsvdir/default/
 ```
+
 ## 8.2 Zapret service on rc.d BSD Systems
 
 ```shell
