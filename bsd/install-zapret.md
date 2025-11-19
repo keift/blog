@@ -31,7 +31,7 @@ sudo pkg_add curl unzip bind unbound
 
 ## 3. Change DNS rules
 
-Zapret only fucks dpi, its not going to add dns for yourself. Get cool and add a dns over tls with unbound :3
+Zapret only bypasses dpi, its not going to add dns for yourself. Get cool and add a dns over tls with unbound :3
 Be sure pf rules flushed and firewall state is open.
 Im gonna use cloudflare's dns for myself... so u can use any dns what is suitable for yourself (eg yandex dns if youre in russia)
 
