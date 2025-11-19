@@ -13,5 +13,8 @@
   - [DoT with Systemd-Resolved](./linux/dot-with-systemd-resolved.md)
   - [Use NextDNS](./linux/use-nextdns.md)
 
+- [BSD](./bsd/README.md)
+  - [Install Zapret](./bsd/install-zapret.md)
+
 - [Windows](./windows/README.md)
   - [Install GoodbyeDPI](./windows/install-goodbyedpi.md)
