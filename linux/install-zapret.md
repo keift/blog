@@ -76,7 +76,7 @@ sudo rm -rf ~/zapret-v71.4
 cd ~/
 
 # Download the compiled zip file from GitHub
-wget https://github.com/bol-van/zapret/releases/download/v71.4/zapret-v71.4.zip
+sudo wget https://github.com/bol-van/zapret/releases/download/v71.4/zapret-v71.4.zip
 ```
 
 ## 5. Unzip the zip file
