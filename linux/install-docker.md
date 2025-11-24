@@ -30,6 +30,9 @@ sudo systemctl start docker
 This is how you can uninstall Docker.
 
 ```shell
+# Stop Docker
+sudo systemctl stop docker
+
 # Debian, Ubuntu, Kali, Linux Mint (APT)
 sudo apt purge -y docker* containerd.io
 

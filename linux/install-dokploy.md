@@ -19,11 +19,13 @@ Dokploy is a deployment service.
 ```shell
 # Pull and run the specified shell script
 curl -fsSL https://get.docker.com | sh
-curl -sSL https://dokploy.com/install.sh | sh
 
 # Enable and start Docker
 sudo systemctl enable docker
 sudo systemctl start docker
+
+# Pull and run the specified shell script
+curl -sSL https://dokploy.com/install.sh | sh
 ```
 
 ## TIP: Uninstall Dokploy
