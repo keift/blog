@@ -28,6 +28,24 @@ sudo systemctl start docker
 curl -sSL https://dokploy.com/install.sh | sh
 ```
 
+## RECOMMENDED: Docker Cleanup Schedule
+
+It's important to clean up your Docker periodically. You can do this by creating a new schedule from the `Schedules` page. This will clean up unused containers, images, volumes, and caches.
+
+Task Name: `Hourly Docker Cleanup`
+
+Schedule: `0 * * * *` (every hour)
+
+Script:
+
+```shell
+docker container prune --force
+docker image prune --all --force
+docker volume prune --all --force
+docker system prune --all --volumes --force
+docker builder prune --all --force
+```
+
 ## TIP: Uninstall Dokploy
 
 This is how you can uninstall Dokploy.
