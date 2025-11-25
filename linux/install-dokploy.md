@@ -32,9 +32,17 @@ curl -sSL https://dokploy.com/install.sh | sh
 
 It's important to clean up your Docker periodically. You can do this by creating a new schedule from the **Schedules** page. This will clean up unused containers, images, volumes, and caches.
 
-Task Name: `Hourly Docker Cleanup`
+Task Name:
 
-Schedule: `0 * * * *` (every hour)
+```
+Hourly Docker Cleanup
+```
+
+Schedule (Hourly):
+
+```
+0 * * * *
+```
 
 Script:
 
