@@ -50,8 +50,8 @@ It's important to clean up your Docker periodically. You can do this by creating
 > docker container prune --force
 > docker image prune --all --force
 > docker volume prune --all --force
-> docker system prune --all --volumes --force
 > docker builder prune --all --force
+> docker system prune --all --volumes --force
 > ```
 
 ## TIP: Uninstall Dokploy
