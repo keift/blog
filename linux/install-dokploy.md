@@ -64,7 +64,7 @@ sudo docker service remove dokploy dokploy-traefik dokploy-postgres dokploy-redi
 sudo docker container remove -f dokploy-traefik
 
 # Remove Dokploy volumes
-sudo docker volume remove -f dokploy-docker-config dokploy-postgres dokploy-redis
+sudo docker volume remove -f dokploy-config dokploy-postgres dokploy-redis
 
 # Remove Dokploy network
 sudo docker network remove -f dokploy-network
