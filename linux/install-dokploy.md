@@ -59,14 +59,22 @@ It's important to clean up your Docker periodically. You can do this by creating
 This is how you can uninstall Dokploy.
 
 ```shell
-# Remove the Docker swarm services
-sudo docker service rm dokploy dokploy-traefik dokploy-postgres dokploy-redis
+# Remove Dokploy services
+sudo docker service remove dokploy dokploy-traefik dokploy-postgres dokploy-redis
+sudo docker container remove -f dokploy-traefik
 
-# Remove the Docker volumes
-sudo docker volume rm -f dokploy-postgres-database redis-data-volume
+# Remove Dokploy volumes
+sudo docker volume remove -f dokploy-docker-config dokploy-postgres dokploy-redis
 
-# Remove the Docker network
-sudo docker network rm -f dokploy-network
+# Remove Dokploy network
+sudo docker network remove -f dokploy-network
+
+# Cleanup Docker
+sudo docker container prune --force
+sudo docker image prune --all --force
+sudo docker volume prune --all --force
+sudo docker builder prune --all --force
+sudo docker system prune --all --volumes --force
 
 # Remove unused files
 sudo rm -rf /etc/dokploy
