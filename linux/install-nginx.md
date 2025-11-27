@@ -3,16 +3,7 @@ description: Create reverse proxy services.
 icon: n
 ---
 
-## 1. Update Hosts content
-
-If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
-
-```shell
-# Specify the current hostname in /etc/hosts
-sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
-```
-
-## 2. Install Nginx
+## 1. Install Nginx
 
 Nginx is a web server and reverse proxy service.
 
@@ -35,7 +26,7 @@ sudo systemctl enable nginx
 sudo systemctl start nginx
 ```
 
-## 3. Specify permissions on the UFW side
+## 2. Specify permissions on the UFW side
 
 Allow Nginx to be accessed from outside in the firewall.
 
@@ -44,7 +35,7 @@ Allow Nginx to be accessed from outside in the firewall.
 sudo ufw allow "Nginx Full"
 ```
 
-## 4. Create a service
+## 3. Create a service
 
 Here we perform routing by creating a reverse proxy service.
 

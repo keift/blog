@@ -3,16 +3,7 @@ description: Set up and use your own VPN server.
 icon: braille
 ---
 
-## 1. Update Hosts content
-
-If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
-
-```shell
-# Specify the current hostname in /etc/hosts
-sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
-```
-
-## 2. Install required tools
+## 1. Install required tools
 
 Required tools for installation.
 
@@ -31,7 +22,7 @@ sudo zypper -n install curl
 sudo pacman -S --noconfirm curl
 ```
 
-## 3. Install Tailscale
+## 2. Install Tailscale
 
 Install Tailscale with shell script.
 
@@ -44,7 +35,7 @@ sudo systemctl enable tailscale
 sudo systemctl start tailscale
 ```
 
-## 4. Login to the Tailscale
+## 3. Login to the Tailscale
 
 You must be connected to the Tailscale network on both your server and your clients.
 
@@ -53,7 +44,7 @@ You must be connected to the Tailscale network on both your server and your clie
 sudo tailscale login
 ```
 
-## 5. Advertise exit node
+## 4. Advertise exit node
 
 Select a host machine as the exit node. This represents the device you will use as the VPN.
 
@@ -76,7 +67,7 @@ sudo tailscale up
 
 Finally, open the menu of the machine labeled **"Exit Node"** from [Tailscale dashboard](https://login.tailscale.com/admin/machines) and select the **"Use as exit node"** option in **"Edit route settings..."**.
 
-## 6. Connect to the exit node
+## 5. Connect to the exit node
 
 You can successfully use your VPN service by connecting to the exit node from different devices.
 

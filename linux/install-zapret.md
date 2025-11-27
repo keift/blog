@@ -3,16 +3,7 @@ description: Install Zapret to bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 
-## 1. Update Hosts content
-
-If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
-
-```shell
-# Specify the current hostname in /etc/hosts
-sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
-```
-
-## 2. Install required tools
+## 1. Install required tools
 
 Required tools for installation.
 
@@ -31,7 +22,7 @@ sudo zypper -n install curl bind-utils unzip nftables
 sudo pacman -S --noconfirm curl bind-tools unzip nftables
 ```
 
-## 3. Change DNS rules
+## 2. Change DNS rules
 
 Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves.
 
@@ -63,7 +54,7 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 sudo systemctl restart systemd-resolved
 ```
 
-## 4. Download Zapret
+## 3. Download Zapret
 
 Download the compiled zip file as release on GitHub.
 
@@ -79,7 +70,7 @@ cd ~/
 sudo wget https://github.com/bol-van/zapret/releases/download/v72.2/zapret-v72.2.zip
 ```
 
-## 5. Unzip the zip file
+## 4. Unzip the zip file
 
 Extract the zip file and then delete it.
 
@@ -91,7 +82,7 @@ sudo unzip ~/zapret-v72.2.zip
 sudo rm -rf ~/zapret-v72.2.zip
 ```
 
-## 6. Prepare for installation
+## 5. Prepare for installation
 
 Install the requirements and prepare to perform a clean install.
 
@@ -115,7 +106,7 @@ select firewall type :
 your choice (default : nftables) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-## 7. Do Blockcheck
+## 6. Do Blockcheck
 
 Find the DPI methods implemented by the ISP.
 
@@ -179,7 +170,7 @@ This is an example settings for **NFQWS**. It may be different for each person. 
 --dpi-desync=fakeddisorder --dpi-desync-ttl=1 --dpi-desync-autottl=-5 --dpi-desync-split-pos=1
 ```
 
-## 8. Install Zapret
+## 7. Install Zapret
 
 We can start installing Zapret.
 
@@ -278,7 +269,7 @@ WAN interface :
 your choice (default : ANY) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-## 9. Finish the installation
+## 8. Finish the installation
 
 All done! 🎉 We are done with this folder of Zapret anymore. We can delete it.
 

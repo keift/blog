@@ -3,16 +3,7 @@ description: Install Zapret to bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 
-## 1. Update Hosts content
-
-If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
-
-```shell
-# Specify the current hostname in /etc/hosts
-sudo sh -c "echo \"127.0.0.1 $(hostname)\" >> /etc/hosts"
-```
-
-## 2. Install required tools
+## 1. Install required tools
 
 Required tools for installation.
 
@@ -29,7 +20,7 @@ sudo pkg_add curl unzip bind unbound
 # Others bsd's can install from their package managers, source or cargo (rust implement, not recommended).
 ```
 
-## 3. Change DNS rules
+## 2. Change DNS rules
 
 Zapret only bypasses dpi, its not going to add dns for yourself. Get cool and add a dns over tls with unbound :3
 Be sure pf rules flushed and firewall state is open.
@@ -68,7 +59,7 @@ echo "nameserver 127.0.0.1" | sudo tee /etc/resolv.conf
 sudo chflags schg /etc/resolv.conf
 ```
 
-## 4. Download Zapret
+## 3. Download Zapret
 
 Download the compiled zip file as release on GitHub.
 
@@ -80,7 +71,7 @@ cd /usr/local
 git clone https://github.com/bol-van/zapret.git
 ```
 
-## 5. Prepare for installation
+## 4. Prepare for installation
 
 build and prepare to perform installation.
 
@@ -93,7 +84,7 @@ make
 ./install_bin.sh
 ```
 
-## 7. Do Blockcheck
+## 5. Do Blockcheck
 
 Find the DPI methods implemented by the ISP.
 
@@ -157,7 +148,7 @@ This is an example settings for **DVTWS**. It may be different for each person. 
 --dpi-desync=fakeddisorder --dpi-desync-ttl=1 --dpi-desync-autottl=-5 --dpi-desync-split-pos=1
 ```
 
-## 8. Install Zapret
+## 6. Install Zapret
 
 We can start installing Zapret.
 Also there's dvtws implement for nfqws because bsd systems doesnt use network filter libs.
@@ -174,7 +165,7 @@ sudo ps -p 1 -o comm=
 # else jump to 8.2
 ```
 
-## 8.1 Zapret service on Runit BSD Systems
+## 6.1 Zapret service on Runit BSD Systems
 
 ```shell
 mkdir -p /usr/local/etc/sv/nfqws
@@ -200,7 +191,7 @@ chmod +x /usr/local/etc/sv/nfqws/log/run
 ln -s /usr/local/etc/sv/nfqws /usr/local/etc/runit/runsvdir/default/
 ```
 
-## 8.2 Zapret service on rc.d BSD Systems
+## 6.2 Zapret service on rc.d BSD Systems
 
 ```shell
 cat > /usr/local/etc/rc.d/nfqws << 'EOF'

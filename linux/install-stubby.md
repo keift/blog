@@ -3,16 +3,7 @@ description: Encrypt your DNS queries with Stubby.
 icon: notebook
 ---
 
-## 1. Update Hosts content
-
-If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
-
-```shell
-# Specify the current hostname in /etc/hosts
-sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
-```
-
-## 2. Install Stubby
+## Install Stubby
 
 Stubby is a DNS-over-TLS service.
 

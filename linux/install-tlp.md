@@ -3,16 +3,7 @@ description: Extend the life of your battery by limiting it.
 icon: battery-three-quarters
 ---
 
-## 1. Update Hosts content
-
-If you have changed the hostname before, it may not have been updated in `/etc/hosts`. Correct this to avoid problems during installation.
-
-```shell
-# Specify the current hostname in /etc/hosts
-sudo sed -i "/^127\.0\.1\.1\s\+/s/\S\+$/$(hostname)/" /etc/hosts
-```
-
-## 2. Install TLP
+## 1. Install TLP
 
 TLP is a power management service.
 
@@ -34,7 +25,7 @@ sudo pacman -S --noconfirm tlp tlp-rdw
 sudo tlp start
 ```
 
-## 3. Complete the TLP setup
+## 2. Complete the TLP setup
 
 Set up and use TLP.
 
