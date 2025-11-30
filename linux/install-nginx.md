@@ -81,6 +81,9 @@ sudo systemctl restart nginx
 This is how you can uninstall Nginx.
 
 ```shell
+# Stop service
+sudo systemctl stop nginx
+
 # Debian, Ubuntu, Kali, Linux Mint (APT)
 sudo apt purge -y nginx
 
