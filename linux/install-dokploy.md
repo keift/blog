@@ -40,7 +40,7 @@ It's important to clean up your Docker periodically. You can do this by creating
 > ```shell
 > #!/bin/bash
 >
-> WAIT=10
+> CHECK_INTERVAL=10
 >
 > echo "Starting Docker cleanup..."
 >
@@ -51,8 +51,8 @@ It's important to clean up your Docker periodically. You can do this by creating
 >         echo "Docker is idle. Starting cleanup..."
 >         break
 >     else
->         echo "Docker is busy. Will check again in 10 seconds..."
->         sleep $WAIT
+>         echo "Docker is busy. Will check again in $CHECK_INTERVAL seconds..."
+>         sleep $CHECK_INTERVAL
 >     fi
 > done
 >
