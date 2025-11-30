@@ -40,13 +40,13 @@ It's important to clean up your Docker periodically. You can do this by creating
 > ```shell
 > CHECK_INTERVAL=10
 >
-> echo "Starting Docker cleanup..."
+> echo "Preparing for execution..."
 >
 > while true; do
 >     PROCESSES=$(ps aux | grep -E "docker build|docker pull" | grep -v grep)
 >
 >     if [ -z "$PROCESSES" ]; then
->         echo "Docker is idle. Starting cleanup..."
+>         echo "Docker is idle. Starting execution..."
 >         break
 >     else
 >         echo "Docker is busy. Will check again in $CHECK_INTERVAL seconds..."
@@ -60,7 +60,7 @@ It's important to clean up your Docker periodically. You can do this by creating
 > docker builder prune --all --force
 > docker system prune --all --volumes --force
 >
-> echo "Docker cleanup completed."
+> echo "Execution completed."
 > ```
 
 ## TIP: Uninstall Dokploy
