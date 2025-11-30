@@ -38,11 +38,31 @@ It's important to clean up your Docker periodically. You can do this by creating
 > Script:
 >
 > ```shell
+> #!/bin/bash
+>
+> WAIT=10
+>
+> echo "Starting Docker cleanup..."
+>
+> while true; do
+>     ACTIVE_PROCESSES=$(ps aux | grep -E 'docker build|docker pull' | grep -v grep)
+>
+>     if [ -z "$ACTIVE_PROCESSES" ]; then
+>         echo "Docker is idle. Starting cleanup..."
+>         break
+>     else
+>         echo "Docker is busy. Will check again in 10 seconds..."
+>         sleep $WAIT
+>     fi
+> done
+>
 > docker container prune --force
 > docker image prune --all --force
 > docker volume prune --all --force
 > docker builder prune --all --force
 > docker system prune --all --volumes --force
+>
+> echo "Docker cleanup completed."
 > ```
 
 ## TIP: Uninstall Dokploy
