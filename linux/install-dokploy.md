@@ -45,7 +45,7 @@ It's important to clean up your Docker periodically. You can do this by creating
 > echo "Starting Docker cleanup..."
 >
 > while true; do
->     ACTIVE_PROCESSES=$(ps aux | grep -E 'docker build|docker pull' | grep -v grep)
+>     ACTIVE_PROCESSES=$(ps aux | grep -E "docker build|docker pull" | grep -v grep)
 >
 >     if [ -z "$ACTIVE_PROCESSES" ]; then
 >         echo "Docker is idle. Starting cleanup..."
