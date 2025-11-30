@@ -38,8 +38,6 @@ It's important to clean up your Docker periodically. You can do this by creating
 > Script:
 >
 > ```shell
-> #!/bin/bash
->
 > CHECK_INTERVAL=10
 >
 > echo "Starting Docker cleanup..."
