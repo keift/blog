@@ -24,7 +24,7 @@ sudo pacman -S --noconfirm flatpak gnome-software gnome-software-packagekit-plug
 # Define Flathub remote reference
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-# Install Flatseal for change application permissions
+# Install Flatseal to make changes to application permissions
 flatpak install flathub com.github.tchx84.Flatseal
 ```
 
