@@ -25,7 +25,7 @@ sudo pacman -S --noconfirm flatpak gnome-software gnome-software-packagekit-plug
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
 # Install Flatseal to make changes to application permissions
-flatpak install flathub com.github.tchx84.Flatseal
+flatpak install -y flathub com.github.tchx84.Flatseal
 ```
 
 ## TIP: Uninstall Flatpak and Gnome Software
