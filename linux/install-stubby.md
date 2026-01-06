@@ -64,10 +64,6 @@ upstream_recursive_servers:
     tls_auth_name: "base.dns.mullvad.net"
   - address_data: 2a07:e340::4
     tls_auth_name: "base.dns.mullvad.net"
-  - address_data: 194.242.2.2
-    tls_auth_name: "dns.mullvad.net"
-  - address_data: 2a07:e340::2
-    tls_auth_name: "dns.mullvad.net"
 EOF
 
 # Restart the Stubby for everything to work properly
