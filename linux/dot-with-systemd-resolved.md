@@ -3,7 +3,33 @@ description: Encrypt your DNS queries with Systemd-Resolved.
 icon: notebook
 ---
 
-## ALTERNATIVE: Cloudflare DNS (Recommended)
+## ALTERNATIVE: Mullvad DNS (Recommended)
+
+We are using Mullvad DNS here. This DNS service blocks ads, trackers, and malware.
+
+```shell
+# Enable and start Systemd-Resolved
+sudo systemctl enable systemd-resolved
+sudo systemctl start systemd-resolved
+
+# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Cloudflare DNS in it
+sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+[Resolve]
+DNS=194.242.2.4
+DNS=2a07:e340::4
+DNS=194.242.2.2
+DNS=2a07:e340::2
+DNSOverTLS=yes
+EOF
+
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
+# Restart Systemd-Resolved for the changes to take effect
+sudo systemctl restart systemd-resolved
+```
+
+## ALTERNATIVE: Cloudflare DNS
 
 We are using Cloudflare DNS here.
 
@@ -15,7 +41,10 @@ sudo systemctl start systemd-resolved
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Cloudflare DNS in it
 sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
 [Resolve]
-DNS=1.1.1.1 1.0.0.1 2606:4700:4700::1111 2606:4700:4700::1001
+DNS=1.1.1.1
+DNS=2606:4700:4700::1111
+DNS=1.0.0.1
+DNS=2606:4700:4700::1001
 DNSOverTLS=yes
 EOF
 
@@ -38,7 +67,10 @@ sudo systemctl start systemd-resolved
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Google DNS in it
 sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
 [Resolve]
-DNS=8.8.8.8 8.8.4.4 2001:4860:4860::8888 2001:4860:4860::8844
+DNS=8.8.8.8
+DNS=2001:4860:4860::8888
+DNS=8.8.4.4
+DNS=2001:4860:4860::8844
 DNSOverTLS=yes
 EOF
 
@@ -61,30 +93,10 @@ sudo systemctl start systemd-resolved
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Yandex DNS in it
 sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
 [Resolve]
-DNS=77.88.8.8 77.88.8.1 2a02:6b8::feed:0ff 2a02:6b8:0:1::feed:0ff
-DNSOverTLS=yes
-EOF
-
-# Make /etc/resolv.conf a symlink to Systemd-Resolved file
-sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-
-# Restart Systemd-Resolved for the changes to take effect
-sudo systemctl restart systemd-resolved
-```
-
-## ALTERNATIVE: Quad9
-
-We are using Quad9 here.
-
-```shell
-# Enable and start Systemd-Resolved
-sudo systemctl enable systemd-resolved
-sudo systemctl start systemd-resolved
-
-# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Quad9 in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
-[Resolve]
-DNS=9.9.9.9 149.112.112.112 2620:fe::fe 2620:fe::9
+DNS=77.88.8.8
+DNS=2a02:6b8::feed:0ff
+DNS=77.88.8.1
+DNS=2a02:6b8:0:1::feed:0ff
 DNSOverTLS=yes
 EOF
 

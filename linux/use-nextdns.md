@@ -19,7 +19,10 @@ sudo systemctl start systemd-resolved
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use NextDNS in it
 sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
 [Resolve]
-DNS=45.90.28.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io 45.90.30.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io 2a07:a8c0::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io 2a07:a8c1::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
+DNS=45.90.28.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
+DNS=2a07:a8c0::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
+DNS=45.90.30.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
+DNS=2a07:a8c1::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNSOverTLS=yes
 EOF
 
@@ -70,9 +73,9 @@ listen_addresses:
 upstream_recursive_servers:
   - address_data: 45.90.28.0
     tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
-  - address_data: 45.90.30.0
-    tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
   - address_data: 2a07:a8c0::0
+    tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
+  - address_data: 45.90.30.0
     tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
   - address_data: 2a07:a8c1::0
     tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"

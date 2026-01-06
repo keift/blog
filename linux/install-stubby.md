@@ -62,9 +62,9 @@ listen_addresses:
 upstream_recursive_servers:
   - address_data: 1.1.1.1
     tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
-  - address_data: 1.0.0.1
-    tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
   - address_data: 2606:4700:4700::1111
+    tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
+  - address_data: 1.0.0.1
     tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
   - address_data: 2606:4700:4700::1001
     tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
@@ -84,8 +84,8 @@ EOF
 sudo tee /etc/resolv.conf > /dev/null << EOF
 nameserver 127.0.0.1
 nameserver 1.1.1.1
-nameserver 1.0.0.1
 nameserver 2606:4700:4700::1111
+nameserver 1.0.0.1
 nameserver 2606:4700:4700::1001
 EOF
 
@@ -132,9 +132,9 @@ listen_addresses:
 upstream_recursive_servers:
   - address_data: 8.8.8.8
     tls_auth_name: "dns.google"
-  - address_data: 8.8.4.4
-    tls_auth_name: "dns.google"
   - address_data: 2001:4860:4860::8888
+    tls_auth_name: "dns.google"
+  - address_data: 8.8.4.4
     tls_auth_name: "dns.google"
   - address_data: 2001:4860:4860::8844
     tls_auth_name: "dns.google"
@@ -154,8 +154,8 @@ EOF
 sudo tee /etc/resolv.conf > /dev/null << EOF
 nameserver 127.0.0.1
 nameserver 8.8.8.8
-nameserver 8.8.4.4
 nameserver 2001:4860:4860::8888
+nameserver 8.8.4.4
 nameserver 2001:4860:4860::8844
 EOF
 
@@ -202,9 +202,9 @@ listen_addresses:
 upstream_recursive_servers:
   - address_data: 77.88.8.8
     tls_auth_name: "common.dot.dns.yandex.net"
-  - address_data: 77.88.8.1
-    tls_auth_name: "common.dot.dns.yandex.net"
   - address_data: 2a02:6b8::feed:0ff
+    tls_auth_name: "common.dot.dns.yandex.net"
+  - address_data: 77.88.8.1
     tls_auth_name: "common.dot.dns.yandex.net"
   - address_data: 2a02:6b8:0:1::feed:0ff
     tls_auth_name: "common.dot.dns.yandex.net"
@@ -224,8 +224,8 @@ EOF
 sudo tee /etc/resolv.conf > /dev/null << EOF
 nameserver 127.0.0.1
 nameserver 77.88.8.8
-nameserver 77.88.8.1
 nameserver 2a02:6b8::feed:0ff
+nameserver 77.88.8.1
 nameserver 2a02:6b8:0:1::feed:0ff
 EOF
 
@@ -272,9 +272,9 @@ listen_addresses:
 upstream_recursive_servers:
   - address_data: 9.9.9.9
     tls_auth_name: "dns.quad9.net"
-  - address_data: 149.112.112.112
-    tls_auth_name: "dns.quad9.net"
   - address_data: 2620:fe::fe
+    tls_auth_name: "dns.quad9.net"
+  - address_data: 149.112.112.112
     tls_auth_name: "dns.quad9.net"
   - address_data: 2620:fe::9
     tls_auth_name: "dns.quad9.net"
@@ -294,8 +294,8 @@ EOF
 sudo tee /etc/resolv.conf > /dev/null << EOF
 nameserver 127.0.0.1
 nameserver 9.9.9.9
-nameserver 149.112.112.112
 nameserver 2620:fe::fe
+nameserver 149.112.112.112
 nameserver 2620:fe::9
 EOF
 
