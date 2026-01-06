@@ -26,7 +26,77 @@ sudo systemctl enable stubby
 sudo systemctl start stubby
 ```
 
-## ALTERNATIVE: Cloudflare DNS (Recommended)
+## ALTERNATIVE: Mullvad DNS (Recommended)
+
+Set up and use Stubby. We are using Mullvad DNS here. This DNS service blocks ads, trackers, and malware.
+
+```shell
+# Install Stubby
+sudo apt install -y stubby
+sudo dnf install -y stubby
+sudo yum install -y stubby
+sudo zypper -n install stubby
+sudo pacman -S --noconfirm stubby
+
+# Enable and start Systemd-Resolved
+sudo systemctl enable systemd-resolved
+sudo systemctl start systemd-resolved
+
+# Enable and start Stubby
+sudo systemctl enable stubby
+sudo systemctl start stubby
+
+# Configure Stubby
+sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
+resolution_type: GETDNS_RESOLUTION_STUB
+tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
+round_robin_upstreams: 1
+idle_timeout: 10000
+
+dns_transport_list:
+  - GETDNS_TRANSPORT_TLS
+
+listen_addresses:
+  - 127.0.0.1@53
+
+upstream_recursive_servers:
+  - address_data: 194.242.2.4
+    tls_auth_name: "base.dns.mullvad.net"
+  - address_data: 2a07:e340::4
+    tls_auth_name: "base.dns.mullvad.net"
+  - address_data: 194.242.2.2
+    tls_auth_name: "dns.mullvad.net"
+  - address_data: 2a07:e340::2
+    tls_auth_name: "dns.mullvad.net"
+EOF
+
+# Restart the Stubby for everything to work properly
+sudo systemctl restart stubby
+
+# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Stubby in it
+sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+[Resolve]
+DNS=127.0.0.1
+DNSStubListener=no
+EOF
+
+# Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
+sudo tee /etc/resolv.conf > /dev/null << EOF
+nameserver 127.0.0.1
+nameserver 1.1.1.1
+nameserver 2606:4700:4700::1111
+nameserver 1.0.0.1
+nameserver 2606:4700:4700::1001
+EOF
+
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
+# Restart Systemd-Resolved for the changes to take effect
+sudo systemctl restart systemd-resolved
+```
+
+## ALTERNATIVE: Cloudflare DNS
 
 Set up and use Stubby. We are using Cloudflare DNS here.
 
@@ -227,76 +297,6 @@ nameserver 77.88.8.8
 nameserver 2a02:6b8::feed:0ff
 nameserver 77.88.8.1
 nameserver 2a02:6b8:0:1::feed:0ff
-EOF
-
-# Make /etc/resolv.conf a symlink to Systemd-Resolved file
-sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-
-# Restart Systemd-Resolved for the changes to take effect
-sudo systemctl restart systemd-resolved
-```
-
-## ALTERNATIVE: Quad9
-
-Set up and use Stubby. We are using Quad9 here.
-
-```shell
-# Install Stubby
-sudo apt install -y stubby
-sudo dnf install -y stubby
-sudo yum install -y stubby
-sudo zypper -n install stubby
-sudo pacman -S --noconfirm stubby
-
-# Enable and start Systemd-Resolved
-sudo systemctl enable systemd-resolved
-sudo systemctl start systemd-resolved
-
-# Enable and start Stubby
-sudo systemctl enable stubby
-sudo systemctl start stubby
-
-# Configure Stubby
-sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
-resolution_type: GETDNS_RESOLUTION_STUB
-tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
-round_robin_upstreams: 1
-idle_timeout: 10000
-
-dns_transport_list:
-  - GETDNS_TRANSPORT_TLS
-
-listen_addresses:
-  - 127.0.0.1@53
-
-upstream_recursive_servers:
-  - address_data: 9.9.9.9
-    tls_auth_name: "dns.quad9.net"
-  - address_data: 2620:fe::fe
-    tls_auth_name: "dns.quad9.net"
-  - address_data: 149.112.112.112
-    tls_auth_name: "dns.quad9.net"
-  - address_data: 2620:fe::9
-    tls_auth_name: "dns.quad9.net"
-EOF
-
-# Restart the Stubby for everything to work properly
-sudo systemctl restart stubby
-
-# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Stubby in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
-[Resolve]
-DNS=127.0.0.1
-DNSStubListener=no
-EOF
-
-# Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
-sudo tee /etc/resolv.conf > /dev/null << EOF
-nameserver 127.0.0.1
-nameserver 9.9.9.9
-nameserver 2620:fe::fe
-nameserver 149.112.112.112
-nameserver 2620:fe::9
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
