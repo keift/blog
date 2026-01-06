@@ -26,36 +26,12 @@ sudo pacman -S --noconfirm curl bind-tools unzip nftables
 
 Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves.
 
-We've used Yandex DNS here with Russian users in mind. However, other provider alternatives are also available if you prefer.
-
 - [Mullvad DNS](https://keift.gitbook.io/blog/linux/dot-with-systemd-resolved#alternative-mullvad-dns-recommended) (Recommended)
 - [Cloudflare DNS](https://keift.gitbook.io/blog/linux/dot-with-systemd-resolved#alternative-cloudflare-dns)
 - [Google DNS](https://keift.gitbook.io/blog/linux/dot-with-systemd-resolved#alternative-google-dns)
 - [Yandex DNS](https://keift.gitbook.io/blog/linux/dot-with-systemd-resolved#alternative-yandex-dns)
 
 If your distribution does not include Systemd, you will need to do this using [Stubby](https://keift.gitbook.io/blog/linux/install-stubby).
-
-```shell
-# Enable and start Systemd-Resolved
-sudo systemctl enable systemd-resolved
-sudo systemctl start systemd-resolved
-
-# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Yandex DNS in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
-[Resolve]
-DNS=77.88.8.8
-DNS=2a02:6b8::feed:0ff
-DNS=77.88.8.1
-DNS=2a02:6b8:0:1::feed:0ff
-DNSOverTLS=yes
-EOF
-
-# Make /etc/resolv.conf a symlink to Systemd-Resolved file
-sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-
-# Restart Systemd-Resolved for the changes to take effect
-sudo systemctl restart systemd-resolved
-```
 
 ## 3. Download Zapret
 
