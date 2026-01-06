@@ -28,7 +28,7 @@ Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We n
 
 We've used Yandex DNS here with Russian users in mind. However, other provider alternatives are also available if you prefer.
 
-- [Mullvad DNS (Recommended)](https://keift.gitbook.io/blog/linux/dot-with-systemd-resolved#alternative-mullvad-dns-recommended)
+- [Mullvad DNS](https://keift.gitbook.io/blog/linux/dot-with-systemd-resolved#alternative-mullvad-dns-recommended) (Recommended)
 - [Cloudflare DNS](https://keift.gitbook.io/blog/linux/dot-with-systemd-resolved#alternative-cloudflare-dns)
 - [Google DNS](https://keift.gitbook.io/blog/linux/dot-with-systemd-resolved#alternative-google-dns)
 - [Yandex DNS](https://keift.gitbook.io/blog/linux/dot-with-systemd-resolved#alternative-yandex-dns)
