@@ -17,8 +17,6 @@ sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
 [Resolve]
 DNS=194.242.2.4#base.dns.mullvad.net
 DNS=2a07:e340::4#base.dns.mullvad.net
-DNS=194.242.2.2#dns.mullvad.net
-DNS=2a07:e340::2#dns.mullvad.net
 DNSOverTLS=yes
 EOF
 
