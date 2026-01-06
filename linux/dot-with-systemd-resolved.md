@@ -12,7 +12,7 @@ We are using Mullvad DNS here. This DNS service blocks ads, trackers, and malwar
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
-# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Cloudflare DNS in it
+# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Mullvad DNS in it
 sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
 [Resolve]
 DNS=194.242.2.4
