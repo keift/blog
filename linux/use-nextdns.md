@@ -95,8 +95,8 @@ EOF
 sudo tee /etc/resolv.conf > /dev/null << EOF
 nameserver 127.0.0.1
 nameserver 45.90.28.0
-nameserver 45.90.30.0
 nameserver 2a07:a8c0::
+nameserver 45.90.30.0
 nameserver 2a07:a8c1::
 EOF
 
