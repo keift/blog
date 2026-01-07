@@ -131,13 +131,13 @@ listen_addresses:
 
 upstream_recursive_servers:
   - address_data: 1.1.1.1
-    tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
+    tls_auth_name: "one.one.one.one"
   - address_data: 2606:4700:4700::1111
-    tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
+    tls_auth_name: "one.one.one.one"
   - address_data: 1.0.0.1
-    tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
+    tls_auth_name: "one.one.one.one"
   - address_data: 2606:4700:4700::1001
-    tls_auth_name: "1dot1dot1dot1.cloudflare-dns.com"
+    tls_auth_name: "one.one.one.one"
 EOF
 
 # Restart the Stubby for everything to work properly

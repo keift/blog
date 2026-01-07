@@ -41,10 +41,10 @@ sudo systemctl start systemd-resolved
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Cloudflare DNS in it
 sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
 [Resolve]
-DNS=1.1.1.1#1dot1dot1dot1.cloudflare-dns.com
-DNS=2606:4700:4700::1111#1dot1dot1dot1.cloudflare-dns.com
-DNS=1.0.0.1#1dot1dot1dot1.cloudflare-dns.com
-DNS=2606:4700:4700::1001#1dot1dot1dot1.cloudflare-dns.com
+DNS=1.1.1.1#one.one.one.one
+DNS=2606:4700:4700::1111#one.one.one.one
+DNS=1.0.0.1#one.one.one.one
+DNS=2606:4700:4700::1001#one.one.one.one
 DNSOverTLS=yes
 EOF
 
