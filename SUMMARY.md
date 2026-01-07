@@ -10,7 +10,7 @@
   - [Install Docker](./linux/install-docker.md)
   - [Install Nginx](./linux/install-nginx.md)
   - [Install Tailscale](./linux/install-tailscale.md)
-  - [DoT with Systemd-Resolved](./linux/dot-with-systemd-resolved.md)
+  - [Use DNS-over-TLS](./linux/use-dns-over-tls.md)
   - [Use NextDNS](./linux/use-nextdns.md)
 
 - [BSD](./bsd/README.md)
