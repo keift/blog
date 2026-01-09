@@ -17,7 +17,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use NextDNS in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=45.90.28.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=2a07:a8c0::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
@@ -58,7 +58,7 @@ sudo systemctl enable stubby
 sudo systemctl start stubby
 
 # Configure Stubby
-sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
+sudo tee /etc/stubby/stubby.yml &>/dev/null << EOF
 resolution_type: GETDNS_RESOLUTION_STUB
 tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
 round_robin_upstreams: 1
@@ -85,14 +85,14 @@ EOF
 sudo systemctl restart stubby
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Stubby in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1
 DNSStubListener=no
 EOF
 
 # Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
-sudo tee /etc/resolv.conf > /dev/null << EOF
+sudo tee /etc/resolv.conf &>/dev/null << EOF
 nameserver 127.0.0.1
 nameserver 45.90.28.0
 nameserver 2a07:a8c0::
@@ -124,7 +124,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Leave the Systemd-Resolved configuration blank
-sudo tee /etc/systemd/resolved.conf > /dev/null <<< ""
+sudo tee /etc/systemd/resolved.conf &>/dev/null <<< ""
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf

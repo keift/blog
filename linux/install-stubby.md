@@ -47,7 +47,7 @@ sudo systemctl enable stubby
 sudo systemctl start stubby
 
 # Configure Stubby
-sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
+sudo tee /etc/stubby/stubby.yml &>/dev/null << EOF
 resolution_type: GETDNS_RESOLUTION_STUB
 tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
 round_robin_upstreams: 1
@@ -74,14 +74,14 @@ EOF
 sudo systemctl restart stubby
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Stubby in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1
 DNSStubListener=no
 EOF
 
 # Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
-sudo tee /etc/resolv.conf > /dev/null << EOF
+sudo tee /etc/resolv.conf &>/dev/null << EOF
 nameserver 127.0.0.1
 nameserver 1.1.1.1
 nameserver 2606:4700:4700::1111
@@ -117,7 +117,7 @@ sudo systemctl enable stubby
 sudo systemctl start stubby
 
 # Configure Stubby
-sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
+sudo tee /etc/stubby/stubby.yml &>/dev/null << EOF
 resolution_type: GETDNS_RESOLUTION_STUB
 tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
 round_robin_upstreams: 1
@@ -144,14 +144,14 @@ EOF
 sudo systemctl restart stubby
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Stubby in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1
 DNSStubListener=no
 EOF
 
 # Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
-sudo tee /etc/resolv.conf > /dev/null << EOF
+sudo tee /etc/resolv.conf &>/dev/null << EOF
 nameserver 127.0.0.1
 nameserver 1.1.1.1
 nameserver 2606:4700:4700::1111
@@ -187,7 +187,7 @@ sudo systemctl enable stubby
 sudo systemctl start stubby
 
 # Configure Stubby
-sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
+sudo tee /etc/stubby/stubby.yml &>/dev/null << EOF
 resolution_type: GETDNS_RESOLUTION_STUB
 tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
 round_robin_upstreams: 1
@@ -214,14 +214,14 @@ EOF
 sudo systemctl restart stubby
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Stubby in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1
 DNSStubListener=no
 EOF
 
 # Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
-sudo tee /etc/resolv.conf > /dev/null << EOF
+sudo tee /etc/resolv.conf &>/dev/null << EOF
 nameserver 127.0.0.1
 nameserver 8.8.8.8
 nameserver 2001:4860:4860::8888
@@ -257,7 +257,7 @@ sudo systemctl enable stubby
 sudo systemctl start stubby
 
 # Configure Stubby
-sudo tee /etc/stubby/stubby.yml > /dev/null << EOF
+sudo tee /etc/stubby/stubby.yml &>/dev/null << EOF
 resolution_type: GETDNS_RESOLUTION_STUB
 tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
 round_robin_upstreams: 1
@@ -284,14 +284,14 @@ EOF
 sudo systemctl restart stubby
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Stubby in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1
 DNSStubListener=no
 EOF
 
 # Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
-sudo tee /etc/resolv.conf > /dev/null << EOF
+sudo tee /etc/resolv.conf &>/dev/null << EOF
 nameserver 127.0.0.1
 nameserver 77.88.8.8
 nameserver 2a02:6b8::feed:0ff
@@ -323,7 +323,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Leave the Systemd-Resolved configuration blank
-sudo tee /etc/systemd/resolved.conf > /dev/null <<< ""
+sudo tee /etc/systemd/resolved.conf &>/dev/null <<< ""
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf

@@ -33,7 +33,7 @@ sudo sysrc firewall_enable="YES"
 
 # Backup your old unbound config and replace it with this (or if you advanced merge it)
 sudo cp /usr/local/etc/unbound/unbound.conf /usr/local/etc/unbound/unbound.conf.bak
-sudo tee /usr/local/etc/unbound/unbound.conf > /dev/null <<'EOF'
+sudo tee /usr/local/etc/unbound/unbound.conf &>/dev/null <<'EOF'
 server:
     interface: 127.0.0.1
     do-ip4: yes

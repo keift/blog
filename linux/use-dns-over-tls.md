@@ -13,7 +13,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Mullvad DNS in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=194.242.2.4#base.dns.mullvad.net
 DNS=2a07:e340::4#base.dns.mullvad.net
@@ -39,7 +39,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Cloudflare DNS in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=1.1.1.1#one.one.one.one
 DNS=2606:4700:4700::1111#one.one.one.one
@@ -65,7 +65,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Google DNS in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=8.8.8.8#dns.google
 DNS=2001:4860:4860::8888#dns.google
@@ -91,7 +91,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Yandex DNS in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=77.88.8.8#common.dot.dns.yandex.net
 DNS=2a02:6b8::feed:0ff#common.dot.dns.yandex.net
@@ -117,7 +117,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Leave the Systemd-Resolved configuration blank
-sudo tee /etc/systemd/resolved.conf > /dev/null <<< ""
+sudo tee /etc/systemd/resolved.conf &>/dev/null <<< ""
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf

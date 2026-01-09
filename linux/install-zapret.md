@@ -41,7 +41,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Rewrite the /etc/systemd/resolved.conf file and specify that we will use Yandex DNS in it
-sudo tee /etc/systemd/resolved.conf > /dev/null << EOF
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=77.88.8.8#common.dot.dns.yandex.net
 DNS=2a02:6b8::feed:0ff#common.dot.dns.yandex.net
@@ -304,7 +304,7 @@ sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
 # Leave the Systemd-Resolved configuration blank
-sudo tee /etc/systemd/resolved.conf > /dev/null <<< ""
+sudo tee /etc/systemd/resolved.conf &>/dev/null <<< ""
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf

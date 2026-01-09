@@ -48,7 +48,7 @@ LISTEN_PORT="80"
 UPSTREAM_PORT="3000"
 
 # Configure service
-sudo tee /etc/nginx/sites-available/$SERVICE_NAME.conf > /dev/null << EOF
+sudo tee /etc/nginx/sites-available/$SERVICE_NAME.conf &>/dev/null << EOF
 server {
   server_name $SERVER_NAME;
   listen $LISTEN_PORT;
