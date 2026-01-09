@@ -3,6 +3,30 @@ description: Install Zapret to bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 
+## ✨ Install Zapret in one step
+
+We've created an installation wizard that lets you install Zapret in a single step. However, we'll still keep the installation steps here.
+
+### Installation
+
+You can install it as follows.
+
+```shell
+curl -fsSL https://is.gd/U95wCm | bash
+```
+
+### Uninstall
+
+This is how you can uninstall Zapret.
+
+```shell
+curl -fsSL https://is.gd/lxqryq | bash
+```
+
+<details>
+
+<summary>See installation steps.</summary>
+
 ## 1. Install required tools
 
 Required tools for installation.
@@ -311,3 +335,5 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
 ```
+
+</details>
