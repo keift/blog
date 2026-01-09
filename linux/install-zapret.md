@@ -3,9 +3,9 @@ description: Install Zapret to bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 
-## ✨ Install Zapret in one step **[NEW!]**
+## ✨ Install Zapret in one step
 
-We've created an installation wizard that lets you install Zapret in a single step. However, we'll still keep the installation steps here.
+We've created an installation wizard that lets you install Zapret in a single step.
 
 **Installation**
 
@@ -22,6 +22,8 @@ This is how you can uninstall Zapret.
 ```shell
 curl -fsSL https://is.gd/lxqryq | bash
 ```
+
+However, below we've shown what to do if we wanted to install it ourselves.
 
 ## 1. Install required tools
 
