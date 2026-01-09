@@ -73,11 +73,11 @@ listen_addresses:
 upstream_recursive_servers:
   - address_data: 45.90.28.0
     tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
-  - address_data: 2a07:a8c0::0
+  - address_data: 2a07:a8c0::
     tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
   - address_data: 45.90.30.0
     tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
-  - address_data: 2a07:a8c1::0
+  - address_data: 2a07:a8c1::
     tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
 EOF
 
