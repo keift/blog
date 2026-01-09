@@ -121,7 +121,6 @@ sudo ~/zapret-v72.7/blockcheck.sh
 Here are the answers you need to give to the questions you may encounter during this time.
 
 ```
-specify domain(s) to test. multiple domains are space separated.
 domain(s) (default: rutracker.org) : 🟥 [ENTER A WEBSITE DOMAIN NAME BLOCKED IN YOUR COUNTRY HERE - EXAMPLE: discord.com] 🟥
 ```
 
