@@ -16,7 +16,7 @@ Press **Win + R** and type `cmd`.
 cd %userprofile%/Documents
 
 # Download the compiled zip file from GitHub
-curl -Lo goodbyedpi-v1.1.zip https://github.com/fir4tozden/goodbyedpi/archive/refs/tags/v1.1.zip
+curl -Lo goodbyedpi-v1.1.zip https://github.com/keift/goodbyedpi/archive/refs/tags/v1.1.zip
 ```
 
 ## 3. Unzip the zip file
