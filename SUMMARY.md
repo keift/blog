@@ -2,7 +2,6 @@
 
 - [Linux](./linux/README.md)
   - [Install Zapret](./linux/install-zapret.md)
-  - [Install Neatd](./linux/install-neatd.md)
   - [Install Flatpak](./linux/install-flatpak.md)
   - [Install TLP](./linux/install-tlp.md)
   - [Install Dokploy](./linux/install-dokploy.md)
