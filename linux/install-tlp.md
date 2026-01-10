@@ -15,11 +15,11 @@ sudo apt install -y tlp tlp-rdw
 sudo dnf install -y tlp tlp-rdw
 sudo yum install -y tlp tlp-rdw
 
-# OpenSUSE (Zypper)
-sudo zypper -n install tlp tlp-rdw
-
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm tlp tlp-rdw
+
+# OpenSUSE (Zypper)
+sudo zypper -n install tlp tlp-rdw
 
 # Start TLP
 sudo tlp start

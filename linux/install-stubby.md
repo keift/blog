@@ -15,11 +15,11 @@ sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
 
-# OpenSUSE (Zypper)
-sudo zypper -n install stubby
-
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm stubby
+
+# OpenSUSE (Zypper)
+sudo zypper -n install stubby
 
 # Enable and start Stubby
 sudo systemctl enable stubby
@@ -35,8 +35,8 @@ Set up and use Stubby. We are using Cloudflare DNS here.
 sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
-sudo zypper -n install stubby
 sudo pacman -S --noconfirm stubby
+sudo zypper -n install stubby
 
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
@@ -105,8 +105,8 @@ Set up and use Stubby. We are using Mullvad DNS here.
 sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
-sudo zypper -n install stubby
 sudo pacman -S --noconfirm stubby
+sudo zypper -n install stubby
 
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
@@ -175,8 +175,8 @@ Set up and use Stubby. We are using Google DNS here.
 sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
-sudo zypper -n install stubby
 sudo pacman -S --noconfirm stubby
+sudo zypper -n install stubby
 
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
@@ -245,8 +245,8 @@ Set up and use Stubby. We are using Yandex DNS here.
 sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
-sudo zypper -n install stubby
 sudo pacman -S --noconfirm stubby
+sudo zypper -n install stubby
 
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved

@@ -15,11 +15,11 @@ sudo apt install -y curl
 sudo dnf install -y curl
 sudo yum install -y curl
 
-# OpenSUSE (Zypper)
-sudo zypper -n install curl
-
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm curl
+
+# OpenSUSE (Zypper)
+sudo zypper -n install curl
 ```
 
 ## 2. Install Tailscale

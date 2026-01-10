@@ -15,11 +15,11 @@ sudo apt install -y flatpak gnome-software gnome-software-plugin-flatpak
 sudo dnf install -y flatpak gnome-software gnome-software-plugin-flatpak
 sudo yum install -y flatpak gnome-software gnome-software-plugin-flatpak
 
-# OpenSUSE (Zypper)
-sudo zypper -n install flatpak gnome-software gnome-software-plugin-flatpak
-
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm flatpak gnome-software gnome-software-packagekit-plugin
+
+# OpenSUSE (Zypper)
+sudo zypper -n install flatpak gnome-software gnome-software-plugin-flatpak
 
 # Define Flathub remote reference
 sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo

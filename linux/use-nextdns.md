@@ -46,8 +46,8 @@ DEVICE_NAME="HUAWEI MateBook D16"
 sudo apt install -y stubby
 sudo dnf install -y stubby
 sudo yum install -y stubby
-sudo zypper -n install stubby
 sudo pacman -S --noconfirm stubby
+sudo zypper -n install stubby
 
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved

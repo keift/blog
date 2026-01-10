@@ -15,11 +15,11 @@ sudo apt install -y nginx
 sudo dnf install -y nginx
 sudo yum install -y nginx
 
-# OpenSUSE (Zypper)
-sudo zypper -n install nginx
-
 # Arch, Manjaro (Pacman)
 sudo pacman -S --noconfirm nginx
+
+# OpenSUSE (Zypper)
+sudo zypper -n install nginx
 
 # Enable and start Nginx
 sudo systemctl enable nginx

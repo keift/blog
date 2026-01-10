@@ -32,17 +32,17 @@ Required tools for installation.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
-sudo apt install -y curl dnsutils nftables unzip
+sudo apt install -y curl dnsutils nftables systemd-resolved unzip
 
 # Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
-sudo dnf install -y bind-utils curl nftables unzip
-sudo yum install -y bind-utils curl nftables unzip
-
-# OpenSUSE (Zypper)
-sudo zypper -n install bind-utils curl nftables unzip
+sudo dnf install -y bind-utils curl nftables systemd-resolved unzip
+sudo yum install -y bind-utils curl nftables systemd-resolved unzip
 
 # Arch, Manjaro (Pacman)
-sudo pacman -S --noconfirm bind-tools curl nftables unzip
+sudo pacman -S --noconfirm bind-tools curl nftables systemd-resolved unzip
+
+# OpenSUSE (Zypper)
+sudo zypper -n install bind-utils curl nftables systemd-resolved unzip
 ```
 
 ## 2. Change DNS rules
