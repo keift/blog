@@ -289,7 +289,7 @@ your choice (default : ANY) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 
 All done! 🎉 We are done with this folder of Zapret anymore. We can delete it.
 
-````shell
+```shell
 # Delete the folder
 sudo rm -rf /tmp/zapret-v72.7
 ```
