@@ -289,7 +289,7 @@ your choice (default : ANY) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 
 All done! 🎉 We are done with this folder of Zapret anymore. We can delete it.
 
-```shell
+````shell
 # Delete the folder
 sudo rm -rf /tmp/zapret-v72.7
 ```
@@ -303,9 +303,9 @@ If you ever regain your freedom, you can undo all of these actions in the follow
 sudo /opt/zapret/uninstall_easy.sh
 
 # Remove unused files
-sudo rm -rf /tmp/zapret-v72.7
 sudo rm -rf /opt/zapret
-```
+sudo rm -rf /tmp/zapret-v72.7
+````
 
 ## TIP: Remove DNS settings
 
