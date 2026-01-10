@@ -91,11 +91,11 @@ sudo apt purge -y nginx
 sudo dnf remove -y nginx
 sudo yum remove -y nginx
 
-# OpenSUSE (Zypper)
-sudo zypper -n remove -u nginx
-
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm nginx
+
+# OpenSUSE (Zypper)
+sudo zypper -n remove -u nginx
 
 # Remove unused files
 sudo rm -rf /etc/nginx

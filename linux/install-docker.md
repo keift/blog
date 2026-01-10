@@ -31,11 +31,11 @@ sudo apt purge -y docker* containerd.io
 sudo dnf remove -y docker* containerd.io
 sudo yum remove -y docker* containerd.io
 
-# OpenSUSE (Zypper)
-sudo zypper -n remove -u docker* containerd.io
-
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm docker* containerd.io
+
+# OpenSUSE (Zypper)
+sudo zypper -n remove -u docker* containerd.io
 
 # Remove unused files
 sudo rm -rf /var/lib/docker

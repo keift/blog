@@ -116,8 +116,8 @@ If you want to remove the DNS settings, you can do the following.
 sudo apt purge -y stubby
 sudo dnf remove -y stubby
 sudo yum remove -y stubby
-sudo zypper -n remove -u stubby
 sudo pacman -Rns --noconfirm stubby
+sudo zypper -n remove -u stubby
 
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved

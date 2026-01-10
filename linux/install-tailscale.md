@@ -113,8 +113,8 @@ This is how you can uninstall Tailscale.
 sudo apt purge -y tailscale
 sudo dnf remove -y tailscale
 sudo yum remove -y tailscale
-sudo zypper -n remove -u tailscale
 sudo pacman -Rns --noconfirm tailscale
+sudo zypper -n remove -u tailscale
 
 # Remove configs
 sudo rm -rf /etc/sysctl.d/99-tailscale.conf

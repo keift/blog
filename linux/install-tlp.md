@@ -50,9 +50,9 @@ sudo apt purge -y tlp tlp-rdw
 sudo dnf remove -y tlp tlp-rdw
 sudo yum remove -y tlp tlp-rdw
 
-# OpenSUSE (Zypper)
-sudo zypper -n remove -u tlp tlp-rdw
-
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm tlp tlp-rdw
+
+# OpenSUSE (Zypper)
+sudo zypper -n remove -u tlp tlp-rdw
 ```

@@ -37,9 +37,9 @@ sudo apt purge -y flatpak gnome-software gnome-software-plugin-flatpak
 sudo dnf remove -y flatpak gnome-software gnome-software-plugin-flatpak
 sudo yum remove -y flatpak gnome-software gnome-software-plugin-flatpak
 
-# OpenSUSE (Zypper)
-sudo zypper -n remove -u flatpak gnome-software gnome-software-plugin-flatpak
-
 # Arch, Manjaro (Pacman)
 sudo pacman -Rns --noconfirm flatpak gnome-software gnome-software-packagekit-plugin
+
+# OpenSUSE (Zypper)
+sudo zypper -n remove -u flatpak gnome-software gnome-software-plugin-flatpak
 ```
