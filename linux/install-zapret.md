@@ -3,7 +3,7 @@ description: Install Zapret to bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 
-### ✨ Install Zapret in one step
+**✨ Install Zapret in one step**
 
 We've created an installation wizard that lets you install Zapret in a single step.
 
