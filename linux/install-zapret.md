@@ -7,7 +7,7 @@ icon: lock-keyhole-open
 
 We've created an installation wizard that lets you install Zapret in a single step.
 
-**Installation**
+## Installation
 
 You can install it as follows.
 
@@ -15,7 +15,7 @@ You can install it as follows.
 curl -fsSL https://is.gd/U95wCm | bash
 ```
 
-**Uninstall**
+## Uninstall
 
 This is how you can uninstall Zapret.
 
