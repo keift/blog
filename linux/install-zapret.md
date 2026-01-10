@@ -23,7 +23,9 @@ This is how you can uninstall Zapret.
 curl -fsSL https://is.gd/lxqryq | bash
 ```
 
-However, below we've shown what to do if we wanted to install it ourselves.
+<details>
+
+<summary>Archived</summary>
 
 ## 1. Install required tools
 
@@ -333,3 +335,5 @@ sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
 ```
+
+</details>
