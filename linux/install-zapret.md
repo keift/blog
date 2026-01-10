@@ -24,7 +24,6 @@ curl -fsSL https://is.gd/lxqryq | bash
 ```
 
 <details>
-
 <summary>Archived: Step-by-step installation</summary>
 
 ## 1. Install required tools
