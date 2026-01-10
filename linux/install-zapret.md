@@ -305,7 +305,7 @@ sudo /opt/zapret/uninstall_easy.sh
 # Remove unused files
 sudo rm -rf /opt/zapret
 sudo rm -rf /tmp/zapret-v72.7
-````
+```
 
 ## TIP: Remove DNS settings
 
