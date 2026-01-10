@@ -25,7 +25,7 @@ curl -fsSL https://is.gd/lxqryq | bash
 
 <details>
 
-<summary>Archived</summary>
+<summary>Archived: Step-by-step installation</summary>
 
 ## 1. Install required tools
 
@@ -87,41 +87,31 @@ Download the compiled zip file as release on GitHub.
 
 ```shell
 # Delete if present
-sudo rm -rf ~/zapret-v72.7.zip
-sudo rm -rf ~/zapret-v72.7
-
-# Go to the home directory
-cd ~/
+sudo rm -rf /tmp/zapret-v72.7
+sudo rm -rf /tmp/zapret-v72.7.zip
 
 # Download the compiled zip file from GitHub
-sudo wget https://github.com/bol-van/zapret/releases/download/v72.7/zapret-v72.7.zip
-```
+sudo wget -P /tmp https://github.com/bol-van/zapret/releases/download/v72.7/zapret-v72.7.zip
 
-## 4. Unzip the zip file
-
-Extract the zip file and then delete it.
-
-```shell
 # Unzip the zip file
-sudo unzip ~/zapret-v72.7.zip
+sudo unzip -d /tmp /tmp/zapret-v72.7.zip
 
 # Delete the zip file that we no longer need
-sudo rm -rf ~/zapret-v72.7.zip
+sudo rm -rf /tmp/zapret-v72.7.zip
 ```
 
-## 5. Prepare for installation
+## 4. Prepare for installation
 
 Install the requirements and prepare to perform a clean install.
 
 ```shell
 # For a clean installation, remove any installation files that may be present in case an installation has been made before
-sudo ~/zapret-v72.7/uninstall_easy.sh
 sudo /opt/zapret/uninstall_easy.sh
 sudo rm -rf /opt/zapret
 
 # Install requirements
-sudo ~/zapret-v72.7/install_prereq.sh
-sudo ~/zapret-v72.7/install_bin.sh
+sudo /tmp/zapret-v72.7/install_prereq.sh
+sudo /tmp/zapret-v72.7/install_bin.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -133,13 +123,13 @@ select firewall type :
 your choice (default : nftables) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-## 6. Do Blockcheck
+## 5. Do Blockcheck
 
 Find the DPI methods implemented by the ISP.
 
 ```shell
 # Run the test
-sudo ~/zapret-v72.7/blockcheck.sh
+sudo /tmp/zapret-v72.7/blockcheck.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -196,13 +186,13 @@ This is an example settings for **NFQWS**. It may be different for each person. 
 --dpi-desync=fakeddisorder --dpi-desync-ttl=1 --dpi-desync-autottl=-5 --dpi-desync-split-pos=1
 ```
 
-## 7. Install Zapret
+## 6. Install Zapret
 
 We can start installing Zapret.
 
 ```shell
 # Start the installation
-sudo ~/zapret-v72.7/install_easy.sh
+sudo /tmp/zapret-v72.7/install_easy.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -295,13 +285,13 @@ WAN interface :
 your choice (default : ANY) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
-## 8. Finish the installation
+## 7. Finish the installation
 
 All done! 🎉 We are done with this folder of Zapret anymore. We can delete it.
 
 ```shell
 # Delete the folder
-sudo rm -rf ~/zapret-v72.7
+sudo rm -rf /tmp/zapret-v72.7
 ```
 
 ## TIP: Uninstall Zapret
@@ -313,7 +303,7 @@ If you ever regain your freedom, you can undo all of these actions in the follow
 sudo /opt/zapret/uninstall_easy.sh
 
 # Remove unused files
-sudo rm -rf ~/zapret-v72.7
+sudo rm -rf /tmp/zapret-v72.7
 sudo rm -rf /opt/zapret
 ```
 
