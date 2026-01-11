@@ -325,6 +325,14 @@ sudo systemctl start systemd-resolved
 # Leave the Systemd-Resolved configuration blank
 sudo tee /etc/systemd/resolved.conf &>/dev/null <<< ""
 
+# Leave the /etc/resolv.conf file safe
+sudo tee /etc/resolv.conf &>/dev/null << EOF
+nameserver 1.1.1.1
+nameserver 2606:4700:4700::1111
+nameserver 1.0.0.1
+nameserver 2606:4700:4700::1001
+EOF
+
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 [ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
