@@ -26,9 +26,9 @@ curl -fsSL https://is.gd/uninstall_zapret | bash
 <details>
 <summary>Archived: Step-by-step installation</summary>
 
-## 1. Install required tools
+## 1. Install dependencies
 
-Required tools for installation.
+Dependencies for installation.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
@@ -45,7 +45,7 @@ sudo pacman -S --noconfirm bind-tools curl nftables systemd-resolved unzip
 sudo zypper -n install bind-utils curl nftables systemd-resolved unzip
 ```
 
-## 2. Change DNS rules
+## 2. Change DNS settings
 
 Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves.
 

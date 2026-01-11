@@ -3,9 +3,9 @@ description: Set up and use your own VPN server.
 icon: braille
 ---
 
-## 1. Install required tools
+## 1. Install dependencies
 
-Required tools for installation.
+Dependencies for installation.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
