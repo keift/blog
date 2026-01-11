@@ -5,7 +5,7 @@ icon: n
 
 ## 1. Install Nginx
 
-Nginx is a web server and reverse proxy service.
+You can install it as follows.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
@@ -78,7 +78,7 @@ sudo systemctl restart nginx
 
 ## TIP: Uninstall Nginx
 
-This is how you can uninstall Nginx.
+You can uninstall it as follows.
 
 ```shell
 # Stop service

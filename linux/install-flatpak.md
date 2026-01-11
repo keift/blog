@@ -5,7 +5,7 @@ icon: basket-shopping
 
 ## Install Flatpak and Gnome Software
 
-Flatpak and Gnome Software integration.
+You can install it as follows.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
@@ -27,7 +27,7 @@ sudo flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub
 
 ## TIP: Uninstall Flatpak and Gnome Software
 
-This is how you can uninstall Flatpak and Gnome Software.
+You can uninstall it as follows.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)

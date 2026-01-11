@@ -24,7 +24,7 @@ sudo zypper -n install curl
 
 ## 2. Install Tailscale
 
-Install Tailscale with shell script.
+You can install it as follows.
 
 ```shell
 # Pull and run the specified shell script
@@ -106,7 +106,7 @@ sudo tailscale up
 
 ## TIP: Uninstall Tailscale
 
-This is how you can uninstall Tailscale.
+You can uninstall it as follows.
 
 ```shell
 # Uninstall Tailscale

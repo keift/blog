@@ -5,7 +5,7 @@ icon: docker
 
 ## Install Docker
 
-Docker is a containerization service.
+You can install it as follows.
 
 ```shell
 # Pull and run the specified shell script
@@ -18,7 +18,7 @@ sudo systemctl start docker
 
 ## TIP: Uninstall Docker
 
-This is how you can uninstall Docker.
+You can uninstall it as follows.
 
 ```shell
 # Stop service

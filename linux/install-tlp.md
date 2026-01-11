@@ -5,7 +5,7 @@ icon: battery-three-quarters
 
 ## 1. Install TLP
 
-TLP is a power management service.
+You can install it as follows.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
@@ -40,7 +40,7 @@ sudo systemctl restart tlp
 
 ## TIP: Uninstall TLP
 
-This is how you can uninstall TLP.
+You can uninstall it as follows.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)

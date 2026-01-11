@@ -5,7 +5,7 @@ icon: docker
 
 ## Install Dokploy
 
-Dokploy is a deployment service.
+You can install it as follows.
 
 ```shell
 # Pull and run the specified shell script
@@ -21,7 +21,7 @@ curl -sSL https://dokploy.com/install.sh | sh
 
 ## TIP: Uninstall Dokploy
 
-This is how you can uninstall Dokploy.
+You can uninstall it as follows.
 
 ```shell
 # Remove Dokploy services

@@ -8,6 +8,13 @@ icon: notebook
 We are using Cloudflare DNS here.
 
 ```shell
+# Install Systemd-Resolved
+sudo apt install -y systemd-resolved
+sudo dnf install -y systemd-resolved
+sudo yum install -y systemd-resolved
+sudo pacman -S --noconfirm systemd-resolved
+sudo zypper -n install systemd-resolved
+
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
@@ -34,6 +41,13 @@ sudo systemctl restart systemd-resolved
 We are using Mullvad DNS here.
 
 ```shell
+# Install Systemd-Resolved
+sudo apt install -y systemd-resolved
+sudo dnf install -y systemd-resolved
+sudo yum install -y systemd-resolved
+sudo pacman -S --noconfirm systemd-resolved
+sudo zypper -n install systemd-resolved
+
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
@@ -60,6 +74,13 @@ sudo systemctl restart systemd-resolved
 We are using Google DNS here.
 
 ```shell
+# Install Systemd-Resolved
+sudo apt install -y systemd-resolved
+sudo dnf install -y systemd-resolved
+sudo yum install -y systemd-resolved
+sudo pacman -S --noconfirm systemd-resolved
+sudo zypper -n install systemd-resolved
+
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
@@ -86,6 +107,13 @@ sudo systemctl restart systemd-resolved
 We are using Yandex DNS here.
 
 ```shell
+# Install Systemd-Resolved
+sudo apt install -y systemd-resolved
+sudo dnf install -y systemd-resolved
+sudo yum install -y systemd-resolved
+sudo pacman -S --noconfirm systemd-resolved
+sudo zypper -n install systemd-resolved
+
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
@@ -109,9 +137,16 @@ sudo systemctl restart systemd-resolved
 
 ## TIP: Remove DNS settings
 
-If you want to remove the DNS settings, you can do the following.
+You can remove it as follows.
 
 ```shell
+# Install Systemd-Resolved
+sudo apt install -y systemd-resolved
+sudo dnf install -y systemd-resolved
+sudo yum install -y systemd-resolved
+sudo pacman -S --noconfirm systemd-resolved
+sudo zypper -n install systemd-resolved
+
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved

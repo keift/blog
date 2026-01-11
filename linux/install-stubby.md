@@ -5,7 +5,7 @@ icon: notebook
 
 ## Install Stubby
 
-Stubby is a DNS-over-TLS service.
+You can install it as follows.
 
 ```shell
 # Debian, Ubuntu, Kali, Linux Mint (APT)
@@ -308,7 +308,7 @@ sudo systemctl restart systemd-resolved
 
 ## TIP: Uninstall Stubby
 
-This is how you can uninstall Stubby.
+You can uninstall it as follows.
 
 ```shell
 # Uninstall Stubby
