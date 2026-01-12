@@ -5,7 +5,7 @@ icon: lock-keyhole-open
 
 **✨ Install Zapret in one step**
 
-We've created an installation wizard that lets you install Zapret in a single step. Installing Zapret is now very easy!
+Installing Zapret is now very easy!
 
 **Installation**
 
