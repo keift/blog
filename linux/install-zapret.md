@@ -32,16 +32,16 @@ Dependencies for installation.
 
 ```shell
 # Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
-sudo apt install -y curl dnsutils nftables systemd-resolved unzip
+sudo apt install -y curl dnsutils nftables systemd-resolved unzip wget
 
 # RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
-sudo dnf install -y bind-utils curl nftables systemd-resolved unzip
+sudo dnf install -y bind-utils curl nftables systemd-resolved unzip wget
 
 # Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
-sudo pacman -S --noconfirm bind-tools curl nftables systemd-resolved unzip
+sudo pacman -S --noconfirm bind-tools curl nftables systemd-resolved unzip wget
 
 # openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
-sudo zypper -n install bind-utils curl nftables systemd-resolved unzip
+sudo zypper -n install bind-utils curl nftables systemd-resolved unzip wget
 ```
 
 ## 2. Change DNS settings
