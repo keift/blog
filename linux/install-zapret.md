@@ -23,6 +23,8 @@ You can uninstall it as follows.
 curl -fsSL https://is.gd/uninstall_zapret | bash
 ```
 
+<img src="https://raw.githubusercontent.com/keift/zapret/refs/heads/main/assets/screenshot-1.png" width="500px"/>
+
 <details>
 <summary>Archived: Step-by-step installation</summary>
 
