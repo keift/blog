@@ -27,7 +27,7 @@ curl -fsSL https://is.gd/uninstall_zapret | bash
 
 Here it is.
 
-<img src="https://raw.githubusercontent.com/keift/zapret/refs/heads/main/assets/screenshot-1.png" width="500px"/>
+<img src="https://raw.githubusercontent.com/keift/zapret/refs/heads/main/assets/screenshot-1.png" width="100%"/>
 
 <details>
 <summary>Archived: Step-by-step installation</summary>
