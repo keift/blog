@@ -8,17 +8,16 @@ icon: notebook
 You can install it as follows.
 
 ```shell
-# Debian, Ubuntu, Kali, Linux Mint (APT)
+# Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
 sudo apt install -y stubby
 
-# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
+# RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
 sudo dnf install -y stubby
-sudo yum install -y stubby
 
-# Arch, Manjaro (Pacman)
+# Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
 sudo pacman -S --noconfirm stubby
 
-# OpenSUSE (Zypper)
+# openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
 sudo zypper -n install stubby
 
 # Enable and start Stubby
@@ -34,7 +33,6 @@ Set up and use Stubby. We are using Cloudflare DNS here.
 # Install Stubby
 sudo apt install -y stubby
 sudo dnf install -y stubby
-sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 sudo zypper -n install stubby
 
@@ -104,7 +102,6 @@ Set up and use Stubby. We are using Mullvad DNS here.
 # Install Stubby
 sudo apt install -y stubby
 sudo dnf install -y stubby
-sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 sudo zypper -n install stubby
 
@@ -174,7 +171,6 @@ Set up and use Stubby. We are using Google DNS here.
 # Install Stubby
 sudo apt install -y stubby
 sudo dnf install -y stubby
-sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 sudo zypper -n install stubby
 
@@ -244,7 +240,6 @@ Set up and use Stubby. We are using Yandex DNS here.
 # Install Stubby
 sudo apt install -y stubby
 sudo dnf install -y stubby
-sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 sudo zypper -n install stubby
 
@@ -314,7 +309,6 @@ You can uninstall it as follows.
 # Uninstall Stubby
 sudo apt purge -y stubby
 sudo dnf remove -y stubby
-sudo yum remove -y stubby
 sudo pacman -Rns --noconfirm stubby
 sudo zypper -n remove -u stubby
 

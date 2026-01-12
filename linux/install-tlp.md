@@ -8,17 +8,16 @@ icon: battery-three-quarters
 You can install it as follows.
 
 ```shell
-# Debian, Ubuntu, Kali, Linux Mint (APT)
+# Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
 sudo apt install -y tlp tlp-rdw
 
-# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
+# RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
 sudo dnf install -y tlp tlp-rdw
-sudo yum install -y tlp tlp-rdw
 
-# Arch, Manjaro (Pacman)
+# Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
 sudo pacman -S --noconfirm tlp tlp-rdw
 
-# OpenSUSE (Zypper)
+# openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
 sudo zypper -n install tlp tlp-rdw
 
 # Start TLP
@@ -43,16 +42,15 @@ sudo systemctl restart tlp
 You can uninstall it as follows.
 
 ```shell
-# Debian, Ubuntu, Kali, Linux Mint (APT)
+# Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
 sudo apt purge -y tlp tlp-rdw
 
-# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
+# RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
 sudo dnf remove -y tlp tlp-rdw
-sudo yum remove -y tlp tlp-rdw
 
-# Arch, Manjaro (Pacman)
+# Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
 sudo pacman -Rns --noconfirm tlp tlp-rdw
 
-# OpenSUSE (Zypper)
+# openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
 sudo zypper -n remove -u tlp tlp-rdw
 ```

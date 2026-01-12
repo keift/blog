@@ -15,7 +15,6 @@ DEVICE_NAME="HUAWEI MateBook D16"
 # Install Systemd-Resolved
 sudo apt install -y systemd-resolved
 sudo dnf install -y systemd-resolved
-sudo yum install -y systemd-resolved
 sudo pacman -S --noconfirm systemd-resolved
 sudo zypper -n install systemd-resolved
 
@@ -52,7 +51,6 @@ DEVICE_NAME="HUAWEI MateBook D16"
 # Install Stubby
 sudo apt install -y stubby
 sudo dnf install -y stubby
-sudo yum install -y stubby
 sudo pacman -S --noconfirm stubby
 sudo zypper -n install stubby
 
@@ -122,7 +120,6 @@ You can remove it as follows.
 # Uninstall Stubby
 sudo apt purge -y stubby
 sudo dnf remove -y stubby
-sudo yum remove -y stubby
 sudo pacman -Rns --noconfirm stubby
 sudo zypper -n remove -u stubby
 

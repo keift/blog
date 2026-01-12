@@ -8,17 +8,16 @@ icon: braille
 Dependencies for installation.
 
 ```shell
-# Debian, Ubuntu, Kali, Linux Mint (APT)
+# Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
 sudo apt install -y curl
 
-# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
+# RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
 sudo dnf install -y curl
-sudo yum install -y curl
 
-# Arch, Manjaro (Pacman)
+# Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
 sudo pacman -S --noconfirm curl
 
-# OpenSUSE (Zypper)
+# openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
 sudo zypper -n install curl
 ```
 
@@ -112,7 +111,6 @@ You can uninstall it as follows.
 # Uninstall Tailscale
 sudo apt purge -y tailscale
 sudo dnf remove -y tailscale
-sudo yum remove -y tailscale
 sudo pacman -Rns --noconfirm tailscale
 sudo zypper -n remove -u tailscale
 

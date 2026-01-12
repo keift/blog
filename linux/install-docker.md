@@ -24,17 +24,16 @@ You can uninstall it as follows.
 # Stop service
 sudo systemctl stop docker
 
-# Debian, Ubuntu, Kali, Linux Mint (APT)
+# Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
 sudo apt purge -y docker* containerd.io
 
-# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
+# RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
 sudo dnf remove -y docker* containerd.io
-sudo yum remove -y docker* containerd.io
 
-# Arch, Manjaro (Pacman)
+# Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
 sudo pacman -Rns --noconfirm docker* containerd.io
 
-# OpenSUSE (Zypper)
+# openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
 sudo zypper -n remove -u docker* containerd.io
 
 # Remove unused files

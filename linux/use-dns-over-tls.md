@@ -11,7 +11,6 @@ We are using Cloudflare DNS here.
 # Install Systemd-Resolved
 sudo apt install -y systemd-resolved
 sudo dnf install -y systemd-resolved
-sudo yum install -y systemd-resolved
 sudo pacman -S --noconfirm systemd-resolved
 sudo zypper -n install systemd-resolved
 
@@ -44,7 +43,6 @@ We are using Mullvad DNS here.
 # Install Systemd-Resolved
 sudo apt install -y systemd-resolved
 sudo dnf install -y systemd-resolved
-sudo yum install -y systemd-resolved
 sudo pacman -S --noconfirm systemd-resolved
 sudo zypper -n install systemd-resolved
 
@@ -77,7 +75,6 @@ We are using Google DNS here.
 # Install Systemd-Resolved
 sudo apt install -y systemd-resolved
 sudo dnf install -y systemd-resolved
-sudo yum install -y systemd-resolved
 sudo pacman -S --noconfirm systemd-resolved
 sudo zypper -n install systemd-resolved
 
@@ -110,7 +107,6 @@ We are using Yandex DNS here.
 # Install Systemd-Resolved
 sudo apt install -y systemd-resolved
 sudo dnf install -y systemd-resolved
-sudo yum install -y systemd-resolved
 sudo pacman -S --noconfirm systemd-resolved
 sudo zypper -n install systemd-resolved
 

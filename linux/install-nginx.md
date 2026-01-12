@@ -8,17 +8,16 @@ icon: n
 You can install it as follows.
 
 ```shell
-# Debian, Ubuntu, Kali, Linux Mint (APT)
+# Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
 sudo apt install -y nginx
 
-# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
+# RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
 sudo dnf install -y nginx
-sudo yum install -y nginx
 
-# Arch, Manjaro (Pacman)
+# Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
 sudo pacman -S --noconfirm nginx
 
-# OpenSUSE (Zypper)
+# openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
 sudo zypper -n install nginx
 
 # Enable and start Nginx
@@ -84,17 +83,16 @@ You can uninstall it as follows.
 # Stop service
 sudo systemctl stop nginx
 
-# Debian, Ubuntu, Kali, Linux Mint (APT)
+# Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
 sudo apt purge -y nginx
 
-# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
+# RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
 sudo dnf remove -y nginx
-sudo yum remove -y nginx
 
-# Arch, Manjaro (Pacman)
+# Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
 sudo pacman -Rns --noconfirm nginx
 
-# OpenSUSE (Zypper)
+# openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
 sudo zypper -n remove -u nginx
 
 # Remove unused files

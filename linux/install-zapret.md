@@ -31,17 +31,16 @@ curl -fsSL https://is.gd/uninstall_zapret | bash
 Dependencies for installation.
 
 ```shell
-# Debian, Ubuntu, Kali, Linux Mint (APT)
+# Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
 sudo apt install -y curl dnsutils nftables systemd-resolved unzip
 
-# Red Hat, CentOS, Fedora, AlmaLinux, Rocky (DNF / YUM)
+# RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
 sudo dnf install -y bind-utils curl nftables systemd-resolved unzip
-sudo yum install -y bind-utils curl nftables systemd-resolved unzip
 
-# Arch, Manjaro (Pacman)
+# Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
 sudo pacman -S --noconfirm bind-tools curl nftables systemd-resolved unzip
 
-# OpenSUSE (Zypper)
+# openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
 sudo zypper -n install bind-utils curl nftables systemd-resolved unzip
 ```
 
