@@ -12,7 +12,7 @@ Installing Zapret is now very easy!
 You can install it as follows.
 
 ```shell
-curl -fsSL https://bit.ly/install-zapret | bash
+curl -fsSL https://is.gd/install_zapret | bash
 ```
 
 **Uninstall**
@@ -20,7 +20,7 @@ curl -fsSL https://bit.ly/install-zapret | bash
 You can uninstall it as follows.
 
 ```shell
-curl -fsSL https://bit.ly/uninstall-zapret | bash
+curl -fsSL https://is.gd/uninstall_zapret | bash
 ```
 
 <details>
