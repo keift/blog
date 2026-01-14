@@ -67,17 +67,17 @@ Download the compiled zip file as release on GitHub.
 
 ```shell
 # Delete if present
-sudo rm -rf /tmp/zapret-v72.7
-sudo rm -rf /tmp/zapret-v72.7.zip
+sudo rm -rf /tmp/zapret-v72.8
+sudo rm -rf /tmp/zapret-v72.8.zip
 
 # Download the compiled zip file from GitHub
-sudo wget -P /tmp https://github.com/bol-van/zapret/releases/download/v72.7/zapret-v72.7.zip
+sudo wget -P /tmp https://github.com/bol-van/zapret/releases/download/v72.8/zapret-v72.8.zip
 
 # Unzip the zip file
-sudo unzip -d /tmp /tmp/zapret-v72.7.zip
+sudo unzip -d /tmp /tmp/zapret-v72.8.zip
 
 # Delete the zip file that we no longer need
-sudo rm -rf /tmp/zapret-v72.7.zip
+sudo rm -rf /tmp/zapret-v72.8.zip
 ```
 
 ## 4. Prepare for installation
@@ -90,8 +90,8 @@ sudo /opt/zapret/uninstall_easy.sh
 sudo rm -rf /opt/zapret
 
 # Install requirements
-sudo /tmp/zapret-v72.7/install_prereq.sh
-sudo /tmp/zapret-v72.7/install_bin.sh
+sudo /tmp/zapret-v72.8/install_prereq.sh
+sudo /tmp/zapret-v72.8/install_bin.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -109,7 +109,7 @@ Find the DPI methods implemented by the ISP.
 
 ```shell
 # Run the test
-sudo /tmp/zapret-v72.7/blockcheck.sh
+sudo /tmp/zapret-v72.8/blockcheck.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -172,7 +172,7 @@ We can start installing Zapret.
 
 ```shell
 # Start the installation
-sudo /tmp/zapret-v72.7/install_easy.sh
+sudo /tmp/zapret-v72.8/install_easy.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -271,7 +271,7 @@ All done! 🎉 We are done with this folder of Zapret anymore. We can delete it.
 
 ```shell
 # Delete the folder
-sudo rm -rf /tmp/zapret-v72.7
+sudo rm -rf /tmp/zapret-v72.8
 ```
 
 ## TIP: Uninstall Zapret
@@ -284,7 +284,7 @@ sudo /opt/zapret/uninstall_easy.sh
 
 # Remove unused files
 sudo rm -rf /opt/zapret
-sudo rm -rf /tmp/zapret-v72.7
+sudo rm -rf /tmp/zapret-v72.8
 ```
 
 ## TIP: Remove DNS settings
