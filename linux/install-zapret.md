@@ -12,7 +12,7 @@ Installing Zapret is now very easy!
 You can install it as follows.
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/keift/zapret/refs/heads/main/src/install.sh | bash
+curl -fsSL https://raw.github.com/keift/zapret/refs/heads/main/src/install.sh | bash
 ```
 
 **Uninstall**
@@ -20,14 +20,14 @@ curl -fsSL https://raw.githubusercontent.com/keift/zapret/refs/heads/main/src/in
 You can uninstall it as follows.
 
 ```shell
-curl -fsSL https://raw.githubusercontent.com/keift/zapret/refs/heads/main/src/uninstall.sh | bash
+curl -fsSL https://raw.github.com/keift/zapret/refs/heads/main/src/uninstall.sh | bash
 ```
 
 **Screenshots**
 
 Here it is.
 
-<img src="https://raw.githubusercontent.com/keift/zapret/refs/heads/main/assets/screenshot-1.png" width="100%"/>
+<img src="https://raw.github.com/keift/zapret/refs/heads/main/assets/screenshot-1.png" width="100%"/>
 
 <details>
 <summary>Archived: Step-by-step installation</summary>
