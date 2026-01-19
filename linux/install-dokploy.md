@@ -45,4 +45,4 @@ sudo docker system prune --all --volumes --force
 sudo rm -rf /etc/dokploy
 ```
 
-If you want to remove Docker as well, [continue here](https://keift.gitbook.io/blog/linux/install-docker#tip-uninstall-docker).
+If you want to remove Docker as well, [continue here](https://keift.gitbook.io/guides/linux/install-docker#tip-uninstall-docker).
