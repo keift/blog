@@ -3,28 +3,6 @@ description: Encrypt your DNS queries with DNSCrypt Proxy.
 icon: notebook
 ---
 
-## Install DNSCrypt Proxy
-
-You can install it as follows.
-
-```shell
-# Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
-sudo apt install -y dnscrypt-proxy
-
-# RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
-sudo dnf install -y dnscrypt-proxy
-
-# Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
-sudo pacman -S --noconfirm dnscrypt-proxy
-
-# openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
-sudo zypper -n install dnscrypt-proxy
-
-# Enable and start DNSCrypt Proxy
-sudo systemctl enable dnscrypt-proxy
-sudo systemctl start dnscrypt-proxy
-```
-
 ## ALTERNATIVE: Cloudflare DNS (Recommended)
 
 Set up and use DNSCrypt Proxy. We are using Cloudflare DNS here.

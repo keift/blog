@@ -5,7 +5,7 @@ icon: shield
 
 ## ALTERNATIVE: NextDNS with Systemd-Resolved (Recommended)
 
-Using NextDNS in Systemd distributions.
+Using NextDNS with Systemd-Resolved.
 
 ```shell
 # 🟥 Environment variables
@@ -42,7 +42,7 @@ sudo systemctl restart systemd-resolved
 
 ## ALTERNATIVE: NextDNS with DNSCrypt Proxy
 
-Using NextDNS in non-Systemd distributions.
+Using NextDNS with DNSCrypt Proxy.
 
 ```shell
 # 🟥 Environment variables
