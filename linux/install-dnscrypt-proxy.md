@@ -24,15 +24,15 @@ sudo systemctl start dnscrypt-proxy
 
 # Configure DNSCrypt Proxy
 sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
-listen_addresses = ['127.0.0.1:5300']
+listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
-server_names = ['cloudflare', 'cloudflare-ipv6']
+server_names = ["cloudflare", "cloudflare-ipv6"]
 
 [sources]
-  [sources.'public-resolvers']
-  url = 'https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md'
-  minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
-  cache_file = '/var/cache/dnscrypt-proxy/public-resolvers-v3.md'
+  [sources."public-resolvers"]
+  url = "https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md"
+  minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3"
+  cache_file = "/var/cache/dnscrypt-proxy/public-resolvers-v3.md"
 EOF
 
 # Restart the DNSCrypt Proxy for everything to work properly
@@ -42,6 +42,7 @@ sudo systemctl restart dnscrypt-proxy
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1:5300
+DNS=[::1]:5300
 DNS=1.1.1.1#one.one.one.one
 DNS=2606:4700:4700::1111#one.one.one.one
 DNS=1.0.0.1#one.one.one.one
@@ -86,15 +87,15 @@ sudo systemctl start dnscrypt-proxy
 
 # Configure DNSCrypt Proxy
 sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
-listen_addresses = ['127.0.0.1:5300']
+listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
-server_names = ['mullvad-base-doh', 'mullvad-doh']
+server_names = ["mullvad-base-doh", "mullvad-doh"]
 
 [sources]
-  [sources.'public-resolvers']
-  url = 'https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md'
-  minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
-  cache_file = '/var/cache/dnscrypt-proxy/public-resolvers-v3.md'
+  [sources."public-resolvers"]
+  url = "https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md"
+  minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3"
+  cache_file = "/var/cache/dnscrypt-proxy/public-resolvers-v3.md"
 EOF
 
 # Restart the DNSCrypt Proxy for everything to work properly
@@ -104,6 +105,7 @@ sudo systemctl restart dnscrypt-proxy
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1:5300
+DNS=[::1]:5300
 DNS=194.242.2.4#base.dns.mullvad.net
 DNS=2a07:e340::4#base.dns.mullvad.net
 DNS=194.242.2.2#dns.mullvad.net
@@ -148,15 +150,15 @@ sudo systemctl start dnscrypt-proxy
 
 # Configure DNSCrypt Proxy
 sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
-listen_addresses = ['127.0.0.1:5300']
+listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
-server_names = ['google', 'google-ipv6']
+server_names = ["google", "google-ipv6"]
 
 [sources]
-  [sources.'public-resolvers']
-  url = 'https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md'
-  minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
-  cache_file = '/var/cache/dnscrypt-proxy/public-resolvers-v3.md'
+  [sources."public-resolvers"]
+  url = "https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md"
+  minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3"
+  cache_file = "/var/cache/dnscrypt-proxy/public-resolvers-v3.md"
 EOF
 
 # Restart the DNSCrypt Proxy for everything to work properly
@@ -166,6 +168,7 @@ sudo systemctl restart dnscrypt-proxy
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1:5300
+DNS=[::1]:5300
 DNS=8.8.8.8#dns.google
 DNS=2001:4860:4860::8888#dns.google
 DNS=8.8.4.4#dns.google
@@ -210,15 +213,15 @@ sudo systemctl start dnscrypt-proxy
 
 # Configure DNSCrypt Proxy
 sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
-listen_addresses = ['127.0.0.1:5300']
+listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
-server_names = ['yandex', 'yandex-ipv6']
+server_names = ["yandex", "yandex-ipv6"]
 
 [sources]
-  [sources.'public-resolvers']
-  url = 'https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md'
-  minisign_key = 'RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3'
-  cache_file = '/var/cache/dnscrypt-proxy/public-resolvers-v3.md'
+  [sources."public-resolvers"]
+  url = "https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md"
+  minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3"
+  cache_file = "/var/cache/dnscrypt-proxy/public-resolvers-v3.md"
 EOF
 
 # Restart the DNSCrypt Proxy for everything to work properly
@@ -228,6 +231,7 @@ sudo systemctl restart dnscrypt-proxy
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1:5300
+DNS=[::1]:5300
 DNS=77.88.8.8#common.dot.dns.yandex.net
 DNS=2a02:6b8::feed:0ff#common.dot.dns.yandex.net
 DNS=77.88.8.1#common.dot.dns.yandex.net

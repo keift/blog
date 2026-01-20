@@ -65,13 +65,13 @@ sudo systemctl start dnscrypt-proxy
 
 # Configure DNSCrypt Proxy
 sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
-listen_addresses = ['127.0.0.1:5300']
+listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
-server_names = ['NextDNS-${NEXTDNS_ID}']
+server_names = ["NextDNS-${NEXTDNS_ID}"]
 
 [static]
-  [static.'NextDNS-${NEXTDNS_ID}']
-  stamp = '${NEXTDNS_STAMP}'
+  [static."NextDNS-${NEXTDNS_ID}"]
+  stamp = "${NEXTDNS_STAMP}"
 EOF
 
 # Restart the DNSCrypt Proxy for everything to work properly
@@ -81,6 +81,7 @@ sudo systemctl restart dnscrypt-proxy
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1:5300
+DNS=[::1]:5300
 DNS=45.90.28.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=2a07:a8c0::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=45.90.30.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
