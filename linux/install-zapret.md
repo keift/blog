@@ -54,12 +54,10 @@ sudo zypper -n install bind-utils curl nftables systemd-resolved unzip wget
 
 Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves.
 
-- [Cloudflare DNS](https://keift.gitbook.io/guides/linux/use-dns-over-tls#alternative-cloudflare-dns-recommended) (Recommended)
-- [Mullvad DNS](https://keift.gitbook.io/guides/linux/use-dns-over-tls#alternative-mullvad-dns)
-- [Google DNS](https://keift.gitbook.io/guides/linux/use-dns-over-tls#alternative-google-dns)
-- [Yandex DNS](https://keift.gitbook.io/guides/linux/use-dns-over-tls#alternative-yandex-dns)
-
-If your distribution does not include Systemd, you will need to do this using [Stubby](https://keift.gitbook.io/guides/linux/install-stubby).
+- [Cloudflare DNS](https://keift.gitbook.io/guides/linux/install-dnscrypt-proxy#alternative-cloudflare-dns-recommended) (Recommended)
+- [Mullvad DNS](https://keift.gitbook.io/guides/linux/install-dnscrypt-proxy#alternative-mullvad-dns)
+- [Google DNS](https://keift.gitbook.io/guides/linux/install-dnscrypt-proxy#alternative-google-dns)
+- [Yandex DNS](https://keift.gitbook.io/guides/linux/install-dnscrypt-proxy#alternative-yandex-dns)
 
 ## 3. Download Zapret
 
