@@ -8,7 +8,7 @@
   - [Install Docker](./linux/install-docker.md)
   - [Install Nginx](./linux/install-nginx.md)
   - [Install Tailscale](./linux/install-tailscale.md)
-  - [Install Stubby](./linux/install-stubby.md)
+  - [Install DNSCrypt Proxy](./linux/install-dnscrypt-proxy.md)
   - [Use DNS-Over-TLS](./linux/use-dns-over-tls.md)
   - [Use NextDNS](./linux/use-nextdns.md)
 

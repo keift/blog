@@ -30,6 +30,7 @@ DNS=2a07:a8c0::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=45.90.30.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=2a07:a8c1::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNSOverTLS=yes
+Domains=~.
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
@@ -39,64 +40,56 @@ EOF
 sudo systemctl restart systemd-resolved
 ```
 
-## ALTERNATIVE: NextDNS with Stubby
+## ALTERNATIVE: NextDNS with DNSCrypt Proxy
 
 Using NextDNS in non-Systemd distributions.
 
 ```shell
 # 🟥 Environment variables
 NEXTDNS_ID="aaaaaa"
+NEXTDNS_STAMP="sdns://AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 DEVICE_NAME="HUAWEI MateBook D16"
 
-# Install Stubby
-sudo apt install -y stubby
-sudo dnf install -y stubby
-sudo pacman -S --noconfirm stubby
-sudo zypper -n install stubby
+# Install DNSCrypt Proxy
+sudo apt install -y dnscrypt-proxy
+sudo dnf install -y dnscrypt-proxy
+sudo pacman -S --noconfirm dnscrypt-proxy
+sudo zypper -n install dnscrypt-proxy
 
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
-# Enable and start Stubby
-sudo systemctl enable stubby
-sudo systemctl start stubby
+# Enable and start DNSCrypt Proxy
+sudo systemctl enable dnscrypt-proxy
+sudo systemctl start dnscrypt-proxy
 
-# Configure Stubby
-sudo tee /etc/stubby/stubby.yml &>/dev/null << EOF
-resolution_type: GETDNS_RESOLUTION_STUB
-tls_authentication: GETDNS_AUTHENTICATION_REQUIRED
-round_robin_upstreams: 1
-idle_timeout: 10000
+# Configure DNSCrypt Proxy
+sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
+listen_addresses = ['127.0.0.1:5300']
 
-dns_transport_list:
-  - GETDNS_TRANSPORT_TLS
+server_names = ['NextDNS-${NEXTDNS_ID}']
 
-listen_addresses:
-  - 127.0.0.1@53
-
-upstream_recursive_servers:
-  - address_data: 45.90.28.0
-    tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
-  - address_data: 2a07:a8c0::
-    tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
-  - address_data: 45.90.30.0
-    tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
-  - address_data: 2a07:a8c1::
-    tls_auth_name: "${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io"
+[static]
+  [static.'NextDNS-${NEXTDNS_ID}']
+  stamp = '${NEXTDNS_STAMP}'
 EOF
 
-# Restart the Stubby for everything to work properly
-sudo systemctl restart stubby
+# Restart the DNSCrypt Proxy for everything to work properly
+sudo systemctl restart dnscrypt-proxy
 
-# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Stubby in it
+# Rewrite the /etc/systemd/resolved.conf file and specify that we will use DNSCrypt Proxy in it
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
-DNS=127.0.0.1
-DNSStubListener=no
+DNS=127.0.0.1:5300
+DNS=45.90.28.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
+DNS=2a07:a8c0::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
+DNS=45.90.30.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
+DNS=2a07:a8c1::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
+Domains=~.
 EOF
 
-# Rewrite the /etc/resolv.conf file and specify that we will use Stubby in it
+# Rewrite the /etc/resolv.conf file and specify that we will use DNSCrypt Proxy in it
 sudo tee /etc/resolv.conf &>/dev/null << EOF
 nameserver 127.0.0.1
 nameserver 45.90.28.0
@@ -117,11 +110,11 @@ sudo systemctl restart systemd-resolved
 You can remove it as follows.
 
 ```shell
-# Uninstall Stubby
-sudo apt purge -y stubby
-sudo dnf remove -y stubby
-sudo pacman -Rns --noconfirm stubby
-sudo zypper -n remove -u stubby
+# Uninstall DNSCrypt Proxy
+sudo apt purge -y dnscrypt-proxy
+sudo dnf remove -y dnscrypt-proxy
+sudo pacman -Rns --noconfirm dnscrypt-proxy
+sudo zypper -n remove -u dnscrypt-proxy
 
 # Enable and start Systemd-Resolved
 sudo systemctl enable systemd-resolved
