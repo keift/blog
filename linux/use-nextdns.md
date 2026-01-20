@@ -88,15 +88,6 @@ DNS=45.90.30.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=2a07:a8c1::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 EOF
 
-# Rewrite the /etc/resolv.conf file and specify that we will use DNSCrypt Proxy in it
-sudo tee /etc/resolv.conf &>/dev/null << EOF
-nameserver 127.0.0.1
-nameserver 45.90.28.0
-nameserver 2a07:a8c0::
-nameserver 45.90.30.0
-nameserver 2a07:a8c1::
-EOF
-
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 [ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
@@ -121,14 +112,6 @@ sudo systemctl start systemd-resolved
 
 # Leave the Systemd-Resolved configuration blank
 sudo tee /etc/systemd/resolved.conf &>/dev/null <<< ""
-
-# Leave the /etc/resolv.conf file safe
-sudo tee /etc/resolv.conf &>/dev/null << EOF
-nameserver 1.1.1.1
-nameserver 2606:4700:4700::1111
-nameserver 1.0.0.1
-nameserver 2606:4700:4700::1001
-EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 [ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf

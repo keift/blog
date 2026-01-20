@@ -50,15 +50,6 @@ DNS=2606:4700:4700::1001#one.one.one.one
 DNSOverTLS=yes
 EOF
 
-# Rewrite the /etc/resolv.conf file and specify that we will use DNSCrypt Proxy in it
-sudo tee /etc/resolv.conf &>/dev/null << EOF
-nameserver 127.0.0.1
-nameserver 1.1.1.1
-nameserver 2606:4700:4700::1111
-nameserver 1.0.0.1
-nameserver 2606:4700:4700::1001
-EOF
-
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 [ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
@@ -111,15 +102,6 @@ DNS=2a07:e340::4#base.dns.mullvad.net
 DNS=194.242.2.2#dns.mullvad.net
 DNS=2a07:e340::2#dns.mullvad.net
 DNSOverTLS=yes
-EOF
-
-# Rewrite the /etc/resolv.conf file and specify that we will use DNSCrypt Proxy in it
-sudo tee /etc/resolv.conf &>/dev/null << EOF
-nameserver 127.0.0.1
-nameserver 1.1.1.1
-nameserver 2606:4700:4700::1111
-nameserver 1.0.0.1
-nameserver 2606:4700:4700::1001
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
@@ -176,15 +158,6 @@ DNS=2001:4860:4860::8844#dns.google
 DNSOverTLS=yes
 EOF
 
-# Rewrite the /etc/resolv.conf file and specify that we will use DNSCrypt Proxy in it
-sudo tee /etc/resolv.conf &>/dev/null << EOF
-nameserver 127.0.0.1
-nameserver 8.8.8.8
-nameserver 2001:4860:4860::8888
-nameserver 8.8.4.4
-nameserver 2001:4860:4860::8844
-EOF
-
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 [ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
@@ -239,15 +212,6 @@ DNS=2a02:6b8:0:1::feed:0ff#common.dot.dns.yandex.net
 DNSOverTLS=yes
 EOF
 
-# Rewrite the /etc/resolv.conf file and specify that we will use DNSCrypt Proxy in it
-sudo tee /etc/resolv.conf &>/dev/null << EOF
-nameserver 127.0.0.1
-nameserver 77.88.8.8
-nameserver 2a02:6b8::feed:0ff
-nameserver 77.88.8.1
-nameserver 2a02:6b8:0:1::feed:0ff
-EOF
-
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 [ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
 
@@ -272,14 +236,6 @@ sudo systemctl start systemd-resolved
 
 # Leave the Systemd-Resolved configuration blank
 sudo tee /etc/systemd/resolved.conf &>/dev/null <<< ""
-
-# Leave the /etc/resolv.conf file safe
-sudo tee /etc/resolv.conf &>/dev/null << EOF
-nameserver 1.1.1.1
-nameserver 2606:4700:4700::1111
-nameserver 1.0.0.1
-nameserver 2606:4700:4700::1001
-EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
 [ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
