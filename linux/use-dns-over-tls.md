@@ -18,7 +18,7 @@ sudo zypper -n install systemd-resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
-# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Cloudflare DNS in it
+# Configure Systemd-Resolved
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=1.1.1.1#one.one.one.one
@@ -50,7 +50,7 @@ sudo zypper -n install systemd-resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
-# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Mullvad DNS in it
+# Configure Systemd-Resolved
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=194.242.2.4#base.dns.mullvad.net
@@ -82,7 +82,7 @@ sudo zypper -n install systemd-resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
-# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Google DNS in it
+# Configure Systemd-Resolved
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=8.8.8.8#dns.google
@@ -114,7 +114,7 @@ sudo zypper -n install systemd-resolved
 sudo systemctl enable systemd-resolved
 sudo systemctl start systemd-resolved
 
-# Rewrite the /etc/systemd/resolved.conf file and specify that we will use Yandex DNS in it
+# Configure Systemd-Resolved
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=77.88.8.8#common.dot.dns.yandex.net
