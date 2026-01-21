@@ -29,10 +29,7 @@ DNS=45.90.28.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=2a07:a8c0::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=45.90.30.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=2a07:a8c1::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
-
 Domains=~.
-DNSOverTLS=opportunistic
-DNSStubListener=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
@@ -81,10 +78,7 @@ DNS=45.90.28.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=2a07:a8c0::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=45.90.30.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=2a07:a8c1::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
-
 Domains=~.
-DNSOverTLS=opportunistic
-DNSStubListener=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file

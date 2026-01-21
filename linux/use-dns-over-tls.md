@@ -25,10 +25,7 @@ DNS=1.1.1.1#one.one.one.one
 DNS=2606:4700:4700::1111#one.one.one.one
 DNS=1.0.0.1#one.one.one.one
 DNS=2606:4700:4700::1001#one.one.one.one
-
 Domains=~.
-DNSOverTLS=opportunistic
-DNSStubListener=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
@@ -60,10 +57,7 @@ DNS=194.242.2.4#base.dns.mullvad.net
 DNS=2a07:e340::4#base.dns.mullvad.net
 DNS=194.242.2.2#dns.mullvad.net
 DNS=2a07:e340::2#dns.mullvad.net
-
 Domains=~.
-DNSOverTLS=opportunistic
-DNSStubListener=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
@@ -95,10 +89,7 @@ DNS=8.8.8.8#dns.google
 DNS=2001:4860:4860::8888#dns.google
 DNS=8.8.4.4#dns.google
 DNS=2001:4860:4860::8844#dns.google
-
 Domains=~.
-DNSOverTLS=opportunistic
-DNSStubListener=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
@@ -130,10 +121,7 @@ DNS=77.88.8.8#common.dot.dns.yandex.net
 DNS=2a02:6b8::feed:0ff#common.dot.dns.yandex.net
 DNS=77.88.8.1#common.dot.dns.yandex.net
 DNS=2a02:6b8:0:1::feed:0ff#common.dot.dns.yandex.net
-
 Domains=~.
-DNSOverTLS=opportunistic
-DNSStubListener=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
