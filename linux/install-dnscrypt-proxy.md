@@ -8,6 +8,12 @@ icon: notebook
 Set up and use DNSCrypt Proxy. We are using Cloudflare DNS here.
 
 ```shell
+# Install Systemd-Resolved
+sudo apt install -y systemd-resolved
+sudo dnf install -y systemd-resolved
+sudo pacman -S --noconfirm systemd-resolved
+sudo zypper -n install systemd-resolved
+
 # Install DNSCrypt Proxy
 sudo apt install -y dnscrypt-proxy
 sudo dnf install -y dnscrypt-proxy
@@ -65,6 +71,12 @@ sudo systemctl restart dnscrypt-proxy
 Set up and use DNSCrypt Proxy. We are using Mullvad DNS here.
 
 ```shell
+# Install Systemd-Resolved
+sudo apt install -y systemd-resolved
+sudo dnf install -y systemd-resolved
+sudo pacman -S --noconfirm systemd-resolved
+sudo zypper -n install systemd-resolved
+
 # Install DNSCrypt Proxy
 sudo apt install -y dnscrypt-proxy
 sudo dnf install -y dnscrypt-proxy
@@ -122,6 +134,12 @@ sudo systemctl restart dnscrypt-proxy
 Set up and use DNSCrypt Proxy. We are using Google DNS here.
 
 ```shell
+# Install Systemd-Resolved
+sudo apt install -y systemd-resolved
+sudo dnf install -y systemd-resolved
+sudo pacman -S --noconfirm systemd-resolved
+sudo zypper -n install systemd-resolved
+
 # Install DNSCrypt Proxy
 sudo apt install -y dnscrypt-proxy
 sudo dnf install -y dnscrypt-proxy
@@ -179,6 +197,12 @@ sudo systemctl restart dnscrypt-proxy
 Set up and use DNSCrypt Proxy. We are using Yandex DNS here.
 
 ```shell
+# Install Systemd-Resolved
+sudo apt install -y systemd-resolved
+sudo dnf install -y systemd-resolved
+sudo pacman -S --noconfirm systemd-resolved
+sudo zypper -n install systemd-resolved
+
 # Install DNSCrypt Proxy
 sudo apt install -y dnscrypt-proxy
 sudo dnf install -y dnscrypt-proxy

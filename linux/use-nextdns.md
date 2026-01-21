@@ -52,6 +52,12 @@ NEXTDNS_ID="aaaaaa"
 NEXTDNS_STAMP="sdns://AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 DEVICE_NAME="HUAWEI MateBook D16"
 
+# Install Systemd-Resolved
+sudo apt install -y systemd-resolved
+sudo dnf install -y systemd-resolved
+sudo pacman -S --noconfirm systemd-resolved
+sudo zypper -n install systemd-resolved
+
 # Install DNSCrypt Proxy
 sudo apt install -y dnscrypt-proxy
 sudo dnf install -y dnscrypt-proxy
