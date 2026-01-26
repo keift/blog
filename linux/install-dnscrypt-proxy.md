@@ -33,6 +33,7 @@ sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1:5300
 DNS=[::1]:5300
+
 DNS=1.1.1.1#one.one.one.one
 DNS=2606:4700:4700::1111#one.one.one.one
 DNS=1.0.0.1#one.one.one.one
@@ -94,6 +95,7 @@ sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1:5300
 DNS=[::1]:5300
+
 DNS=194.242.2.4#base.dns.mullvad.net
 DNS=2a07:e340::4#base.dns.mullvad.net
 DNS=194.242.2.2#dns.mullvad.net
@@ -155,6 +157,7 @@ sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1:5300
 DNS=[::1]:5300
+
 DNS=8.8.8.8#dns.google
 DNS=2001:4860:4860::8888#dns.google
 DNS=8.8.4.4#dns.google
@@ -216,6 +219,7 @@ sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
 DNS=127.0.0.1:5300
 DNS=[::1]:5300
+
 DNS=77.88.8.8#common.dot.dns.yandex.net
 DNS=2a02:6b8::feed:0ff#common.dot.dns.yandex.net
 DNS=77.88.8.1#common.dot.dns.yandex.net
