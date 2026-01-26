@@ -31,7 +31,7 @@ DNS=45.90.30.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 DNS=2a07:a8c1::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
 
 Domains=~.
-DNSOverTLS=opportunistic
+DNSOverTLS=yes
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
@@ -77,13 +77,8 @@ sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 DNS=127.0.0.1:5300
 DNS=[::1]:5300
 
-DNS=45.90.28.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
-DNS=2a07:a8c0::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
-DNS=45.90.30.0#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
-DNS=2a07:a8c1::#${DEVICE_NAME// /--}-${NEXTDNS_ID}.dns.nextdns.io
-
 Domains=~.
-DNSOverTLS=opportunistic
+DNSOverTLS=no
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
