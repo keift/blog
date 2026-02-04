@@ -8,4 +8,4 @@ icon: hand-wave
 
 ## Follow us
 
-[GitHub](https://github.com/keift) | [Twitter](https://x.com/keiftco)
+[Twitter](https://x.com/keiftco) | [GitHub](https://github.com/keift)
