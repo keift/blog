@@ -69,13 +69,13 @@ sudo rm -rf /tmp/zapret
 sudo rm -rf /tmp/zapret.zip
 
 # Download the compiled zip file from GitHub
-sudo wget -O /tmp/zapret.zip https://github.com/bol-van/zapret/releases/download/v72.9/zapret-v72.9.zip
+sudo wget -O /tmp/zapret.zip https://github.com/bol-van/zapret2/releases/download/v0.9.2/zapret2-v0.9.2.zip
 
 # Unzip the zip file
 sudo unzip -d /tmp /tmp/zapret.zip
 
 # Rename the file
-sudo mv /tmp/zapret-v72.9 /tmp/zapret
+sudo mv /tmp/zapret-v0.9.2 /tmp/zapret
 
 # Delete the zip file that we no longer need
 sudo rm -rf /tmp/zapret.zip
