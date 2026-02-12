@@ -65,17 +65,20 @@ Download the compiled zip file as release on GitHub.
 
 ```shell
 # Delete if present
-sudo rm -rf /tmp/zapret-v72.9
-sudo rm -rf /tmp/zapret-v72.9.zip
+sudo rm -rf /tmp/zapret
+sudo rm -rf /tmp/zapret.zip
 
 # Download the compiled zip file from GitHub
-sudo wget -P /tmp https://github.com/bol-van/zapret/releases/download/v72.9/zapret-v72.9.zip
+sudo wget -O /tmp/zapret.zip https://github.com/bol-van/zapret/releases/download/v72.9/zapret-v72.9.zip
 
 # Unzip the zip file
-sudo unzip -d /tmp /tmp/zapret-v72.9.zip
+sudo unzip -d /tmp /tmp/zapret.zip
+
+# Rename the file
+sudo mv /tmp/zapret-v72.9 /tmp/zapret
 
 # Delete the zip file that we no longer need
-sudo rm -rf /tmp/zapret-v72.9.zip
+sudo rm -rf /tmp/zapret.zip
 ```
 
 ## 4. Prepare for installation
@@ -88,8 +91,8 @@ sudo /opt/zapret/uninstall_easy.sh
 sudo rm -rf /opt/zapret
 
 # Install requirements
-sudo /tmp/zapret-v72.9/install_prereq.sh
-sudo /tmp/zapret-v72.9/install_bin.sh
+sudo /tmp/zapret/install_prereq.sh
+sudo /tmp/zapret/install_bin.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -107,7 +110,7 @@ Find the DPI methods implemented by the ISP.
 
 ```shell
 # Run the test
-sudo /tmp/zapret-v72.9/blockcheck.sh
+sudo /tmp/zapret/blockcheck.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -170,7 +173,7 @@ We can start installing Zapret.
 
 ```shell
 # Start the installation
-sudo /tmp/zapret-v72.9/install_easy.sh
+sudo /tmp/zapret/install_easy.sh
 ```
 
 Here are the answers you need to give to the questions you may encounter during this time.
@@ -269,7 +272,7 @@ All done! 🎉 We are done with this folder of Zapret anymore. We can delete it.
 
 ```shell
 # Delete the folder
-sudo rm -rf /tmp/zapret-v72.9
+sudo rm -rf /tmp/zapret
 ```
 
 ## TIP: Uninstall Zapret
@@ -282,7 +285,7 @@ sudo /opt/zapret/uninstall_easy.sh
 
 # Remove unused files
 sudo rm -rf /opt/zapret
-sudo rm -rf /tmp/zapret-v72.9
+sudo rm -rf /tmp/zapret
 ```
 
 ## TIP: Remove DNS settings
