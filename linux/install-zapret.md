@@ -120,7 +120,7 @@ domain(s) (default: rutracker.org) : 🟥 [ENTER A WEBSITE DOMAIN NAME BLOCKED I
 ```
 
 ```
-ip protocol version(s) - 4, 6 or 46 for both (default: 4) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
+ip protocol version(s) - 4, 6 or 46 for both (default: 46) : 🟩 [LEAVE THIS QUESTION BLANK] 🟩
 ```
 
 ```
