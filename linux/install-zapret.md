@@ -75,7 +75,7 @@ sudo wget -O /tmp/zapret.zip https://github.com/bol-van/zapret2/releases/downloa
 sudo unzip -d /tmp /tmp/zapret.zip
 
 # Rename the file
-sudo mv /tmp/zapret-v0.9.2 /tmp/zapret
+sudo mv /tmp/zapret2-v0.9.2 /tmp/zapret
 
 # Delete the zip file that we no longer need
 sudo rm -rf /tmp/zapret.zip
