@@ -15,7 +15,7 @@ sudo apt install -y flatpak gnome-software gnome-software-plugin-flatpak
 sudo dnf install -y flatpak gnome-software gnome-software-plugin-flatpak
 
 # Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
-sudo pacman -S --noconfirm flatpak gnome-software gnome-software-packagekit-plugin
+sudo pacman -S --noconfirm flatpak gnome-software gnome-software-plugin-flatpak
 
 # openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
 sudo zypper -n install flatpak gnome-software gnome-software-plugin-flatpak
