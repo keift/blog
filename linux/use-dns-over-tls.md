@@ -91,6 +91,7 @@ DNS=2a01:4f9:c010:3f02::1
 DNS=2a01:4f8:c2c:123f::1
 DNS=2a00:1098:2c::1
 
+Domains=~.
 DNSOverTLS=no
 EOF
 
