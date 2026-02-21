@@ -21,12 +21,12 @@ sudo systemctl start systemd-resolved
 # Configure Systemd-Resolved
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
-DNS=2a01:4f9:c010:3f02::1#nat64.net
-DNS=2a01:4f8:c2c:123f::1#nat64.net
-DNS=2a00:1098:2c::1#nat64.net
+DNS=2a01:4f9:c010:3f02::1
+DNS=2a01:4f8:c2c:123f::1
+DNS=2a00:1098:2c::1
 
 Domains=~.
-DNSOverTLS=yes
+DNSOverTLS=no
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
