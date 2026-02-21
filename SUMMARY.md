@@ -9,6 +9,7 @@
   - [Install DNSCrypt Proxy](./linux/install-dnscrypt-proxy.md)
   - [Use DNS-Over-TLS](./linux/use-dns-over-tls.md)
   - [Use NextDNS](./linux/use-nextdns.md)
+  - [Use NAT64](./linux/use-nat64.md)
 
 - [BSD](./bsd/README.md)
   - [Install Zapret](./bsd/install-zapret.md)
