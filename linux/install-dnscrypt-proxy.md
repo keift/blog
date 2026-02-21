@@ -60,63 +60,6 @@ EOF
 sudo systemctl restart dnscrypt-proxy
 ```
 
-## ALTERNATIVE: Mullvad DNS
-
-Set up and use DNSCrypt Proxy. We are using Mullvad DNS here.
-
-```shell
-# Install Systemd-Resolved
-sudo apt install -y systemd-resolved
-sudo dnf install -y systemd-resolved
-sudo pacman -S --noconfirm systemd-resolved
-sudo zypper -n install systemd-resolved
-
-# Install DNSCrypt Proxy
-sudo apt install -y dnscrypt-proxy
-sudo dnf install -y dnscrypt-proxy
-sudo pacman -S --noconfirm dnscrypt-proxy
-sudo zypper -n install dnscrypt-proxy
-
-# Enable and start Systemd-Resolved
-sudo systemctl enable systemd-resolved
-sudo systemctl start systemd-resolved
-
-# Enable and start DNSCrypt Proxy
-sudo systemctl enable dnscrypt-proxy
-sudo systemctl start dnscrypt-proxy
-
-# Configure Systemd-Resolved
-sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
-[Resolve]
-DNS=127.0.0.1:5300
-DNS=[::1]:5300
-
-DNSOverTLS=no
-EOF
-
-# Make /etc/resolv.conf a symlink to Systemd-Resolved file
-[ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-
-# Restart Systemd-Resolved for the changes to take effect
-sudo systemctl restart systemd-resolved
-
-# Configure DNSCrypt Proxy
-sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
-listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
-
-server_names = ["mullvad-base-doh", "mullvad-doh"]
-
-[sources]
-  [sources."public-resolvers"]
-  urls = ["https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md", "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"]
-  minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3"
-  cache_file = "/var/cache/dnscrypt-proxy/public-resolvers-v3.md"
-EOF
-
-# Restart DNSCrypt Proxy for the changes to take effect
-sudo systemctl restart dnscrypt-proxy
-```
-
 ## ALTERNATIVE: Google DNS
 
 Set up and use DNSCrypt Proxy. We are using Google DNS here.
@@ -162,63 +105,6 @@ sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
 listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
 server_names = ["google", "google-ipv6"]
-
-[sources]
-  [sources."public-resolvers"]
-  urls = ["https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md", "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"]
-  minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3"
-  cache_file = "/var/cache/dnscrypt-proxy/public-resolvers-v3.md"
-EOF
-
-# Restart DNSCrypt Proxy for the changes to take effect
-sudo systemctl restart dnscrypt-proxy
-```
-
-## ALTERNATIVE: Yandex DNS
-
-Set up and use DNSCrypt Proxy. We are using Yandex DNS here.
-
-```shell
-# Install Systemd-Resolved
-sudo apt install -y systemd-resolved
-sudo dnf install -y systemd-resolved
-sudo pacman -S --noconfirm systemd-resolved
-sudo zypper -n install systemd-resolved
-
-# Install DNSCrypt Proxy
-sudo apt install -y dnscrypt-proxy
-sudo dnf install -y dnscrypt-proxy
-sudo pacman -S --noconfirm dnscrypt-proxy
-sudo zypper -n install dnscrypt-proxy
-
-# Enable and start Systemd-Resolved
-sudo systemctl enable systemd-resolved
-sudo systemctl start systemd-resolved
-
-# Enable and start DNSCrypt Proxy
-sudo systemctl enable dnscrypt-proxy
-sudo systemctl start dnscrypt-proxy
-
-# Configure Systemd-Resolved
-sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
-[Resolve]
-DNS=127.0.0.1:5300
-DNS=[::1]:5300
-
-DNSOverTLS=no
-EOF
-
-# Make /etc/resolv.conf a symlink to Systemd-Resolved file
-[ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-
-# Restart Systemd-Resolved for the changes to take effect
-sudo systemctl restart systemd-resolved
-
-# Configure DNSCrypt Proxy
-sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
-listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
-
-server_names = ["yandex", "yandex-ipv6"]
 
 [sources]
   [sources."public-resolvers"]

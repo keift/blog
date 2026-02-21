@@ -55,9 +55,7 @@ sudo zypper -n install bind-utils curl dnscrypt-proxy nftables systemd-resolved 
 Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We need to do that ourselves.
 
 - [Cloudflare DNS](https://keift.gitbook.io/guides/linux/install-dnscrypt-proxy#alternative-cloudflare-dns-recommended) (Recommended)
-- [Mullvad DNS](https://keift.gitbook.io/guides/linux/install-dnscrypt-proxy#alternative-mullvad-dns)
 - [Google DNS](https://keift.gitbook.io/guides/linux/install-dnscrypt-proxy#alternative-google-dns)
-- [Yandex DNS](https://keift.gitbook.io/guides/linux/install-dnscrypt-proxy#alternative-yandex-dns)
 
 ## 3. Download Zapret
 
