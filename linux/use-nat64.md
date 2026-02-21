@@ -3,9 +3,7 @@ description: Fix access problems only on providers that use IPv6.
 icon: '6'
 ---
 
-# Use NAT64
-
-### ALTERNATIVE: NAT64 DNS with Systemd-Resolved (Recommended)
+## ALTERNATIVE: NAT64 DNS with Systemd-Resolved (Recommended)
 
 Using NAT64 with Systemd-Resolved.
 
@@ -38,7 +36,7 @@ EOF
 sudo systemctl restart systemd-resolved
 ```
 
-### TIP: Remove DNS settings
+## TIP: Remove DNS settings
 
 You can remove it as follows.
 
