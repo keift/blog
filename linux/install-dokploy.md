@@ -9,13 +9,6 @@ You can install it as follows.
 
 ```shell
 # Pull and run the specified shell script
-curl -fsSL https://get.docker.com | sh
-
-# Enable and start Docker
-sudo systemctl enable docker
-sudo systemctl start docker
-
-# Pull and run the specified shell script
 curl -sSL https://dokploy.com/install.sh | sh
 ```
 
