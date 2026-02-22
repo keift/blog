@@ -3,7 +3,7 @@ description: Fix access problems only on providers that use IPv6.
 icon: '6'
 ---
 
-## ALTERNATIVE: NAT64 DNS with Systemd-Resolved (Recommended)
+## NAT64 DNS with Systemd-Resolved
 
 Using NAT64 with Systemd-Resolved.
 
