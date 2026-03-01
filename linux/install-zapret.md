@@ -29,6 +29,22 @@ Here it is.
 
 <img src="https://raw.github.com/keift/zapret/refs/heads/main/assets/screenshot-1.png" width="100%"/>
 
+## Parameters
+
+Installation settings can be changed in the following ways.
+
+> | Parameter             | Default | Description                                                                                                                                                                                     |
+> | --------------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+> | `--strict`            | `false` | It sets a strict configuration, such as forcing DNS redirection. This means being dependent on the DNS provider.                                                                                |
+> | `--dnscrypt`          | `false` | This tool first checks if DNS-Over-TLS is available. If the DNS-Over-TLS protocol is unavailable, it uses the DNSCrypt protocol. This parameter specifies that it must use DNSCrypt regardless. |
+> | `--blockcheck-domain` |         | This tool finds the correct domain name by sequentially testing blocked websites in different countries for blockcheck. This parameter allows you to specify this domain name yourself.         |
+>
+> Example:
+>
+> ```shell
+> curl -fsSL https://raw.github.com/keift/zapret/refs/heads/main/src/install.sh | bash -s -- --strict --dnscrypt --blockcheck-domain discord.com
+> ```
+
 <details>
 <summary>Archived: Step-by-step installation</summary>
 
