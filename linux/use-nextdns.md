@@ -71,6 +71,23 @@ sudo systemctl start systemd-resolved
 sudo systemctl enable dnscrypt-proxy
 sudo systemctl start dnscrypt-proxy
 
+# Configure DNSCrypt Proxy
+sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
+listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
+
+server_names = ["NextDNS-${NEXTDNS_ID}"]
+
+netprobe_address = "1.1.1.1:53"
+netprobe_timeout = 60
+
+[static]
+  [static."NextDNS-${NEXTDNS_ID}"]
+  stamp = "${NEXTDNS_STAMP}"
+EOF
+
+# Restart DNSCrypt Proxy for the changes to take effect
+sudo systemctl restart dnscrypt-proxy
+
 # Configure Systemd-Resolved
 sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
 [Resolve]
@@ -86,20 +103,6 @@ EOF
 
 # Restart Systemd-Resolved for the changes to take effect
 sudo systemctl restart systemd-resolved
-
-# Configure DNSCrypt Proxy
-sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
-listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
-
-server_names = ["NextDNS-${NEXTDNS_ID}"]
-
-[static]
-  [static."NextDNS-${NEXTDNS_ID}"]
-  stamp = "${NEXTDNS_STAMP}"
-EOF
-
-# Restart DNSCrypt Proxy for the changes to take effect
-sudo systemctl restart dnscrypt-proxy
 ```
 
 ## TIP: Remove DNS settings

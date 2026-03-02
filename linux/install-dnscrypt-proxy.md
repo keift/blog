@@ -28,26 +28,14 @@ sudo systemctl start systemd-resolved
 sudo systemctl enable dnscrypt-proxy
 sudo systemctl start dnscrypt-proxy
 
-# Configure Systemd-Resolved
-sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
-[Resolve]
-DNS=127.0.0.1:5300
-DNS=[::1]:5300
-
-DNSOverTLS=no
-EOF
-
-# Make /etc/resolv.conf a symlink to Systemd-Resolved file
-[ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-
-# Restart Systemd-Resolved for the changes to take effect
-sudo systemctl restart systemd-resolved
-
 # Configure DNSCrypt Proxy
 sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
 listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
 server_names = ["cloudflare", "cloudflare-ipv6"]
+
+netprobe_address = "1.1.1.1:53"
+netprobe_timeout = 60
 
 [sources]
   [sources."public-resolvers"]
@@ -58,6 +46,22 @@ EOF
 
 # Restart DNSCrypt Proxy for the changes to take effect
 sudo systemctl restart dnscrypt-proxy
+
+# Configure Systemd-Resolved
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
+[Resolve]
+DNS=127.0.0.1:5300
+DNS=[::1]:5300
+
+Domains=~.
+DNSOverTLS=no
+EOF
+
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+[ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
+# Restart Systemd-Resolved for the changes to take effect
+sudo systemctl restart systemd-resolved
 ```
 
 ## ALTERNATIVE: Google DNS
@@ -85,26 +89,14 @@ sudo systemctl start systemd-resolved
 sudo systemctl enable dnscrypt-proxy
 sudo systemctl start dnscrypt-proxy
 
-# Configure Systemd-Resolved
-sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
-[Resolve]
-DNS=127.0.0.1:5300
-DNS=[::1]:5300
-
-DNSOverTLS=no
-EOF
-
-# Make /etc/resolv.conf a symlink to Systemd-Resolved file
-[ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-
-# Restart Systemd-Resolved for the changes to take effect
-sudo systemctl restart systemd-resolved
-
 # Configure DNSCrypt Proxy
 sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
 listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
 server_names = ["google", "google-ipv6"]
+
+netprobe_address = "8.8.8.8:53"
+netprobe_timeout = 60
 
 [sources]
   [sources."public-resolvers"]
@@ -115,6 +107,22 @@ EOF
 
 # Restart DNSCrypt Proxy for the changes to take effect
 sudo systemctl restart dnscrypt-proxy
+
+# Configure Systemd-Resolved
+sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
+[Resolve]
+DNS=127.0.0.1:5300
+DNS=[::1]:5300
+
+Domains=~.
+DNSOverTLS=no
+EOF
+
+# Make /etc/resolv.conf a symlink to Systemd-Resolved file
+[ -e /run/systemd/resolve/stub-resolv.conf ] && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
+
+# Restart Systemd-Resolved for the changes to take effect
+sudo systemctl restart systemd-resolved
 ```
 
 ## TIP: Uninstall DNSCrypt Proxy
