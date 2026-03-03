@@ -5,7 +5,7 @@ icon: '6'
 
 ## NAT64 DNS with Systemd-Resolved
 
-Using NAT64 with Systemd-Resolved.
+Using [NAT64](https://nat64.net) with Systemd-Resolved.
 
 ```shell
 # Install Systemd-Resolved
