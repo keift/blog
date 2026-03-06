@@ -11,8 +11,12 @@
   - [Use NextDNS](./linux/use-nextdns.md)
   - [Use NAT64](./linux/use-nat64.md)
 
+<!--
+
 - [BSD](./bsd/README.md)
   - [Install Zapret](./bsd/install-zapret.md)
+
+-->
 
 - [Windows](./windows/README.md)
   - [Install GoodbyeDPI](./windows/install-goodbyedpi.md)
