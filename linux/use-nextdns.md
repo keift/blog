@@ -77,9 +77,6 @@ listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
 server_names = ["NextDNS-${NEXTDNS_ID}"]
 
-netprobe_address = "1.1.1.1:53"
-netprobe_timeout = 60
-
 [static]
   [static."NextDNS-${NEXTDNS_ID}"]
   stamp = "${NEXTDNS_STAMP}"
