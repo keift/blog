@@ -53,16 +53,16 @@ Dependencies for installation.
 
 ```shell
 # Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
-sudo apt install -y bind9-dnsutils curl dnscrypt-proxy nftables systemd-resolved unzip wget
+sudo apt install -y bind9-dnsutils curl nftables systemd-resolved unzip wget
 
 # RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
-sudo dnf install -y bind-utils curl dnscrypt-proxy nftables systemd-resolved unzip wget
+sudo dnf install -y bind-utils curl nftables systemd-resolved unzip wget
 
 # Arch Linux, Manjaro, CachyOS, EndeavourOS, Artix Linux (Pacman)
-sudo pacman -S --noconfirm bind curl dnscrypt-proxy nftables systemd-resolved unzip wget
+sudo pacman -S --noconfirm bind curl nftables systemd-resolved unzip wget
 
 # openSUSE Tumbleweed, openSUSE Leap, SUSE Linux Enterprise, GeckoLinux, Regata OS (Zypper)
-sudo zypper -n install bind-utils curl dnscrypt-proxy nftables systemd-resolved unzip wget
+sudo zypper -n install bind-utils curl nftables systemd-resolved unzip wget
 ```
 
 ## 2. Change DNS settings
@@ -77,18 +77,21 @@ Zapret only bypasses DPI restrictions. But it does not set up a DNS for us. We n
 Download the compiled zip file as release on GitHub.
 
 ```shell
+# Define Zapret version
+zapret_version="72.12"
+
 # Delete if present
 sudo rm -rf /tmp/zapret
 sudo rm -rf /tmp/zapret.zip
 
 # Download the compiled zip file from GitHub
-sudo wget -O /tmp/zapret.zip https://github.com/bol-van/zapret/releases/download/v72.12/zapret-v72.12.zip
+sudo wget -O /tmp/zapret.zip https://github.com/bol-van/zapret/releases/download/v"${zapret_version}"/zapret-v"${zapret_version}".zip
 
 # Unzip the zip file
 sudo unzip -d /tmp /tmp/zapret.zip
 
 # Rename the file
-sudo mv /tmp/zapret-v72.12 /tmp/zapret
+sudo mv /tmp/zapret-v"${zapret_version}" /tmp/zapret
 
 # Delete the zip file that we no longer need
 sudo rm -rf /tmp/zapret.zip
