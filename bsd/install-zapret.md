@@ -3,8 +3,6 @@ description: Install Zapret to bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 
-<!--
-
 ## 1. Install required tools
 
 Required tools for installation.
@@ -252,5 +250,3 @@ sudo service unbount stop
 # disable firewall
 sudo sysrc firewall_enable="NO"
 ```
-
--->
