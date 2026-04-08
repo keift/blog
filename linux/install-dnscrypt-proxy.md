@@ -38,7 +38,7 @@ server_names = ["cloudflare", "cloudflare-ipv6"]
   [sources."public-resolvers"]
   urls = ["https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md", "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"]
   minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3"
-  cache_file = "/var/cache/dnscrypt-proxy/public-resolvers-v3.md"
+  cache_file = "public-resolvers-v3.md"
 EOF
 
 # Restart DNSCrypt Proxy for the changes to take effect
@@ -96,7 +96,7 @@ server_names = ["google", "google-ipv6"]
   [sources."public-resolvers"]
   urls = ["https://raw.github.com/DNSCrypt/dnscrypt-resolvers/master/v3/public-resolvers.md", "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"]
   minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3"
-  cache_file = "/var/cache/dnscrypt-proxy/public-resolvers-v3.md"
+  cache_file = "public-resolvers-v3.md"
 EOF
 
 # Restart DNSCrypt Proxy for the changes to take effect
