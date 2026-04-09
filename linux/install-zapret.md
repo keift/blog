@@ -3,7 +3,7 @@ description: Bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 
-**✨ Install Zapret in one step**
+**✨ Install Zapret in one step** ![GitHub Stars](https://img.shields.io/github/stars/keift/zapret?style=flat&logo=github&color=615fff&link=https%3A%2F%2Fgithub.com%2Fkeift%2Fzapret)
 
 Installing Zapret is now very easy!
 
