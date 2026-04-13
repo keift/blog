@@ -3,9 +3,9 @@ description: Encrypt your DNS queries with DNSCrypt Proxy.
 icon: notebook
 ---
 
-## Set up DNSCrypt Proxy
+## DNSCrypt with Systemd-Resolved
 
-Set up and use DNSCrypt Proxy.
+Using DNSCrypt with Systemd-Resolved.
 
 ```shell
 # Install Systemd-Resolved
@@ -31,8 +31,6 @@ sudo systemctl start dnscrypt-proxy
 # Configure DNSCrypt Proxy
 sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
 listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
-
-server_names = ["cloudflare", "cloudflare-ipv6"]
 
 [sources."public-resolvers"]
 urls = ["https://raw.github.com/dnscrypt/dnscrypt-resolvers/master/v3/public-resolvers.md", "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"]
