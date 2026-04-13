@@ -3,9 +3,9 @@ description: Encrypt your DNS queries with DNSCrypt Proxy.
 icon: notebook
 ---
 
-## ALTERNATIVE: Cloudflare DNS (Recommended)
+## Set up DNSCrypt Proxy
 
-Set up and use DNSCrypt Proxy. We are using Cloudflare DNS here.
+Set up and use DNSCrypt Proxy.
 
 ```shell
 # Install Systemd-Resolved
@@ -33,63 +33,6 @@ sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
 listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
 server_names = ["cloudflare", "cloudflare-ipv6"]
-
-[sources."public-resolvers"]
-urls = ["https://raw.github.com/dnscrypt/dnscrypt-resolvers/master/v3/public-resolvers.md", "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"]
-minisign_key = "RWQf6LRCGA9i53mlYecO4IzT51TGPpvWucNSCh1CBM0QTaLn73Y7GFO3"
-cache_file = "public-resolvers.md"
-EOF
-
-# Restart DNSCrypt Proxy for the changes to take effect
-sudo systemctl restart dnscrypt-proxy
-
-# Configure Systemd-Resolved
-sudo tee /etc/systemd/resolved.conf &>/dev/null << EOF
-[Resolve]
-DNS=127.0.0.1:5300
-DNS=[::1]:5300
-
-Domains=~.
-DNSOverTLS=no
-EOF
-
-# Make /etc/resolv.conf a symlink to Systemd-Resolved file
-sudo test -f /run/systemd/resolve/stub-resolv.conf && sudo ln -sf /run/systemd/resolve/stub-resolv.conf /etc/resolv.conf
-
-# Restart Systemd-Resolved for the changes to take effect
-sudo systemctl restart systemd-resolved
-```
-
-## ALTERNATIVE: Google DNS
-
-Set up and use DNSCrypt Proxy. We are using Google DNS here.
-
-```shell
-# Install Systemd-Resolved
-sudo apt install -y systemd-resolved
-sudo dnf install -y systemd-resolved
-sudo pacman -S --noconfirm systemd-resolved
-sudo zypper -n install systemd-resolved
-
-# Install DNSCrypt Proxy
-sudo apt install -y dnscrypt-proxy
-sudo dnf install -y dnscrypt-proxy
-sudo pacman -S --noconfirm dnscrypt-proxy
-sudo zypper -n install dnscrypt-proxy
-
-# Enable and start Systemd-Resolved
-sudo systemctl enable systemd-resolved
-sudo systemctl start systemd-resolved
-
-# Enable and start DNSCrypt Proxy
-sudo systemctl enable dnscrypt-proxy
-sudo systemctl start dnscrypt-proxy
-
-# Configure DNSCrypt Proxy
-sudo tee /etc/dnscrypt-proxy/dnscrypt-proxy.toml &>/dev/null << EOF
-listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
-
-server_names = ["google", "google-ipv6"]
 
 [sources."public-resolvers"]
 urls = ["https://raw.github.com/dnscrypt/dnscrypt-resolvers/master/v3/public-resolvers.md", "https://download.dnscrypt.info/resolvers-list/v3/public-resolvers.md"]
