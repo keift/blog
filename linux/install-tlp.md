@@ -43,7 +43,7 @@ You can uninstall it as follows.
 
 ```shell
 # Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
-sudo apt purge -y tlp tlp-rdw
+sudo apt purge -y --autoremove tlp tlp-rdw
 
 # RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
 sudo dnf remove -y tlp tlp-rdw

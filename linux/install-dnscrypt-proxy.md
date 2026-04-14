@@ -64,7 +64,7 @@ You can uninstall it as follows.
 
 ```shell
 # Uninstall DNSCrypt Proxy
-sudo apt purge -y dnscrypt-proxy
+sudo apt purge -y --autoremove dnscrypt-proxy
 sudo dnf remove -y dnscrypt-proxy
 sudo pacman -Rns --noconfirm dnscrypt-proxy
 sudo zypper -n remove -u dnscrypt-proxy

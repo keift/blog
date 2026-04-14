@@ -30,7 +30,7 @@ You can uninstall it as follows.
 
 ```shell
 # Debian, Ubuntu, Linux Mint, Kali Linux, Pop!_OS (APT)
-sudo apt purge -y flatpak gnome-software gnome-software-plugin-flatpak
+sudo apt purge -y --autoremove flatpak gnome-software gnome-software-plugin-flatpak
 
 # RHEL, Fedora, CentOS, AlmaLinux, Rocky Linux (DNF)
 sudo dnf remove -y flatpak gnome-software gnome-software-plugin-flatpak
