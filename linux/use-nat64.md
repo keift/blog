@@ -28,6 +28,7 @@ DNS=2a01:4f9:c010:3f02::1
 
 Domains=~.
 DNSOverTLS=no
+DNSStubListener=no
 EOF
 
 # Make /etc/resolv.conf a symlink to Systemd-Resolved file
