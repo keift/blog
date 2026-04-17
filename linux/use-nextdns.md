@@ -77,9 +77,8 @@ listen_addresses = ["127.0.0.1:5300", "[::1]:5300"]
 
 server_names = ["NextDNS-${NEXTDNS_ID}"]
 
-[static]
-  [static."NextDNS-${NEXTDNS_ID}"]
-  stamp = "${NEXTDNS_STAMP}"
+[static."NextDNS-${NEXTDNS_ID}"]
+stamp = "${NEXTDNS_STAMP}"
 EOF
 
 # Restart DNSCrypt Proxy for the changes to take effect
