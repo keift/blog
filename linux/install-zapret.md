@@ -1,13 +1,11 @@
 ---
-description: Bypass DPI barriers.
+description: Single step, bypass DPI barriers.
 icon: lock-keyhole-open
 ---
 
-**✨ One Step, Bypass DPI Barriers** [![GitHub Stars](https://img.shields.io/github/stars/keift/zapret.svg?style=flat&logo=github&label=Stars&color=615fff&link=https%3A%2F%2Fgithub.com%2Fkeift%2Fzapret)](https://github.com/keift/zapret)
-
 We save you from the hassle of setting up Zapret and make it easy to overcome all DPI access restrictions with a single command.
 
-**Installation**
+## Installation
 
 You can install it as follows.
 
@@ -15,7 +13,7 @@ You can install it as follows.
 curl -fsSL https://raw.github.com/keift/zapret/refs/heads/main/src/install.sh | bash
 ```
 
-**Uninstall**
+## Uninstall
 
 You can uninstall it as follows.
 
@@ -23,7 +21,7 @@ You can uninstall it as follows.
 curl -fsSL https://raw.github.com/keift/zapret/refs/heads/main/src/uninstall.sh | bash
 ```
 
-**Screenshots**
+## Screenshots
 
 Here it is.
 
