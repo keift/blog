@@ -41,6 +41,8 @@ Installation settings can be changed in the following ways.
 > curl -fsSL https://raw.github.com/keift/zapret/refs/heads/main/src/install.sh | bash -s -- --blockcheck-domain discord.com
 > ```
 
+<!--
+
 <details>
 <summary>Archived: Step-by-step installation</summary>
 
@@ -321,3 +323,5 @@ sudo systemctl restart systemd-resolved
 ```
 
 </details>
+
+-->
