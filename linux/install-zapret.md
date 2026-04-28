@@ -10,7 +10,7 @@ We save you from the hassle of setting up Zapret and make it easy to overcome al
 You can install it as follows.
 
 ```shell
-curl -fsSL https://raw.github.com/keift/zapret/refs/heads/main/src/install.sh | sudo bash
+curl -fsSL https://raw.github.com/keift/zapret/main/src/install.sh | sudo bash
 ```
 
 ## Uninstall
@@ -18,14 +18,14 @@ curl -fsSL https://raw.github.com/keift/zapret/refs/heads/main/src/install.sh | 
 You can uninstall it as follows.
 
 ```shell
-curl -fsSL https://raw.github.com/keift/zapret/refs/heads/main/src/uninstall.sh | sudo bash
+curl -fsSL https://raw.github.com/keift/zapret/main/src/uninstall.sh | sudo bash
 ```
 
 ## Screenshots
 
 Here it is.
 
-<img src="https://raw.github.com/keift/zapret/refs/heads/main/assets/screenshot-1.png" width="100%"/>
+<img src="https://raw.github.com/keift/zapret/main/assets/screenshot-1.png" width="100%"/>
 
 ## Parameters
 
@@ -38,7 +38,7 @@ Installation settings can be changed in the following ways.
 > Example:
 >
 > ```shell
-> curl -fsSL https://raw.github.com/keift/zapret/refs/heads/main/src/install.sh | sudo bash -s -- --blockcheck-domain discord.com
+> curl -fsSL https://raw.github.com/keift/zapret/main/src/install.sh | sudo bash -s -- --blockcheck-domain discord.com
 > ```
 
 <!--
