@@ -5,8 +5,6 @@ icon: lock-keyhole-open
 
 We save you from the hassle of setting up Zapret and make it easy to overcome all DPI access restrictions with a single command.
 
-Long live Freedom!
-
 ## Installation
 
 You can install it as follows.
